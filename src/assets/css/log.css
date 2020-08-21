@@ -1,0 +1,762 @@
+body{background: #E5E5E5;}
+body {
+margin: 0px;
+padding: 0;
+}
+
+.container {
+display: grid;
+grid-template-columns: 30% 70%;
+grid-template-rows: 100%;
+height: 949px;
+}
+
+.log{
+position: absolute;
+width: 29%;
+height: 50%;
+right: 20%;
+top: 236px;
+background: #FFFFFF;
+border-radius: 10px;
+margin-left: 310px;
+
+}
+#word{
+position: relative;
+text-align: center;
+top: 50px;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+color: #434349; }
+
+#word1{
+position: relative;
+text-align: center;
+top: 100px;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+color: #434349; }
+
+#subscr{
+position: absolute;
+width: 30%;
+top: 100px;
+left: 36%;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+
+
+color: #646C9A;
+}
+
+#subscr1{
+position: relative;
+text-align: center;
+top: 100px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+
+
+color: #646C9A;
+}
+
+#subscr2{
+position: relative;
+text-align: center;
+top: 100px;
+display: none;
+left: 38%;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+
+
+color: #646C9A;
+}
+
+#Password1 {
+display: none;
+}
+
+#Password2 {
+display: none;
+}
+
+#sign_up{
+position: absolute;
+width: 196px;
+height: 48px;
+left: 38%;
+top: 137px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+
+
+}
+
+.fields{
+position: absolute;
+width: 100%;
+height: 100%;
+left: 20%;
+top: 190px;
+}
+
+.fields1{
+position: absolute;
+width: 100%;
+height: 100%;
+left: 20%;
+top: 200px;
+}
+
+input{
+border: 1px solid #E2E5EC;
+box-sizing: border-box;
+font-size: 14px;
+border-radius: 4px;
+width: 60%;
+height: 8%;
+margin-top: 15px;
+padding-left: 10px;
+}
+.btn{
+margin-top: 40px;
+font-size: 16px;
+color: #FFFFFF;
+background: #3758FF;
+}
+
+#btn1{
+margin-top: 40px;
+font-size: 16px;
+color: #FFFFFF;
+background: #3758FF;
+display: none;
+}
+
+.psw{
+position: absolute;
+left: 240px;
+top: 400px;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+text-decoration: none;
+
+color: #2F2E41;
+}
+
+.left_toolbar {
+background-color: #1E1E2D;
+margin: 0px;
+}
+
+#logo {
+margin-top: 50px;
+width: 30%;
+height: 15%;
+margin-left: 30%;
+}
+
+#group {
+margin-top: 200px;
+margin-left: 15%;
+width: 70%;
+height: 25%;
+}
+
+@media only screen and (max-width:1690px){
+    #word{
+        position: absolute;
+        left: 43%;
+        text-align: center;
+        top: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        /* identical to box height */
+        color: #434349;
+     }
+    #subscr{
+        position: absolute;
+        width: 37%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+        #sign_up{
+            position: absolute;
+            width: 196px;
+            height: 48px;
+            left: 36%;
+            top: 137px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            
+            
+            }
+            .psw{
+                position: absolute;
+                left: 42%;
+                top: 400px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                /* identical to box height */
+                text-decoration: none;
+                
+                color: #2F2E41;
+                }
+}
+
+@media only screen and (max-width:1511px){
+    #word{
+        position: absolute;
+        left: 43%;
+        text-align: center;
+        top: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        /* identical to box height */
+        color: #434349;
+     }
+    #subscr{
+        position: absolute;
+        width: 41%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+        #sign_up{
+            position: absolute;
+            width: 196px;
+            height: 48px;
+            left: 36%;
+            top: 137px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            
+            
+            }
+            .psw{
+                position: absolute;
+                left: 42%;
+                top: 400px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                /* identical to box height */
+                text-decoration: none;
+                
+                color: #2F2E41;
+                }
+}
+
+@media only screen and (max-width:1363px){
+    .log{
+        position: absolute;
+        width: 38%;
+        height: 50%;
+        right: 16%;
+        top: 236px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-left: 310px;
+        
+        }
+    #word{
+        position: absolute;
+        left: 43%;
+        text-align: center;
+        top: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        /* identical to box height */
+        color: #434349;
+     }
+    #subscr{
+        position: absolute;
+        width: 35%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+        #sign_up{
+            position: absolute;
+            width: 196px;
+            height: 48px;
+            left: 36%;
+            top: 137px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            
+            
+            }
+            .psw{
+                position: absolute;
+                left: 42%;
+                top: 400px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                /* identical to box height */
+                text-decoration: none;
+                
+                color: #2F2E41;
+                }
+}
+
+@media only screen and (max-width:1219px){
+    
+    #subscr{
+        position: absolute;
+        width: 39.5%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+       
+}
+
+@media only screen and (max-width:1080px){
+    
+    #subscr{
+        position: absolute;
+        width: 44.6%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+       
+}
+
+@media only screen and (max-width:956px){
+    
+    #subscr{
+        position: absolute;
+        width: 50.3%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+       
+}
+
+
+@media only screen and (max-width:848px){
+    .left_toolbar {
+        display: none;
+        background-color: #1E1E2D;
+        margin: 0px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 0% 100%;
+            grid-template-rows: 100%;
+            height: 949px;
+            }
+            
+            .log{
+            position: absolute;
+            width: 60%;
+            height: 50%;
+            right: 20%;
+            top: 236px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            margin-left: 310px;
+            
+            }
+
+    #subscr{
+        position: absolute;
+        width: 35.9%;
+        top: 100px;
+        left: 34%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+       
+}
+
+@media only screen and (min-device-width:1024px) and (max-device-width:1366px){
+   
+
+        .container {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100%;
+            height: 1450px;
+            }
+            
+            .log{
+            position: absolute;
+            width: 60%;
+            height: 50%;
+            right: 7.5%;
+            top: 280px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            margin-left: 310px;
+            
+            }
+            #word{
+                position: absolute;
+                left: 45%;
+                text-align: center;
+                top: 50px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 26px;
+                line-height: 36px;
+                /* identical to box height */
+                color: #434349;
+             }
+            
+    #subscr{
+        position: absolute;
+        width: 29.7%;
+        top: 100px;
+        left: 36%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        
+        
+        color: #646C9A;
+        }
+
+
+        #sign_up{
+            position: absolute;
+            width: 196px;
+            height: 48px;
+            left: 40%;
+            top: 138px;
+            
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            
+            
+            }
+            .psw{
+                position: absolute;
+                left: 42%;
+                top: 450px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                /* identical to box height */
+                text-decoration: none;
+                
+                color: #2F2E41;
+                }
+
+       
+}
+
+@media only screen and (min-device-width:320px) and (max-device-width:612px){
+   
+
+    .container {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 100%;
+        height: 450px;
+        }
+        
+        .log{
+        position: absolute;
+        width: 90%;
+        height: 70%;
+        right: 5%;
+        top: 80px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-left: 310px;
+        
+        }
+        #word{
+            position: absolute;
+            left: 40%;
+            text-align: center;
+            top: 10px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 36px;
+            /* identical to box height */
+            color: #434349;
+         }
+        
+#subscr{
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    left: 25%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    
+    
+    color: #646C9A;
+    }
+
+
+    #sign_up{
+        position: absolute;
+        width: 196px;
+        height: 48px;
+        left: 24%;
+        top: 85px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        
+        
+        }
+
+        .fields{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 20%;
+            top: 130px;
+            }
+        .psw{
+            position: absolute;
+            left: 34%;
+            top: 76%;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+            text-decoration: none;
+            
+            color: #2F2E41;
+            }
+
+   
+}
+@media only screen and (min-device-width:360px) and (max-device-width:612px) and (min-device-height:667px){
+   
+
+    .container {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 100%;
+        height: 450px;
+        }
+        
+        .log{
+        position: absolute;
+        width: 90%;
+        height: 70%;
+        right: 5%;
+        top: 80px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-left: 310px;
+        
+        }
+        #word{
+            position: absolute;
+            left: 41%;
+            text-align: center;
+            top: 10px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 36px;
+            /* identical to box height */
+            color: #434349;
+         }
+        
+#subscr{
+    position: absolute;
+    width: 47%;
+    top: 50px;
+    left: 30%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    
+    
+    color: #646C9A;
+    }
+
+
+    #sign_up{
+        position: absolute;
+        width: 196px;
+        height: 48px;
+        left: 29%;
+        top: 85px;
+        
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        
+        
+        }
+
+        .fields{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 20%;
+            top: 130px;
+            }
+        .psw{
+            position: absolute;
+           left: 38%;
+            top: 68%;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+            text-decoration: none;
+            
+            color: #2F2E41;
+            }
+
+   
+}
