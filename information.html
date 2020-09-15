@@ -76,17 +76,22 @@
                                         <img  id="avatar" src="/src/assets/images/avatar.png" alt="avatar">
                                         <img id="camera" src="/src/assets/images/camera.png" alt="camera">
                                     </div>
-                                        <div class="second2">
-                                            <p id="user_info">Start date: 15.06.2020</p><br>
-                                            <p id="info">name surname <img id="edit" src="/src/assets/images/edit.png" alt="edit"></p>
-                                            <p id="user_info1"><img id="mail" src="/src/assets/images/mail.png" alt="mail"> email@gmail.com <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
-                                            <p id="user_info2"><img id="mail" src="/src/assets/images/phone.png" alt="phone"> +3458799654125 <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
-                                        </div>
+                                    <div id="user_inform">
+                                      <div class="second2" >
+                                        <p id="user_info" v-model="start">Start date: {{start}}</p><br>
+                                        <p id="info" v-model="name">{{name}} <img id="edit" src="/src/assets/images/edit.png" alt="edit"></p>
+                                        <p id="user_info1" v-model="mail"><img id="mail" src="/src/assets/images/mail.png" alt="mail"> {{mail}} <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
+                                        <p id="user_info2" v-model="number_phone"><img id="mail" src="/src/assets/images/phone.png" alt="phone"> {{number_phone}} <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
+                                      </div>
+                                    </div>
+                                      <div id="end">
                                         <div class="third2">
-                                            <p id="user_info">End date: 20.06.2020</p><br>
-                                            <p id="user_info3"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
-                                            <p id="user_info4"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
-                                        </div>
+                                        <p id="user_info" v-model="end">End date: {{end}}</p><br>
+                                        <p id="user_info3"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
+                                        <p id="user_info4"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
+                                    </div>
+                                  </div>
+
                                   </div>
                                   <div id="up_info">
                                     <div id="company_informations" class="tabcontent2">
@@ -133,7 +138,7 @@
                                               <p id="input text">Fax:</p><br>
                                               <input id="Fax" type="text" v-model="Fax"><br>
                                               <p id="input text">Address:</p><br>
-                                              <textarea name="Address" v-model="address1" id="Address1" cols="21%" rows="4"></textarea>
+                                              <textarea name="Address" v-model="Address1" id="Address1" cols="21%" rows="4"></textarea>
                                               <p id="notinput_text">Authorized contact information</p>
                                               <p id="input text">GSM:</p><br>
                                               <input id="GSM" v-model="GSM" type="text">
@@ -143,153 +148,156 @@
                                           <input type="button"  id="button1" value="Save" @click="chekUsers">
                                       </div>
                                   </div>
-                                  <div id="payments" class="tabcontent2">
-                                    <div class="first3">
-                                      <p id="card">Your cards</p>
-                                      <div class="pay">
-                                        <img id="card1" src="/src/assets/images/image 7.png" alt="logo">
-                                        <p class="text_inside">Card number</p>
-                                        <p class="nums_inside">**** **** **** 2345</p>
-                                        <p class="text_inside2">Card holder name</p>
-                                        <p class="tex_inside">Name Surname</p>
-                                        <p class="text_inside1">Expiration date</p>
-                                        <p class="tex_inside1">10/2027</p>
-                                    </div>
-                                    <p id="card_1">Payment history</p>
-                                    <div class="demo">
-                                      <ul class="hr">
-                                        <li id="block1">$65.00</li>
-                                         <li id="pending">Pending</li>
-                                          <li id="right1">May 10, 2020</li>
-                                           <li id="fit">Visa 5432</li>
-                                      </ul>
-                                          <input type="checkbox" id="hd-1" class="hide"/>
-                                          <label id="hd-1-1" for="hd-1" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                          <div>
-                                            <div class="history">
-                                              <div class="one">
-                                                <div class="pay2">
-                                                    <p class="text_inside10">Card number</p>
-                                                    <p class="nums_inside10">**** **** **** 2345</p>
-                                                    <p class="text_inside20">Card holder name</p>
-                                                    <p class="tex_inside10">Name Surname</p>
-                                                    <img id="card1-1" src="/src/assets/images/image 7.png" alt="logo">
-                                                    <p class="text_inside11">Expiration date</p>
-                                                    <p class="tex_inside12">10/2027</p>
-                                              </div>
-
-                                              </div>
-                                              <div class="two">
-                                                <p class="ht">Status</p>
-                                                <p class="ht-1">Pending</p>
-                                                <p class="ht">ID number</p>
-                                                <p class="ht-1">EKG2SJFN</p>
-                                              </div>
-                                              <div class="three">
-                                                <p class="ht">Invoice date</p>
-                                                <p class="ht-1">May 10, 2020</p>
-                                                <p class="ht">Date paid</p>
-                                                <p class="ht-1">May 10, 2020</p>
-                                                <div class="vl"></div>
-                                              </div>
-                                              <div class="four">
-                                                <p class="ht">Amount due</p>
-                                                <p class="ht-2">$65</p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <br/>
-                                          <br/>
-                                          <ul class="hr">
-                                              <li id="block1">$250.00</li>
-                                              <li id="completed1">Completed</li>
-                                                <li id="right3">Apr 10, 2020</li>
-                                                <li id="left">Visa 5432</li>
-                                      </ul>
-                                          <input type="checkbox" id="hd-2" class="hide"/>
-                                          <label id="hd-1-1" for="hd-2"><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                          <div>
-                                            <div class="history">
-                                              <div class="one">
-                                                <div class="pay3">
-                                                    <p class="text_inside10">Card number</p>
-                                                    <p class="nums_inside10">**** **** **** 2345</p>
-                                                    <p class="text_inside20">Card holder name</p>
-                                                    <p class="tex_inside10">Name Surname</p>
-                                                    <img id="card1-2" src="/src/assets/images/image 7.png" alt="logo">
-                                                    <p class="text_inside11">Expiration date</p>
-                                                    <p class="tex_inside12">10/2027</p>
-
-                                              </div>
-                                              </div>
-                                              <div class="two">
-                                                <p class="ht">Status</p>
-                                                <p class="ht-1">Completed</p>
-                                                <p class="ht">ID number</p>
-                                                <p class="ht-1">EKG2SJFN</p>
-                                              </div>
-                                              <div class="three">
-                                                <p class="ht">Invoice date</p>
-                                                <p class="ht-1">Apr 10, 2020</p>
-                                                <p class="ht">Date paid</p>
-                                                <p class="ht-1">Apr 10, 2020</p>
-                                                <div class="vl"></div>
-                                              </div>
-                                              <div class="four">
-                                                <p class="ht">Amount due</p>
-                                                <p class="ht-2">$250</p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <br/>
-                                          <br/>
-                                          <ul class="hr">
-                                              <li id="block1">$50.00</li>
-                                              <li id="completed">Completed</li>
-                                                <li id="right">Mar 10, 2020</li>
-                                                <li id="fit">Visa 5432</li>
-                                      </ul>
-                                          <input type="checkbox" id="hd-3" class="hide"/>
-                                          <label id="hd-1-1" for="hd-3" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                          <div>
-                                            <div class="history">
-                                              <div class="one">
-                                                <div class="pay4">
-                                                  <img id="card1-3" src="/src/assets/images/image 7.png" alt="logo">
-                                                  <p class="text_inside10">Card number</p>
-                                                  <p class="nums_inside10">**** **** **** 2345</p>
-                                                  <p class="text_inside20">Card holder name</p>
-                                                  <p class="tex_inside10">Name Surname</p>
-                                                  <p class="text_inside11">Expiration date</p>
-                                                  <p class="tex_inside12">10/2027</p>
-                                              </div>
-                                              </div>
-                                              <div class="two">
-                                                <p class="ht">Status</p>
-                                                <p class="ht-1">Completed</p>
-                                                <p class="ht">ID number</p>
-                                                <p class="ht-1">EKG2SJFN</p>
-                                              </div>
-                                              <div class="three">
-                                                <p class="ht">Invoice date</p>
-                                                <p class="ht-1">Mar 10, 2020</p>
-                                                <p class="ht">Date paid</p>
-                                                <p class="ht-1">Mar 10, 2020</p>
-                                                <div class="vl"></div>
-                                              </div>
-                                              <div class="four">
-                                                <p class="ht">Amount due</p>
-                                                <p class="ht-2">$50</p>
-                                              </div>
-                                            </div>
-                                          </div>
+                                  <div id="get_pay">
+                                    <div id="payments" class="tabcontent2">
+                                      <div class="first3">
+                                        <p id="card">Your cards</p>
+                                        <div class="pay">
+                                          <img id="card1" src="/src/assets/images/image 7.png" alt="logo">
+                                          <p class="text_inside">Card number</p>
+                                          <p class="nums_inside">**** **** **** 2345</p>
+                                          <p class="text_inside2">Card holder name</p>
+                                          <p class="tex_inside">Name Surname</p>
+                                          <p class="text_inside1">Expiration date</p>
+                                          <p class="tex_inside1">10/2027</p>
                                       </div>
-                                    </div>
-                                    <div class="second3">
+                                      <p id="card_1">Payment history</p>
+                                      <div class="demo">
+                                        <ul class="hr">
+                                          <li id="block1">$65.00</li>
+                                           <li id="pending">Pending</li>
+                                            <li id="right1">May 10, 2020</li>
+                                             <li id="fit">Visa 5432</li>
+                                        </ul>
+                                            <input type="checkbox" id="hd-1" class="hide"/>
+                                            <label id="hd-1-1" for="hd-1" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                                            <div>
+                                              <div class="history">
+                                                <div class="one">
+                                                  <div class="pay2">
+                                                      <p class="text_inside10">Card number</p>
+                                                      <p class="nums_inside10">**** **** **** 2345</p>
+                                                      <p class="text_inside20">Card holder name</p>
+                                                      <p class="tex_inside10">Name Surname</p>
+                                                      <img id="card1-1" src="/src/assets/images/image 7.png" alt="logo">
+                                                      <p class="text_inside11">Expiration date</p>
+                                                      <p class="tex_inside12">10/2027</p>
+                                                </div>
+
+                                                </div>
+                                                <div class="two">
+                                                  <p class="ht">Status</p>
+                                                  <p class="ht-1">Pending</p>
+                                                  <p class="ht">ID number</p>
+                                                  <p class="ht-1">EKG2SJFN</p>
+                                                </div>
+                                                <div class="three">
+                                                  <p class="ht">Invoice date</p>
+                                                  <p class="ht-1">May 10, 2020</p>
+                                                  <p class="ht">Date paid</p>
+                                                  <p class="ht-1">May 10, 2020</p>
+                                                  <div class="vl"></div>
+                                                </div>
+                                                <div class="four">
+                                                  <p class="ht">Amount due</p>
+                                                  <p class="ht-2">$65</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <ul class="hr">
+                                                <li id="block1">$250.00</li>
+                                                <li id="completed1">Completed</li>
+                                                  <li id="right3">Apr 10, 2020</li>
+                                                  <li id="left">Visa 5432</li>
+                                        </ul>
+                                            <input type="checkbox" id="hd-2" class="hide"/>
+                                            <label id="hd-1-1" for="hd-2"><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                                            <div>
+                                              <div class="history">
+                                                <div class="one">
+                                                  <div class="pay3">
+                                                      <p class="text_inside10">Card number</p>
+                                                      <p class="nums_inside10">**** **** **** 2345</p>
+                                                      <p class="text_inside20">Card holder name</p>
+                                                      <p class="tex_inside10">Name Surname</p>
+                                                      <img id="card1-2" src="/src/assets/images/image 7.png" alt="logo">
+                                                      <p class="text_inside11">Expiration date</p>
+                                                      <p class="tex_inside12">10/2027</p>
+
+                                                </div>
+                                                </div>
+                                                <div class="two">
+                                                  <p class="ht">Status</p>
+                                                  <p class="ht-1">Completed</p>
+                                                  <p class="ht">ID number</p>
+                                                  <p class="ht-1">EKG2SJFN</p>
+                                                </div>
+                                                <div class="three">
+                                                  <p class="ht">Invoice date</p>
+                                                  <p class="ht-1">Apr 10, 2020</p>
+                                                  <p class="ht">Date paid</p>
+                                                  <p class="ht-1">Apr 10, 2020</p>
+                                                  <div class="vl"></div>
+                                                </div>
+                                                <div class="four">
+                                                  <p class="ht">Amount due</p>
+                                                  <p class="ht-2">$250</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <ul class="hr">
+                                                <li id="block1">$50.00</li>
+                                                <li id="completed">Completed</li>
+                                                  <li id="right">Mar 10, 2020</li>
+                                                  <li id="fit">Visa 5432</li>
+                                        </ul>
+                                            <input type="checkbox" id="hd-3" class="hide"/>
+                                            <label id="hd-1-1" for="hd-3" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                                            <div>
+                                              <div class="history">
+                                                <div class="one">
+                                                  <div class="pay4">
+                                                    <img id="card1-3" src="/src/assets/images/image 7.png" alt="logo">
+                                                    <p class="text_inside10">Card number</p>
+                                                    <p class="nums_inside10">**** **** **** 2345</p>
+                                                    <p class="text_inside20">Card holder name</p>
+                                                    <p class="tex_inside10">Name Surname</p>
+                                                    <p class="text_inside11">Expiration date</p>
+                                                    <p class="tex_inside12">10/2027</p>
+                                                </div>
+                                                </div>
+                                                <div class="two">
+                                                  <p class="ht">Status</p>
+                                                  <p class="ht-1">Completed</p>
+                                                  <p class="ht">ID number</p>
+                                                  <p class="ht-1">EKG2SJFN</p>
+                                                </div>
+                                                <div class="three">
+                                                  <p class="ht">Invoice date</p>
+                                                  <p class="ht-1">Mar 10, 2020</p>
+                                                  <p class="ht">Date paid</p>
+                                                  <p class="ht-1">Mar 10, 2020</p>
+                                                  <div class="vl"></div>
+                                                </div>
+                                                <div class="four">
+                                                  <p class="ht">Amount due</p>
+                                                  <p class="ht-2">$50</p>
+                                                </div>
+                                              </div>
+                                            </div>
                                         </div>
-                                    <div class="third3">
-                                    </div>
-                                </div>
+                                      </div>
+                                      <div class="second3">
+                                          </div>
+                                      <div class="third3">
+                                      </div>
+                                  </div>
+                                  </div>
+
                             </div>
                                 <div data-v-60a8d82a="" class="col-md-4 kt-margin-b-20-tablet-and-mobile"></div>
                               </div>
