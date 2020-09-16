@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>İltechSoft | Dashboard</title>
+  <meta name="description" content="Updates and statistics">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="/src/assets/css/log.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left_toolbar">
+            <img id="logo" src="/src/assets/images/logo.png" alt="logo">
+            <img id="group" src="/src/assets/images/group.png" alt="group">
+        </div>
+        <div class="log">
+            <h1 id="word">Giriş Yap</h1>
+            <h2 id="subscr">Hesabınıza giriş yapın ya da linke tıklayarak <a id="" href="choose.html">Kayıt Olun</a>
+            </h2>
+            <div class="fields">
+                <input id="Username" type="text" placeholder="Kullanıcı Adı" required>
+                <input id="Password" type="password" placeholder="Şifre" required>
+                <a><input class="btn" type="button" value="Giriş Yap" onclick="getUsers()"></a>
+            </div>
+            <a class = "psw" href="changePassword.html">Şifremi Unuttum ?</a>
+        </div>
+    </div>
+
+  <!--  <script src="enter.js"></script>-->
+    
+    <script type="text/javascript">
+
+    function getUsers() {
+      
+        var xhr = new XMLHttpRequest();
+          
+        xhr.addEventListener("readystatechange", function()  {
+          if(this.readyState === 4) {
+           // console.log(this.responseText);
+            var resultText = xhr.responseText;
+            console.log(resultText);
+
+            if(resultText.length < 5) {
+
+              //user not found
+                window.alert("Kullanıcı Bulunamadı");
+                return;
+            }
+      
+            var obj  = JSON.parse(resultText.replace("[","").replace("]",""));
+
+
+            localStorage.clear();
+            localStorage.setItem("user_id",obj.id);
+            document.location.href = "index.html";
+            
+          }
+        })
+      
+        xhr.open("GET", "http://localhost:3000/users?username=eq." + document.getElementById("Username").value + "&password=eq." + document.getElementById("Password").value );
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send();
+      
+      }
+
+    </script>
+</body>
+</html>

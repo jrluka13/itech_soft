@@ -285,8 +285,8 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
         let get_pay = data;
 
         if(get_pay.length !=0){
-            let end = new Vue ({
-                el:'#end',
+            new Vue ({
+                el:'#get_pay',
                 data:{
 
                 },

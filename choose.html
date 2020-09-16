@@ -14,71 +14,76 @@
             <img id="group" src="/src/assets/images/group.png" alt="group">
         </div>
         <div class="reg">
-            <h1 id="sign">Sign up</h1>
+            <h1 id="sign">Kayıt Ol</h1>
             <form action="#">
-                <p id="sign1">Please choose your company type:</p>
-                <label for="first" id="first_label">Public company</label>
-                <input type="checkbox" name="type" id="first" onchange="personal()">
-                <label for="second" id="second_label">Personal company</label>
-                <input type="checkbox" name="type" id="second" onchange="company()">
+                <p id="sign1">Lütfen şirket tipini seçiniz:</p>
+                <label for="first" id="first_label">Şirket </label>
+                <input type="checkbox" name="type" id="first" onchange="company()">
+                <label for="second" id="second_label">Kişisel </label>
+                <input type="checkbox" name="type" id="second" onchange="personal()">
             </form>
             <img src="/src/assets/images/group5.png" id="check" alt="check">
             <div id="app">
-                <div class="fields" id="fields">
-                    <input id="Username1" v-model="Username1" type="text" placeholder="Username">
-                    <input id="Password1" v-model="Password1" type="password" placeholder="Password">
-                    <input id="Email1" v-model="Email1" type="text" placeholder="Email">
-                    <input id="mobile phone number1" v-model="mobile_phone_number1" type="text" placeholder="phone number">
-                    <input id="membership type : Company title" v-model="membership_type" type="text" placeholder="membership type : Company title">
-                    <input id="Company_title1" v-model="Company_title1" type="text" placeholder="company title">
-                    <input id="compnay type" v-model="compnay_type" type="text" placeholder="compnay type:">
-                    <input id="Company_register_number1" v-model="Company_register_number1" type="text" placeholder="company register number:">
-                    <input id="Kep_address1" v-model="Kep_address1" type="text" placeholder="Kep Address">
-                    <input id="Tax_office_city1" v-model="Tax_office_city1" type="text" placeholder="Tax Office City">
-                    <input id="Tax Office" v-model="Tax_Office" type="text" placeholder="Tax Office:">
-                    <input id="Tax_number1" v-model="Tax_number1" type="text" placeholder="tax number:">
-                </div>
-                <div class="field1" id="field1">
-                    <p class="text_css">Signature officer</p>
-                    <input class="top_1" id="name surnmae1" v-model="name_surnmae1" type="text" placeholder="name surnmae:">
-                    <input id="title of person1" v-model="title_of_person1" type="text" placeholder="title of person:">
-                    <p class="text_css" id="text_form">Company contact information</p>
-                    <input class="top_1" id="Local_no1" v-model="Local_no1" type="text" placeholder="local no">
-                    <input id="mobile No1" type="text" v-model="mobile_No1" placeholder="mobile no">
-                    <input id="Fax1" type="text" v-model="Fax1" placeholder="Fax">
-                    <textarea name="Address" id="Address1" v-model="Address1" cols="39" rows="4" placeholder="address"></textarea>
-                    <p class="text_css" id="text_form">Authorized contact information</p>
-                    <input class="top_1" id="GSM1" type="text" placeholder="GSM">
-                    <input id="Personal_Email1" v-model="Personal_Email1" type="text" placeholder="Email">
-                    <a href="pay.html"><input class="btn2" id="btn3" type="button" value="Confirm" @click="postUsers"></a>
-                </div>
-                <div class="field2" id="field2">
-                    <input id="Personal_Username" v-model="Personal_Username" type="text" placeholder="Username">
-                    <input id="Personal_Password" v-model="Personal_Password" type="password" placeholder="Password">
-                    <input id="Email" v-model="Email" type="text" placeholder="Email">
-                    <input id="mobile phone number" v-model="mobile_phone_number" type="text" placeholder="Mobile No">
-                    <input id="Company_title" v-model="Company_title" type="text" placeholder="Company title">
-                    <input id="Registered_trademark" v-model="Registered_trademark" type="text" placeholder="Registered trademark">
-                    <input id="Company_register_number" v-model="Company_register_number" type="text" placeholder="Сompany register number">
-                    <input id="Trade_registration_number" v-model="Trade_registration_number" type="text" placeholder="Trade registration number">
-                    <input id="Kep_address" v-model="Kep_address" type="text" placeholder="Kep Address">
-                    <input id="Tax_office_city" v-model="Tax_office_city" type="text" placeholder="Tax Office City">
-                    <input id="Tax_number" v-model="Tax_number" type="text" placeholder="tax number:">
-                    </div>
-                    <div class="field3" id="field3">
-                    <p class="text_css">Signature officer</p>
-                    <input class="top" id="name surnmae" v-model="name_surnmae" type="text" placeholder="name surnmae:">
-                    <input id="title of person" v-model="title_of_person" type="text" placeholder="title of person:">
-                    <p class="text_css" id="text">Company contact information</p>
-                    <input class="top" id="Local_no" v-model="Local_no" type="text" placeholder="local no:">
-                    <input id="mobile No" v-model="mobile_No" type="text" placeholder="Mobile No:">
-                    <input id="Fax" v-model="Fax" type="text" placeholder="Fax">
-                    <textarea name="Address1" id="Address" v-model="Address" cols="39" rows="4" placeholder="Address"></textarea>
-                    <p class="text_css">Authorized contact information</p>
-                    <input class="top" id="GSM"  type="text" placeholder="GSM">
-                    <input id="Personal_Email" v-model="Personal_Email" type="text" placeholder="Email">
-                    <a href="pay.html"><input class="btn2" id="btn2" type="button" value="Confirm" @click="postUsers"></a>
-                    </div>
+ <!--Şirket Form, Company Form-->
+ <div class="fields" id="fields">
+  <input id="username1" v-model="username1" type="text" placeholder="Kullanıcı Adı">
+  <input id="password1" v-model="password1" type="password" placeholder="Şifre">
+  <input id="email1" v-model="email1" type="text" placeholder="Email">
+  <input id="mobile_phone_number1" v-model="mobile_phone_number1" type="text" placeholder="Cep Telefonu">
+  <input id="company_title1" v-model="company_title1" type="text" placeholder="Şirket Ünvanı">
+  <input id="company_type1" v-model="compnay_type1" type="text" placeholder="Şirket Türü">
+  <input id="registered_trademark1" v-model="registered_trademark1" type="text" placeholder="Tescilli Marka">
+  <input id="mersis_no1" v-model="mersis_no1" type="text" placeholder="Mersis Numarası">
+  <input id="company_register_number1" v-model="Company_register_number1" type="text" placeholder="Kayıtlı Olduğu Ticaret Odası">
+  <input id="trade_registeration_number1" v-model="trade_registeration_number1" type="text" placeholder="Ticaret Sicil Numarası">
+  <input id="kep_address1" v-model="kep_address1" type="text" placeholder="Kep Addresi">
+  <input id="tax_office_city1"  v-model="tax_office_city1" type="text" placeholder="Vergi Dairesi İl">
+  <input id="tax_office1" v-model="tax_office1" type="text" placeholder="Vergi Dairesi">
+</div>
+<div class="field1" id="field1">
+  <input id="tax_number1" v-model="tax_number1" type="text" placeholder="Vergi No">
+  <p class="text_css">İmza Yetkilisi</p>
+  <input class="top_1" id="signature_officer_name_surname1" v-model="signature_officer_name_surname1" type="text" placeholder="Adı Soyadı">
+  <input id="signature_officer_title1" v-model="signature_officer_title1" type="text" placeholder="Ünvanı">
+  <p class="text_css" id="text_form">Şirket İletişim bilgileri</p>
+  <input class="top_1" id="company_local_no1" v-model="company_local_no1" type="text" placeholder="Sabit">
+  <input id="company_mobile_no1" v-model="company_mobile_no1" type="text" placeholder="GSM No">
+  <input id="company_fax_no1" v-model="company_fax_no1" type="text" placeholder="Fax">
+  <textarea name="company_address1" id="company_address1" v-model="company_address1" cols="39" rows="4" placeholder="Adres"></textarea>
+  <p class="text_css" id="text_form">Yetkili İletişim Bilgileri</p>
+  <input class="top_1" id="contact_person_mobile_no1" v-model="contact_person_mobile_no1" type="text" placeholder="GSM">
+  <input id="contact_person_email1" v-model="contact_person_email1" type="text" placeholder="Email">
+  <a><input class="btn2" type="button" value="Devam Et"  @click="postUsers"></a>
+</div>
+
+<!--Kişisel Form, Personal Company Form-->
+<div class="field2" id="field2">
+  <input id="username2" v-model="username2" type="text" placeholder="Kullanıcı adı">
+  <input id="password2" v-model="password2" type="password" placeholder="Şifre">
+  <input id="email2" v-model="email2" type="text" placeholder="Email">
+  <input id="mobile_phone_number2" v-model="mobile_phone_number2" type="text" placeholder="Cep telefonu">
+  <input id="company_title2" v-model="company_title2" type="text" placeholder="Şirket Ünvanı">
+  <input id="registered_trademark2" v-model="registered_trademark2" type="text" placeholder="Tescilli Marka">
+  <input id="company_register_number2" v-model="company_register_number2" type="text" placeholder="Сompany register number">
+  <input id="trade_registration_number2" v-model="trade_registration_number2" type="text" placeholder="Sicil no">
+  <input id="kep_address2" v-model="kep_address2" type="text" placeholder="Kep Adresi">
+  <input id="tax_office_city2" v-model="tax_office_city2" type="text" placeholder="Vergi Dairesi İl">
+  <input id="tax_number2" v-model="tax_number2" type="text" placeholder="Vergi Numarası">
+  </div>
+  <div class="field3" id="field3">
+  <p class="text_css">Signature officer</p>
+  <input class="top" id="name surnmae" v-model="name_surnmae" type="text" placeholder="name surnmae:">
+  <input id="title of person" v-model="title_of_person" type="text" placeholder="title of person:">
+  <p class="text_css" id="text">Company contact information</p>
+  <input class="top" id="Local_no" v-model="Local_no" type="text" placeholder="local no:">
+  <input id="mobile No" v-model="mobile_No" type="text" placeholder="Mobile No:">
+  <input id="Fax" v-model="Fax" type="text" placeholder="Fax">
+  <textarea name="Address1" id="Address" v-model="Address" cols="39" rows="4" placeholder="Address"></textarea>
+  <p class="text_css">Authorized contact information</p>
+  <input class="top" id="GSM" v-model="GSM" type="text" placeholder="GSM">
+  <input id="Personal_Email" v-model="Personal_Email" type="text" placeholder="Email">
+  <a><input class="btn2" id="btn2" type="button" value="Devam Et2" @click="postUsers1"></a>
+  </div>
             </div>
 
             <input class="btn1" id="btn1" type="button" value="Confirm" onclick="personal()">
@@ -88,5 +93,143 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
    <script src="post.js"></script>
    <script src="hide.js"></script>
+   <!-- <script type="text/javascript">
+
+    function addCompanyUser() {
+
+   var xmlhttp = new XMLHttpRequest();
+   var theUrl = "http://localhost:3000/users";
+
+
+   //Şirket Tipi kullanıcı
+   var addProductData = {
+
+                "username":"___username___",
+                "password":"___password___",
+                "email":"___email___",
+                "mobile_phone_number":"___mobile_phone_number___",
+                "company_title":"___company_title___",
+                "company_type":"___company_type___",
+                "registered_trademark": "___registered_trademark___",
+                "mersis_no":"___mersis_no___",
+
+                "company_register_number":"___company_register_number___",
+                "trade_registration_number":"___trade_register_number___",
+
+                "kep_address":"___kep_address___",
+                "tax_office_city":"___tax_office_city___",
+                "tax_office_name":"___tax_office___",
+                "tax_number":"___tax_number___",
+                "signature_officer_title":"___signature_officer_title___",
+                "signature_officer_name_surname":"___signature_officer_name_surname___",
+                "company_local_no":"___company_local_no___",
+                "company_mobile_no":"___company_mobile_no___",
+                "company_fax_no":"___company_fax_no___",
+                "company_address":"___company_address___",
+                "contact_person_mobile_no":"___contact_person_mobile_no___",
+                "contact_person_email":"___contact_person_email___"  ,
+                "membership_type":"company"
+           }
+
+   var postData = JSON.stringify(addProductData);
+
+   postData = postData.replace("___username___",document.getElementById("username1").value);
+   postData = postData.replace("___password___",document.getElementById("password1").value);
+   postData = postData.replace("___email___",document.getElementById("email1").value);
+   postData = postData.replace("___mobile_phone_number___",document.getElementById("mobile_phone_number1").value);
+   postData = postData.replace("___company_title___",document.getElementById("company_title1").value);
+   postData = postData.replace("___company_type___",document.getElementById("company_type1").value);
+   postData = postData.replace("___registered_trademark___",document.getElementById("registered_trademark1").value);
+   postData = postData.replace("___mersis_no___",document.getElementById("mersis_no1").value);
+   postData = postData.replace("___company_register_number___",document.getElementById("company_register_number1").value);
+   postData = postData.replace("___trade_register_number___",document.getElementById("trade_registeration_number1").value);
+   postData = postData.replace("___kep_address___",document.getElementById("kep_address1").value);
+   postData = postData.replace("___tax_office_city___",document.getElementById("tax_office_city1").value);
+   postData = postData.replace("___tax_office___",document.getElementById("tax_office1").value);
+   postData = postData.replace("___tax_number___",document.getElementById("tax_number1").value);
+   postData = postData.replace("___signature_officer_title___",document.getElementById("signature_officer_title1").value);
+   postData = postData.replace("___signature_officer_name_surname___",document.getElementById("signature_officer_name_surname1").value);
+   postData = postData.replace("___company_local_no___",document.getElementById("company_local_no1").value);
+   postData = postData.replace("___company_mobile_no___",document.getElementById("company_mobile_no1").value);
+   postData = postData.replace("___company_fax_no___",document.getElementById("company_fax_no1").value);
+   postData = postData.replace("___company_address___",document.getElementById("company_address1").value);
+   postData = postData.replace("___contact_person_mobile_no___",document.getElementById("contact_person_mobile_no1").value);
+   postData = postData.replace("___contact_person_email___",document.getElementById("contact_person_email1").value);
+
+
+   xmlhttp.open("POST", theUrl, true);
+   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+   xmlhttp.send(postData);
+
+   xmlhttp.addEventListener("readystatechange", function()  {
+       if(this.readyState === 4) {
+
+         var resultText = xmlhttp.responseText;
+         //window.alert(resultText);
+
+         if(resultText.length < 1) {
+
+            //setCookie("username",document.getElementById("username1").value,30);
+
+           window.alert("Kayıt Başarılı");
+           getRegisteredUserId(document.getElementById("username1").value);
+
+         }
+
+         else {
+
+           window.alert(resultText);
+
+         }
+
+
+       }
+     })
+
+   }
+
+
+function getRegisteredUserId(username) {
+
+var xhr = new XMLHttpRequest();
+
+xhr.addEventListener("readystatechange", function()  {
+  if(this.readyState === 4) {
+   // console.log(this.responseText);
+    var resultText = xhr.responseText;
+    console.log(resultText);
+
+    var obj = JSON.parse(resultText.replace("[","").replace("]",""));
+
+  //  window.alert(obj.id);
+
+
+    localStorage.setItem('user_id',obj.id);
+    document.location.href ="pay.html";
+
+
+
+  }
+})
+
+xhr.open("GET", "http://localhost:3000/users?username=eq." + username);
+xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+xhr.send();
+
+
+}
+
+//getRegisteredUserId("test");
+
+   function setCookie(cname,cvalue,exdays) {
+
+var d = new Date();
+d.setTime(d.getTime() + (exdays*24*60*60*1000));
+var expires = "expires=" + d.toGMTString();
+document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+   </script> -->
 </body>
 </html>
