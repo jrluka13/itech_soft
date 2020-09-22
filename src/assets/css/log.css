@@ -216,8 +216,8 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
@@ -227,15 +227,15 @@ height: 25%;
             height: 48px;
             left: 36%;
             top: 137px;
-            
+
             font-family: Poppins;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
             text-align: center;
-            
-            
+
+
             }
             .psw{
                 position: absolute;
@@ -248,7 +248,7 @@ height: 25%;
                 line-height: 18px;
                 /* identical to box height */
                 text-decoration: none;
-                
+
                 color: #2F2E41;
                 }
 }
@@ -277,8 +277,8 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
@@ -288,15 +288,15 @@ height: 25%;
             height: 48px;
             left: 36%;
             top: 137px;
-            
+
             font-family: Poppins;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
             text-align: center;
-            
-            
+
+
             }
             .psw{
                 position: absolute;
@@ -309,7 +309,7 @@ height: 25%;
                 line-height: 18px;
                 /* identical to box height */
                 text-decoration: none;
-                
+
                 color: #2F2E41;
                 }
 }
@@ -324,7 +324,7 @@ height: 25%;
         background: #FFFFFF;
         border-radius: 10px;
         margin-left: 310px;
-        
+
         }
     #word{
         position: absolute;
@@ -349,8 +349,8 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
@@ -360,15 +360,15 @@ height: 25%;
             height: 48px;
             left: 36%;
             top: 137px;
-            
+
             font-family: Poppins;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
             text-align: center;
-            
-            
+
+
             }
             .psw{
                 position: absolute;
@@ -381,13 +381,13 @@ height: 25%;
                 line-height: 18px;
                 /* identical to box height */
                 text-decoration: none;
-                
+
                 color: #2F2E41;
                 }
 }
 
 @media only screen and (max-width:1219px){
-    
+
     #subscr{
         position: absolute;
         width: 39.5%;
@@ -398,16 +398,16 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
-       
+
 }
 
 @media only screen and (max-width:1080px){
-    
+
     #subscr{
         position: absolute;
         width: 44.6%;
@@ -418,16 +418,16 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
-       
+
 }
 
 @media only screen and (max-width:956px){
-    
+
     #subscr{
         position: absolute;
         width: 50.3%;
@@ -438,12 +438,12 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
-       
+
 }
 
 
@@ -460,7 +460,7 @@ height: 25%;
             grid-template-rows: 100%;
             height: 949px;
             }
-            
+
             .log{
             position: absolute;
             width: 60%;
@@ -470,7 +470,7 @@ height: 25%;
             background: #FFFFFF;
             border-radius: 10px;
             margin-left: 310px;
-            
+
             }
 
     #subscr{
@@ -483,16 +483,16 @@ height: 25%;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
-       
+
 }
 
 @media only screen and (min-device-width:1024px) and (max-device-width:1366px){
-   
+
 
         .container {
             display: grid;
@@ -500,7 +500,7 @@ height: 25%;
             grid-template-rows: 100%;
             height: 1450px;
             }
-            
+
             .log{
             position: absolute;
             width: 60%;
@@ -510,7 +510,7 @@ height: 25%;
             background: #FFFFFF;
             border-radius: 10px;
             margin-left: 310px;
-            
+
             }
             #word{
                 position: absolute;
@@ -525,7 +525,7 @@ height: 25%;
                 /* identical to box height */
                 color: #434349;
              }
-            
+
     #subscr{
         position: absolute;
         width: 29.7%;
@@ -536,8 +536,8 @@ height: 25%;
         font-weight: normal;
         font-size: 18px;
         line-height: 24px;
-        
-        
+
+
         color: #646C9A;
         }
 
@@ -548,15 +548,15 @@ height: 25%;
             height: 48px;
             left: 40%;
             top: 138px;
-            
+
             font-family: Poppins;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
             line-height: 24px;
             text-align: center;
-            
-            
+
+
             }
             .psw{
                 position: absolute;
@@ -569,15 +569,15 @@ height: 25%;
                 line-height: 18px;
                 /* identical to box height */
                 text-decoration: none;
-                
+
                 color: #2F2E41;
                 }
 
-       
+
 }
 
 @media only screen and (min-device-width:320px) and (max-device-width:612px){
-   
+
 
     .container {
         display: grid;
@@ -585,7 +585,7 @@ height: 25%;
         grid-template-rows: 100%;
         height: 450px;
         }
-        
+
         .log{
         position: absolute;
         width: 90%;
@@ -595,7 +595,7 @@ height: 25%;
         background: #FFFFFF;
         border-radius: 10px;
         margin-left: 310px;
-        
+
         }
         #word{
             position: absolute;
@@ -610,7 +610,7 @@ height: 25%;
             /* identical to box height */
             color: #434349;
          }
-        
+
 #subscr{
     position: absolute;
     width: 50%;
@@ -621,8 +621,8 @@ height: 25%;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    
-    
+
+
     color: #646C9A;
     }
 
@@ -633,15 +633,15 @@ height: 25%;
         height: 48px;
         left: 24%;
         top: 85px;
-        
+
         font-family: Poppins;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
         text-align: center;
-        
-        
+
+
         }
 
         .fields{
@@ -662,14 +662,14 @@ height: 25%;
             line-height: 18px;
             /* identical to box height */
             text-decoration: none;
-            
+
             color: #2F2E41;
             }
 
-   
+
 }
 @media only screen and (min-device-width:360px) and (max-device-width:612px) and (min-device-height:667px){
-   
+
 
     .container {
         display: grid;
@@ -677,7 +677,7 @@ height: 25%;
         grid-template-rows: 100%;
         height: 450px;
         }
-        
+
         .log{
         position: absolute;
         width: 90%;
@@ -687,7 +687,7 @@ height: 25%;
         background: #FFFFFF;
         border-radius: 10px;
         margin-left: 310px;
-        
+
         }
         #word{
             position: absolute;
@@ -702,7 +702,7 @@ height: 25%;
             /* identical to box height */
             color: #434349;
          }
-        
+
 #subscr{
     position: absolute;
     width: 47%;
@@ -713,8 +713,8 @@ height: 25%;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    
-    
+
+
     color: #646C9A;
     }
 
@@ -725,15 +725,15 @@ height: 25%;
         height: 48px;
         left: 29%;
         top: 85px;
-        
+
         font-family: Poppins;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 24px;
         text-align: center;
-        
-        
+
+
         }
 
         .fields{
@@ -754,9 +754,9 @@ height: 25%;
             line-height: 18px;
             /* identical to box height */
             text-decoration: none;
-            
+
             color: #2F2E41;
             }
 
-   
+
 }

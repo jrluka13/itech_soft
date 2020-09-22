@@ -75,6 +75,9 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                             Membership_type: '',
                             Company_title: '',
                             Company_type: '',
+                            Registered_trademark: '',
+                            Mersis_no: '',
+                            Trade_registration_number: '',
                             Company_register_number: '',
                             Kep_address: '',
                             Tax_office_city: '',
@@ -86,16 +89,11 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                             Mobile_no: '',
                             Fax: '',
                             Address1: '',
-                            GSM: '',
+                            Contact_person_email: '',
                             Email1: '',
                             get_users: [],
                             get_users1:[],
-                            keys_1: ["username","password","email","mobile_phone_number","company_title","company_type","registered_trademark",//
-                    "company_register_number","trade_registration_number"//
-                    ,"kep_address",
-                    "tax_office_city","tax_office_name","tax_number","signature_officer_title","signature_officer_name_surname","company_local_no",
-                    "company_mobile_no","company_fax_no","company_address","contact_person_mobile_no"//
-                    ,"contact_person_email","membership_type"],
+                            keys_1: ["username","password","email","mobile_phone_number", "company_title","company_type","registered_trademark","mersis_no", "company_register_number","trade_registration_number","kep_address","tax_office_city","tax_office_name","tax_number","signature_officer_title","signature_officer_name_surname","company_local_no","company_mobile_no","company_fax_no","company_address","contact_person_mobile_no","contact_person_email", "membership_type"],
                             arr_update: [],
                             id_user: parseInt(localStorage.getItem('id')),
                             loading:false,
@@ -129,8 +127,8 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
 
 
 
-                            arr_up.push(this.Username,this.Password,this.Email,this.Phone,this.Company_title,this.Company_type,this.Company_register_number,this.Kep_address,
-                                this.Tax_office_city,this.Tax_office,this.Tax_number,this.Title_of_person,this.Name_surname,this.Local_no,this.Mobile_no,this.Fax,this.Address1,
+                            arr_up.push(this.Username,this.Password,this.Email,this.Phone,this.Company_title,this.Company_type, this.Registered_trademark, this.Mersis_no, this.Company_register_number,this.Trade_registration_number,this.Kep_address,
+                                this.Tax_office_city,this.Tax_office,this.Tax_number,this.Name_surname,this.Title_of_person,this.Local_no,this.Mobile_no,this.Fax,this.Address1, this.Contact_person_email,
                                 this.Email1,this.Membership_type);
 
                             // for(let i =0;i<get_users[0].length;i++){
@@ -147,9 +145,6 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                                 findObj.pop();
                             }
                             for(let i = 0;i<findObj.length;i++){
-                                if( i== 6 || i == 7 || i==9 || i==20){
-                                    continue;
-                                }
                                 newarr.push(findObj[i]);
 
                             }
@@ -161,19 +156,24 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                             this.Phone = newarr[3];
                             this.Company_title = newarr[4];
                             this.Company_type = newarr[5];
-                            this.Company_register_number = newarr[6];
-                            this.Kep_address = newarr[7];
-                            this.Tax_office_city = newarr[8];
-                            this.Tax_office = newarr[9];
-                            this.Tax_number = newarr[10];
-                            this.Title_of_person = newarr[11];
-                            this.Name_surname = newarr[12];
-                            this.Local_no = newarr[13];
-                            this.Mobile_no = newarr[14];
-                            this.Fax = newarr[15];
-                            this.Address1 = newarr[16];
-                            this.Email1 = newarr[17];
-                            this.Membership_type = newarr[18];
+                            this.Registered_trademark = newarr[6];
+                            this.Mersis_no = newarr[7];
+                            this.Company_register_number = newarr[8];
+                            this.Trade_registration_number = newarr[9];
+                            this.Kep_address = newarr[10];
+                            this.Tax_office_city = newarr[11];
+                            this.Tax_office = newarr[12];
+                            this.Tax_number = newarr[13];
+                            this.Title_of_person = newarr[14];
+                            this.Name_surname = newarr[15];
+                            this.Local_no = newarr[16];
+                            this.Mobile_no = newarr[17];
+                            this.Fax = newarr[18];
+                            this.Address1 = newarr[19];
+                            this.Email1 = newarr[20];
+                            this.Contact_person_email = newarr[21];
+                            this.Membership_type = newarr[22];
+
 
                             // for(let i =0;i<newarr.length;i++){
                             //     value = arr_up[i];
@@ -192,7 +192,7 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
 
                         methods:{
 
-                            chekUsers(){
+                            chekUsers: function() {
 
                                 this.loading = true;
                                 this.get_users = [];
@@ -206,9 +206,9 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                                 });
                             },
 
-                            update(){
+                            update: function() {
                                 console.log(this.get_users);
-                                let l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,m1,m2,m3;
+                                let l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20,l21,l22,l23;
                                 let findObj = {}
 
                                 l1 = this.Username;
@@ -217,27 +217,29 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                                 l4 = this.Phone;
                                 l5 = this.Company_title;
                                 l6 = this.Company_type;
-                                l7 = this.Company_register_number;
-                                l8 = this.Kep_address;
-                                l9 = this.Tax_office_city;
-                                l10 = this.Tax_office;
-                                l11 = this.Tax_number;
-                                l12 = this.Title_of_person;
-                                l13 = this.Name_surname;
-                                l14 = this.Local_no;
-                                l15 = this.Mobile_no;
-                                l16 = this.Fax;
-                                l17 = this.Address1;
-                                l18 = this.Email1;
-                                l19 = this.Membership_type;
+                                l7 = this.Registered_trademark;
+                                l8 = this.Mersis_no;
+                                l9 = this.Company_register_number;
+                                l10 = this.Trade_registration_number;
+                                l11 = this.Kep_address;
+                                l12 = this.Tax_office_city;
+                                l13 = this.Tax_office;
+                                l14 = this.Tax_number;
+                                l15 = this.Name_surname;
+                                l16 = this.Title_of_person;
+                                l17 = this.Local_no;
+                                l18 = this.Mobile_no;
+                                l19 = this.Fax;
+                                l20 = this.Address1;
+                                l21 = this.Email1;
+                                l22 = this.Contact_person_email;
+                                l23 = this.Membership_type;
 
-                                this.arr_update.push(l1,l2,l3,l4,l5,l6,m1,l7,m2,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,m3,l18,l19);
+
+                                this.arr_update.push(l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20,l21,l22,l23);
 
                                 console.log(this.arr_update);
                                     for(let i = 0;i<this.arr_update.length;i++){
-                                        if(this.arr_update[i] == undefined){
-                                            continue;
-                                        }else
                                             findObj[this.keys_1[i]] = this.arr_update[i];
                                     }
 
@@ -269,6 +271,7 @@ axios.get(`http://51.68.195.202:3000/users?id=eq.${id_user}`)
                                             }
                                             break;
                                         }
+                                        this.arr_update = [];
                                     }
 
                             }

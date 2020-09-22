@@ -17,7 +17,7 @@ body {
 }
 
 #text_form {
-    margin-top: 30px;
+    margin-top: 15px;
     font-family: Poppins;
 font-style: normal;
 font-weight: normal;
@@ -32,7 +32,7 @@ color: #434349;
 .reg{
     position: absolute;
     width: 1295px;
-    height: 880px;
+    height: 940px;
     margin: 30px;
     left: 29.5%;
     background: #FFFFFF;
@@ -134,7 +134,7 @@ input{
     position: absolute;
     width: 335px;
     height: 50px;
-    margin-top: 70px;
+    margin-top: 150px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
@@ -156,7 +156,7 @@ input{
 
 #first_label {
     display: inline-block;
-    margin-left: 495px;
+    margin-left: 555px;
     margin-top: 100px;
     font-family: Poppins;
 font-style: normal;
@@ -196,6 +196,7 @@ color: #000000;
 .left_toolbar {
     background-color: #1E1E2D;
     margin: 0px;
+    height: 1000px;
   }
 
   #logo {
@@ -275,7 +276,7 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
@@ -325,7 +326,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -385,7 +386,7 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
@@ -435,7 +436,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -499,7 +500,7 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
@@ -549,7 +550,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -622,7 +623,7 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
@@ -672,7 +673,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -756,7 +757,7 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
@@ -806,7 +807,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 31%;
+        margin-left: 40%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -960,7 +961,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 24.5%;
+        margin-left: 36%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -989,7 +990,7 @@ color: #434349;
     .reg{
         position: absolute;
         width: 93%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 0%;
         background: #FFFFFF;
@@ -1000,6 +1001,7 @@ color: #434349;
         display: none;
         background-color: #1E1E2D;
         margin: 0px;
+        height: 1000px;
       }
 
       #logo {
@@ -1059,7 +1061,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 30%;
+        margin-left: 38%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -1121,7 +1123,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 30%;
+        margin-left: 38%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -1135,6 +1137,26 @@ color: #434349;
     color: #000000;
     }
 }
+
+
+@media screen and (max-width: 1265px){
+    .btn2{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1251px){
+    .btn2{
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    #company_address1{
+        width: 250px;
+    }
+}
+
 @media screen and (max-width: 700px){
     #sign{
 
@@ -1173,7 +1195,7 @@ color: #434349;
 
     #first_label {
         display: inline-block;
-        margin-left: 30%;
+        margin-left: 39%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -1186,6 +1208,60 @@ color: #434349;
 
     color: #000000;
     }
+}
+
+@media screen and (max-width: 520px){
+    #first_label {
+        display: inline-block;
+        margin-left: 39%;
+        margin-top: 130px;
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+    }
+
+    #first {
+        margin-top: 120px;
+    }
+
+    #second {
+        margin-top: 120px;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+    #first_label {
+        display: inline-block;
+        margin-left: 30%;
+        margin-top: 130px;
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+    }
+
+    #first {
+        margin-top: 120px;
+    }
+
+    #second {
+        margin-top: 120px;
+    }
+
 }
 
 @media screen and (min-device-width : 768px) and (min-height: 1366px){
@@ -1210,6 +1286,7 @@ color: #434349;
 
         background-color: #1E1E2D;
         margin: 0px;
+        height: 1000px;
       }
 
       #logo {
@@ -1727,4 +1804,24 @@ color: #434349;
 
     }
 
+}
+
+#tax_number1 {
+    margin-top: -50px;
+}
+
+#username1 {
+    margin-top: 0px;
+}
+
+#signature_officer_name_surname1 {
+    margin-top: 0px;
+}
+
+#company_address1 {
+    margin-top: 15px;
+}
+
+#company_local_no1 {
+    margin-top: 0px;
 }

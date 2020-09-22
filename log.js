@@ -84,3 +84,67 @@ var app = new Vue({
 
   }
 });
+
+function goToHome()
+{
+	document.location.href = "http://127.0.0.1:5500/index.html";
+}
+
+
+axios.get('http://51.68.195.202:3000/users')
+        .then((response) => {
+        const data = response.data;
+        let user_data = data;
+        let user_flag = false;
+        let psw_flag = 1;
+
+        if(user_data.length !=0){
+            var us_data = new Vue ({
+                el:'#users',
+                data:{
+                    Username: "",
+                    Password: "",
+                },
+                created:function(){
+                    console.log(user_data);
+                  },
+
+                methods: {
+                    check() {
+                        for (let i = 0; i <= user_data.length -1; i++) {
+                            if (user_data[i].username === Username.value && user_data[i].password === Password.value) {
+                                console.log(user_data[i]);
+                                user_flag = true;
+                                localStorage.setItem('username',Username.value);
+                                localStorage.setItem('password',Password.value);
+                                localStorage.setItem('id',user_data[i].id);
+                                localStorage.setItem('login','1');
+                                goToHome();
+                            } else if (user_data[i].username === Username.value && user_data[i].password !== Password.value) {
+                              psw_flag = 2;
+                            }
+                          }
+
+                          if (Username.value.length == 0 && Password.value.length == 0) {
+                            user_flag = true;
+                              alert("Incorrect data entered! Please enter your username and password");
+                          } else if (Username.value.length == 0) {
+                            user_flag = true;
+                            alert("Incorrect data entered! Please enter your username");
+                          } else if (Password.value.length == 0) {
+                            user_flag = true;
+                            alert("Incorrect data entered! Please enter your password");
+                          } else if (psw_flag == 2) {
+                            user_flag = true;
+                            alert("Password is not true")
+                          }
+
+                          if(user_flag == false) {
+                            alert("User was not found")
+                          }
+
+                    }
+                }
+            });
+        }
+        });

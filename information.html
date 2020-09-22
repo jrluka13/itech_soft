@@ -98,7 +98,6 @@
                                       <div class="first1">
                                           <p id="input_text">Username:</p><br>
                                           <input type="text" id="Username" v-model="Username"><br>
-                                          {{Username}}
                                           <p id="input_text">Password:</p><br>
                                           <input type="password" id="Password" v-model="Password"><br>
                                           <p id="input_text">Email:</p><br>
@@ -111,6 +110,12 @@
                                           <input type="password" id="Company_title" v-model="Company_title"><br>
                                           <p id="input_text">Company type:</p><br>
                                           <input type="email" id="Company_type" v-model="Company_type"><br>
+                                          <p id="input_text">Registered trademark:</p><br>
+                                          <input type="password" id="Registered_trademark" v-model="Registered_trademark"><br>
+                                          <p id="input_text">Mersis no:</p><br>
+                                          <input type="password" id="Mersis_no" v-model="Mersis_no"><br>
+                                          <p id="input_text">Trade registration number:</p><br>
+                                          <input type="password" id="Trade_registration_number" v-model="Trade_registration_number"><br>
                                           <p id="input_text">Company register number:</p><br>
                                           <input type="text" id="Company_register_number" v-model="Company_register_number"><br>
                                           <p id="input_text">Kep Address:</p><br>
@@ -141,11 +146,11 @@
                                               <textarea name="Address" v-model="Address1" id="Address1" cols="21%" rows="4"></textarea>
                                               <p id="notinput_text">Authorized contact information</p>
                                               <p id="input text">GSM:</p><br>
-                                              <input id="GSM" v-model="GSM" type="text">
+                                              <input id="GSM" v-model="Contact_person_email" type="text">
                                               <p id="input text">Email:</p><br>
                                               <input id="Email1" v-model="Email1" type="emal">
                                           </div>
-                                          <input type="button"  id="button1" value="Save" @click="chekUsers">
+                                          <button id="button1" v-on:click="chekUsers">Save</button>
                                       </div>
                                   </div>
                                   <div id="get_pay">

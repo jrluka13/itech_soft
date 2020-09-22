@@ -52,30 +52,32 @@
 
 .btns {
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 20% 25%;
   margin-top: 100px;
-  margin-left: -1.5%;
+  margin-left: 1.5%;
 }
 
 .btns1 {
-display: grid;
-grid-template-columns: 40% 50%;
-margin-top: 100px;
-margin-left: -1.5%;
+  display: grid;
+  grid-template-columns: 20% 25%;
+  margin-top: 100px;
+  margin-left: 1.5%;
 }
+
 
 .btns2 {
-display: grid;
-grid-template-columns: 40% 50%;
-margin-top: 100px;
-margin-left: -1.5%;
+  display: grid;
+  grid-template-columns: 20% 25%;
+  margin-top: 100px;
+  margin-left: 1.5%;
 }
 
+
 .btns3 {
-display: grid;
-grid-template-columns: 40% 50%;
-margin-top: 100px;
-margin-left: -1.5%;
+  display: grid;
+  grid-template-columns: 20% 25%;
+  margin-top: 100px;
+  margin-left: 1.5%;
 }
 
 

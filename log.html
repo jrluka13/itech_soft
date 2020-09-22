@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>İltechSoft | Dashboard</title>
-<meta name="description" content="Updates and statistics">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="/src/assets/css/log.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8" />
+  <title>İltechSoft | Dashboard</title>
+  <meta name="description" content="Updates and statistics">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="/src/assets/css/log.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/vue@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,23 +15,56 @@
             <img id="logo" src="/src/assets/images/logo.png" alt="logo">
             <img id="group" src="/src/assets/images/group.png" alt="group">
         </div>
-        <div class="log">
-            <h1 id="word">Login</h1>
-            <h2 id="subscr">Login in to your account. Or new user</h2>
-            <a id="sign_up" href="choose.html">Sign up</a>
-                <div id="app">
-                    <div class="fields">
-                        <input id="Username" v-model="username" type="text" placeholder="Username">
-                        <input id="Password" v-model="password" type="password" placeholder="Password">
-                        <input class="btn" type="button" value="Confirm"  @click="chekUsers">
-                    </div>
-                    <a class = "psw" href="changePassword.html">Forgot passwpord?</a>
-                </div>
-        </div>
+        <div id="users">
+          <div class="log">
+              <h1 id="word">Giriş Yap</h1>
+              <h2 id="subscr">Hesabınıza giriş yapın ya da linke tıklayarak <a id="" href="choose.html">Kayıt Olun</a>
+              </h2>
+              <div class="fields">
+                  <input id="Username" v-model="Username" type="text" placeholder="Kullanıcı Adı" required>
+                  <input id="Password" v-model="Password" type="password" placeholder="Şifre" required>
+                  <a><input class="btn" type="button" value="Giriş Yap" @click="check"></a>
+              </div>
+              <a class = "psw" href="changePassword.html">Şifremi Unuttum ?</a>
+          </div>
+      </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
-<script src="log.js"></script>
-<!-- <script src="enter.js"></script> -->
+
+    <script type="text/javascript">
+
+    // function getUsers() {
+
+        // var xhr = new XMLHttpRequest();
+
+        // xhr.addEventListener("readystatechange", function()  {
+        //   if(this.readyState === 4) {
+        //    // console.log(this.responseText);
+        //     var resultText = xhr.responseText;
+        //     console.log(resultText);
+
+        //     if(resultText.length < 5) {
+
+        //       //user not found
+        //         window.alert("Kullanıcı Bulunamadı");
+        //         return;
+        //     }
+
+        //     var obj  = JSON.parse(resultText.replace("[","").replace("]",""));
+
+
+        //     localStorage.clear();
+        //     localStorage.setItem("user_id",obj.id);
+        //     document.location.href = "index.html";
+
+        //   }
+        // })
+
+        // xhr.open("GET", "http://localhost:3000/users?username=eq." + document.getElementById("Username").value + "&password=eq." + document.getElementById("Password").value );
+        // xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        // xhr.send();
+    </script>
+    <script src="log.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </body>
 </html>
