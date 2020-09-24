@@ -11,23 +11,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="left_toolbar">
-            <img id="logo" src="/src/assets/images/logo.png" alt="logo">
-            <img id="group" src="/src/assets/images/group.png" alt="group">
-        </div>
+        <div class="container">
+            <div class="left_toolbar">
+                <img id="logo" src="/src/assets/images/r2.png" alt="logo">
+                <img id="group" src="/src/assets/images/r10.png" alt="group">
+                <p id="img_inside">Tek tuşla</p>
+                <p id="img_inside1">tüm pazar yerlerine</p>
+                <p id="img_inside2">ürün ekleyebilirsiniz</p>
+                <p id="coopy">Copyrights © 2019 All Rights Reserved by İltechsoft</p>
+            </div>
         <div id="users">
+        <img class="log" src="/src/assets/images/r12.png" alt="logo">
+            <img class="log1" src="/src/assets/images/r11.png" alt="logo1">
           <div class="log">
-              <h1 id="word">Giriş Yap</h1>
-              <h2 id="subscr">Hesabınıza giriş yapın ya da linke tıklayarak <a id="" href="choose.html">Kayıt Olun</a>
-              </h2>
-              <div class="fields">
-                  <input id="Username" v-model="Username" type="text" placeholder="Kullanıcı Adı" required>
-                  <input id="Password" v-model="Password" type="password" placeholder="Şifre" required>
-                  <a><input class="btn" type="button" value="Giriş Yap" @click="check"></a>
-              </div>
-              <a class = "psw" href="changePassword.html">Şifremi Unuttum ?</a>
+            <!-- <h1 id="word">Giriş Yap</h1> -->
+            <img id="word" src="/src/assets/images/r3.png" alt="word">
+            <h2 id="subscr">Hesabınıza giriş yapın ya da linke tıklayarak <a id="" href="choose.html">Kayıt Olun</a>
+            </h2>
+            <div class="fields">
+                <input id="Username" v-model="Username" type="text" placeholder="Kullanıcı Adı" required>
+                <input id="Password" v-model="Password" type="password" placeholder="Şifre" required>
+                <a><input class="btn" type="button" value="Giriş Yap" @click="check"></a>
+            </div>
+            <a class = "psw" href="changePassword.html">Şifremi Unuttum ?</a>
           </div>
-      </div>
+
+        </div>
+
+
+
+
     </div>
 
     <script type="text/javascript">

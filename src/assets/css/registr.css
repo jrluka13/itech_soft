@@ -194,23 +194,67 @@ color: #000000;
 
 
 .left_toolbar {
-    background-color: #1E1E2D;
+    background: radial-gradient(101.04% 101.04% at 41.98% 101.04%, #C4C4C4 10.94%, #EAEAEA 54.69%, #C4C4C4 100%);
     margin: 0px;
     height: 1000px;
   }
 
   #logo {
     margin-top: 50px;
-    margin-left: 30%;
-    width: 35%;
+    margin-left: 25%;
+    width: 50%;
   }
 
   #group {
-    margin-top: 200px;
-    margin-left: 15%;
-    width: 75%;
+    margin-top: 250px;
+    margin-left: 25.5%;
+    width: 50%;
+    position: relative;
   }
 
+  #coopy {
+    text-align: center;
+    margin-top: 400px;
+    color: #000000;
+    font-family: "DIN Pro";
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  #img_inside {
+      position: relative;
+      margin-top: -120px;
+        text-align: center;
+        color: #646464;
+        font-family: "Comic Sans MS";
+        font-size: 19px;
+        font-weight: 700;
+        /* Text style for "tüm pazar" */
+        /* color: #106dba; */
+  }
+
+  #img_inside1 {
+    position: relative;
+    margin-top: -20px;
+      text-align: center;
+      font-family: "Comic Sans MS";
+      font-size: 19px;
+      font-weight: 700;
+      /* Text style for "tüm pazar" */
+      color: #106dba;
+}
+
+#img_inside2 {
+    position: relative;
+    margin-top: -18px;
+      text-align: center;
+      color: #646464;
+      font-family: "Comic Sans MS";
+      font-size: 19px;
+      font-weight: 700;
+      /* Text style for "tüm pazar" */
+      /* color: #106dba; */
+}
 
     #Address1 {
     margin-top: 20px;
