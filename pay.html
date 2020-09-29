@@ -6,6 +6,17 @@
   <meta name="description" content="Updates and statistics">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="/src/assets/css/pay.css" rel="stylesheet" type="text/css" />
+
+  <script>
+    //control cookie
+ // document.addEventListener('DOMContentLoaded', function(){
+
+    console.log(localStorage.getItem('username'));
+
+  //  if (localStorage.getItem('login') ==='0') console.log("asddsa")//window.location.href = 'login'
+     // }
+   //   );
+  </script>
 </head>
 <body>
     <div class="container">
@@ -18,22 +29,59 @@
             <img id="card2" src="/src/assets/images/image 8.png" alt="group">
         </div>
         <div class="pay">
-            <h3 id="card_number">Card number</h3>
+            <h3 id="card_number">Kart Numarası</h3>
             <input id="card_input" type="text">
-            <h3 id="credit_card">Credit Card Type</h3>
-            <select name="cards" id="list_input"></select>
-            <h3 id="card_holder_name">Card holder name</h3>
+            <h3 id="credit_card">Kart Tipi</h3>
+            <select name="cards" id="list_input">
+                <option>Visa</option>
+                <option>Mastercard</option>
+            </select>
+            <h3 id="card_holder_name">Kart Sahibi Adı Soyadı</h3>
             <input id="card_input1" type="text">
             <h3 id="expiration_date">Expiration date</h3>
-            <select name="date1" id="list_input1"></select>
-            <select name="date2" id="list_input2"></select>
+            <select name="date1" id="list_input1">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+
+            </select>
+            <select name="date2" id="list_input2">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+
+            </select>
             
              <h3 id="ccv">CCV</h3>
              <input id="ccv_input" type="text">
 
-             <h2 id="amount_to_pay">amount to pay:</h2>
-             <h2 id="cost">230$</h2>
-             <input class="btn" type="button" value="Confirm"> 
+      
+          
+            <div>
+
+
+            </div>
+
+            <h2 style="margin-top:3px" id="amount_to_pay">Üye Tipi: Demo(14 Gün)</h2>
+
+             <h2 style="margin-top:30px" id="amount_to_pay">Ödenecek Turar:</h2>
+             <h2 style="padding-left:30px;margin-top:30px" id="cost">1 TL</h2>
+             <a href="api.html"><input class="btn" type="button" value="Öde"> </a>
              
         </div>
     </div>

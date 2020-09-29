@@ -18,7 +18,6 @@
   <link href="/src/assets/css/pages/pricing/pricing-3.css" rel="stylesheet" type="text/css" />
   <link href="/src/assets/css/pages/wizard/wizard-3.css" rel="stylesheet" type="text/css" />
   <link href="/src/assets/css/api.css" rel="stylesheet" type="text/css" />
-
   <!--end::Page Custom Styles -->
 
   <!--begin::Page Vendors Styles(used by this page) -->
@@ -52,471 +51,454 @@
 <body>
 
 
-                <div data-v-60a8d82a="">
-                  <div data-v-60a8d82a="" id="kt_subheader" class="kt-subheader   kt-grid__item">
-                    <div data-v-60a8d82a="" class="kt-container  kt-container--fluid ">
-                      <div data-v-60a8d82a="" class="kt-subheader__main">
-                        <h3 data-v-60a8d82a="" class="kt-subheader__title">Api Listesi</h3> <span data-v-60a8d82a="" class="kt-subheader__separator kt-hidden"></span>
-                        <div data-v-60a8d82a="" class="kt-subheader__breadcrumbs"><a data-v-60a8d82a="" href="#/" class="kt-subheader__breadcrumbs-home"><i data-v-60a8d82a="" class="flaticon2-shelter"></i></a> <span data-v-60a8d82a="" class="kt-subheader__breadcrumbs-separator"></span> <a data-v-60a8d82a="" href="#/" class="kt-subheader__breadcrumbs-link">Ana Sayfa</a> <span data-v-60a8d82a="" class="kt-subheader__breadcrumbs-separator"></span> <a data-v-60a8d82a="" href="#/Api" class="kt-subheader__breadcrumbs-link router-link-exact-active kt-subheader__breadcrumbs-link--active">Api</a></div>
+  <div data-v-60a8d82a="">
+    <div data-v-60a8d82a="" id="kt_subheader" class="kt-subheader   kt-grid__item">
+      <div data-v-60a8d82a="" class="kt-container  kt-container--fluid ">
+        <div data-v-60a8d82a="" class="kt-subheader__main">
+          <h3 data-v-60a8d82a="" class="kt-subheader__title">Api Listesi</h3> <span data-v-60a8d82a="" class="kt-subheader__separator kt-hidden"></span>
+          <div data-v-60a8d82a="" class="kt-subheader__breadcrumbs"><a data-v-60a8d82a="" href="#/" class="kt-subheader__breadcrumbs-home"><i data-v-60a8d82a="" class="flaticon2-shelter"></i></a> <span data-v-60a8d82a="" class="kt-subheader__breadcrumbs-separator"></span> <a data-v-60a8d82a="" href="#/" class="kt-subheader__breadcrumbs-link">Ana Sayfa</a> <span data-v-60a8d82a="" class="kt-subheader__breadcrumbs-separator"></span> <a data-v-60a8d82a="" href="#/Api" class="kt-subheader__breadcrumbs-link router-link-exact-active kt-subheader__breadcrumbs-link--active">Api</a></div>
+        </div>
+      </div>
+    </div>
+    <div data-v-60a8d82a="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+      <div data-v-60a8d82a="" class="kt-portlet kt-portlet--mobile">
+        <div data-v-60a8d82a="" class="">
+          <div data-v-60a8d82a="" class="kt-margin-b-50">
+                  <div data-v-60a8d82a="" class="api">
+                      <div class="tab">
+                          <button class="tablink" id="user_informations1" onclick="openPage('user_informations', this)">User informations</button>
+                          <button class="tablink" id="company_informations1" onclick="openPage('company_informations', this)">Company informations</button>
+                          <button class="tablink" id="payments1" onclick="openPage('payments', this)">Payments</button>
+                        </div>
+                  <div id="user_informations" class="tabcontent2">
+                      <div class="first">
+                          <img  id="avatar" src="/src/assets/images/avatar.png" alt="avatar">
+                          <img id="camera" src="/src/assets/images/camera.png" alt="camera">
                       </div>
-                    </div>
-                  </div>
-                  <div data-v-60a8d82a="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-                    <div data-v-60a8d82a="" class="kt-portlet kt-portlet--mobile">
-                      <div data-v-60a8d82a="" class="">
-                        <div data-v-60a8d82a="" class="kt-margin-b-50">
-                                <div data-v-60a8d82a="" class="api">
-                                    <div class="tab">
-                                        <button class="tablink" id="user_informations1" onclick="openPage('user_informations', this)">User informations</button>
-                                        <button class="tablink" id="company_informations1" onclick="openPage('company_informations', this)">Company informations</button>
-                                        <button class="tablink" id="payments1" onclick="openPage('payments', this)">Payments</button>
-                                      </div>
-                                <div id="user_informations" class="tabcontent2">
-                                    <div class="first">
-                                        <img  id="avatar" src="/src/assets/images/avatar.png" alt="avatar">
-                                        <img id="camera" src="/src/assets/images/camera.png" alt="camera">
-                                    </div>
-                                    <div id="user_inform">
-                                      <div class="second2" >
-                                        <p id="user_info" v-model="start">Start date: {{start}}</p><br>
-                                        <p id="info" v-model="name">{{name}} <img id="edit" src="/src/assets/images/edit.png" alt="edit"></p>
-                                        <p id="user_info1" v-model="mail"><img id="mail" src="/src/assets/images/mail.png" alt="mail"> {{mail}} <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
-                                        <p id="user_info2" v-model="number_phone"><img id="mail" src="/src/assets/images/phone.png" alt="phone"> {{number_phone}} <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
-                                      </div>
-                                    </div>
-                                      <div id="end">
-                                        <div class="third2">
-                                        <p id="user_info" v-model="end">End date: {{end}}</p><br>
-                                        <p id="user_info3"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
-                                        <p id="user_info4"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
-                                    </div>
-                                  </div>
-
-                                  </div>
-                                  <div id="up_info">
-                                    <div id="company_informations" class="tabcontent2">
-                                      <div class="first1">
-                                          <p id="input_text">Username:</p><br>
-                                          <input type="text" id="Username" v-model="Username"><br>
-                                          <p id="input_text">Password:</p><br>
-                                          <input type="password" id="Password" v-model="Password"><br>
-                                          <p id="input_text">Email:</p><br>
-                                          <input type="email" id="Email" v-model="Email"><br>
-                                          <p id="input_text">Phone_number:</p><br>
-                                          <input type="text" id="Phone number" v-model="Phone"><br>
-                                          <p id="input_text">Membership type:</p><br>
-                                          <input type="text" id="Membership_type" v-model="Membership_type"><br>
-                                          <p id="input_text">Company title:</p><br>
-                                          <input type="password" id="Company_title" v-model="Company_title"><br>
-                                          <p id="input_text">Company type:</p><br>
-                                          <input type="email" id="Company_type" v-model="Company_type"><br>
-                                          <p id="input_text">Registered trademark:</p><br>
-                                          <input type="password" id="Registered_trademark" v-model="Registered_trademark"><br>
-                                          <p id="input_text">Mersis no:</p><br>
-                                          <input type="password" id="Mersis_no" v-model="Mersis_no"><br>
-                                          <p id="input_text">Trade registration number:</p><br>
-                                          <input type="password" id="Trade_registration_number" v-model="Trade_registration_number"><br>
-                                          <p id="input_text">Company register number:</p><br>
-                                          <input type="text" id="Company_register_number" v-model="Company_register_number"><br>
-                                          <p id="input_text">Kep Address:</p><br>
-                                          <input type="text" id="Kep_address" v-model="Kep_address"><br>
-                                      </div>
-                                          <div class="second1">
-                                              <p id="input_text">Tax Office City:</p><br>
-                                              <input type="text" id="Tax_office_city" v-model="Tax_office_city"><br>
-                                              <p id="input_text">Tax Office:</p><br>
-                                              <input type="password" id="Tax_office" v-model="Tax_office"><br>
-                                              <p id="input_text">Tax number:</p><br>
-                                              <input type="email" id="Tax_number" v-model="Tax_number"><br>
-                                              <p id="notinput_text">Signature officer</p><br>
-                                              <p id="input_text">Name surname:</p><br>
-                                              <input type="text" id="Name_surname" v-model="Name_surname"><br>
-                                              <p id="input_text">Titile of person:</p><br>
-                                              <input type="text" id="Title_of_person" v-model="Title_of_person"><br>
-                                              <p id="notinput_text">Company contact information</p><br>
-                                              <p id="input_text">Local no:</p><br>
-                                              <input type="password" id="Local_no" v-model="Local_no"><br>
-                                              <p id="input_text">Mobile No</p><br>
-                                              <input type="email" id="Mobile_no" v-model="Mobile_no"><br>
-                                              </div>
-                                          <div class="third1">
-                                              <p id="input text">Fax:</p><br>
-                                              <input id="Fax" type="text" v-model="Fax"><br>
-                                              <p id="input text">Address:</p><br>
-                                              <textarea name="Address" v-model="Address1" id="Address1" cols="21%" rows="4"></textarea>
-                                              <p id="notinput_text">Authorized contact information</p>
-                                              <p id="input text">GSM:</p><br>
-                                              <input id="GSM" v-model="Contact_person_email" type="text">
-                                              <p id="input text">Email:</p><br>
-                                              <input id="Email1" v-model="Email1" type="emal">
-                                          </div>
-                                          <button id="button1" v-on:click="chekUsers">Save</button>
-                                      </div>
-                                  </div>
-                                  <div id="get_pay">
-                                    <div id="payments" class="tabcontent2">
-                                      <div class="first3">
-                                        <p id="card">Your cards</p>
-                                        <div class="pay">
-                                          <img id="card1" src="/src/assets/images/image 7.png" alt="logo">
-                                          <p class="text_inside">Card number</p>
-                                          <p class="nums_inside">**** **** **** 2345</p>
-                                          <p class="text_inside2">Card holder name</p>
-                                          <p class="tex_inside">Name Surname</p>
-                                          <p class="text_inside1">Expiration date</p>
-                                          <p class="tex_inside1">10/2027</p>
-                                      </div>
-                                      <p id="card_1">Payment history</p>
-                                      <div class="demo">
-                                        <ul class="hr">
-                                          <li id="block1">$65.00</li>
-                                           <li id="pending">Pending</li>
-                                            <li id="right1">May 10, 2020</li>
-                                             <li id="fit">Visa 5432</li>
-                                        </ul>
-                                            <input type="checkbox" id="hd-1" class="hide"/>
-                                            <label id="hd-1-1" for="hd-1" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                            <div>
-                                              <div class="history">
-                                                <div class="one">
-                                                  <div class="pay2">
-                                                      <p class="text_inside10">Card number</p>
-                                                      <p class="nums_inside10">**** **** **** 2345</p>
-                                                      <p class="text_inside20">Card holder name</p>
-                                                      <p class="tex_inside10">Name Surname</p>
-                                                      <img id="card1-1" src="/src/assets/images/image 7.png" alt="logo">
-                                                      <p class="text_inside11">Expiration date</p>
-                                                      <p class="tex_inside12">10/2027</p>
-                                                </div>
-
-                                                </div>
-                                                <div class="two">
-                                                  <p class="ht">Status</p>
-                                                  <p class="ht-1">Pending</p>
-                                                  <p class="ht">ID number</p>
-                                                  <p class="ht-1">EKG2SJFN</p>
-                                                </div>
-                                                <div class="three">
-                                                  <p class="ht">Invoice date</p>
-                                                  <p class="ht-1">May 10, 2020</p>
-                                                  <p class="ht">Date paid</p>
-                                                  <p class="ht-1">May 10, 2020</p>
-                                                  <div class="vl"></div>
-                                                </div>
-                                                <div class="four">
-                                                  <p class="ht">Amount due</p>
-                                                  <p class="ht-2">$65</p>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <br/>
-                                            <br/>
-                                            <ul class="hr">
-                                                <li id="block1">$250.00</li>
-                                                <li id="completed1">Completed</li>
-                                                  <li id="right3">Apr 10, 2020</li>
-                                                  <li id="left">Visa 5432</li>
-                                        </ul>
-                                            <input type="checkbox" id="hd-2" class="hide"/>
-                                            <label id="hd-1-1" for="hd-2"><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                            <div>
-                                              <div class="history">
-                                                <div class="one">
-                                                  <div class="pay3">
-                                                      <p class="text_inside10">Card number</p>
-                                                      <p class="nums_inside10">**** **** **** 2345</p>
-                                                      <p class="text_inside20">Card holder name</p>
-                                                      <p class="tex_inside10">Name Surname</p>
-                                                      <img id="card1-2" src="/src/assets/images/image 7.png" alt="logo">
-                                                      <p class="text_inside11">Expiration date</p>
-                                                      <p class="tex_inside12">10/2027</p>
-
-                                                </div>
-                                                </div>
-                                                <div class="two">
-                                                  <p class="ht">Status</p>
-                                                  <p class="ht-1">Completed</p>
-                                                  <p class="ht">ID number</p>
-                                                  <p class="ht-1">EKG2SJFN</p>
-                                                </div>
-                                                <div class="three">
-                                                  <p class="ht">Invoice date</p>
-                                                  <p class="ht-1">Apr 10, 2020</p>
-                                                  <p class="ht">Date paid</p>
-                                                  <p class="ht-1">Apr 10, 2020</p>
-                                                  <div class="vl"></div>
-                                                </div>
-                                                <div class="four">
-                                                  <p class="ht">Amount due</p>
-                                                  <p class="ht-2">$250</p>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <br/>
-                                            <br/>
-                                            <ul class="hr">
-                                                <li id="block1">$50.00</li>
-                                                <li id="completed">Completed</li>
-                                                  <li id="right">Mar 10, 2020</li>
-                                                  <li id="fit">Visa 5432</li>
-                                        </ul>
-                                            <input type="checkbox" id="hd-3" class="hide"/>
-                                            <label id="hd-1-1" for="hd-3" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                            <div>
-                                              <div class="history">
-                                                <div class="one">
-                                                  <div class="pay4">
-                                                    <img id="card1-3" src="/src/assets/images/image 7.png" alt="logo">
-                                                    <p class="text_inside10">Card number</p>
-                                                    <p class="nums_inside10">**** **** **** 2345</p>
-                                                    <p class="text_inside20">Card holder name</p>
-                                                    <p class="tex_inside10">Name Surname</p>
-                                                    <p class="text_inside11">Expiration date</p>
-                                                    <p class="tex_inside12">10/2027</p>
-                                                </div>
-                                                </div>
-                                                <div class="two">
-                                                  <p class="ht">Status</p>
-                                                  <p class="ht-1">Completed</p>
-                                                  <p class="ht">ID number</p>
-                                                  <p class="ht-1">EKG2SJFN</p>
-                                                </div>
-                                                <div class="three">
-                                                  <p class="ht">Invoice date</p>
-                                                  <p class="ht-1">Mar 10, 2020</p>
-                                                  <p class="ht">Date paid</p>
-                                                  <p class="ht-1">Mar 10, 2020</p>
-                                                  <div class="vl"></div>
-                                                </div>
-                                                <div class="four">
-                                                  <p class="ht">Amount due</p>
-                                                  <p class="ht-2">$50</p>
-                                                </div>
-                                              </div>
-                                            </div>
-                                        </div>
-                                      </div>
-                                      <div class="second3">
-                                          </div>
-                                      <div class="third3">
-                                      </div>
-                                  </div>
-                                  </div>
-
-                            </div>
-                                <div data-v-60a8d82a="" class="col-md-4 kt-margin-b-20-tablet-and-mobile"></div>
-                              </div>
-                            </div>
-                            <div data-v-60a8d82a="" class="col-xl-4 order-1 order-xl-2 kt-align-right"><a data-v-60a8d82a="" href="#" class="btn btn-default kt-hidden"><i data-v-60a8d82a="" class="la la-cart-plus"></i> New Order
-                  </a>
-                              <div data-v-60a8d82a="" class="kt-separator kt-separator--border-dashed kt-separator--space-lg d-xl-none"></div>
-                            </div>
-                          </div>
+                      <div id="user_inform">
+                        <div class="second2" >
+                          <p id="user_info" v-model="start">Start date: {{start}}</p><br>
+                          <p id="info" v-model="name">{{name}} <img id="edit" src="/src/assets/images/edit.png" alt="edit"></p>
+                          <p id="user_info1" v-model="mail"><img id="mail" src="/src/assets/images/mail.png" alt="mail"> {{mail}} <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
+                          <p id="user_info2" v-model="number_phone"><img id="mail" src="/src/assets/images/phone.png" alt="phone"> {{number_phone}} <img id="edit1" src="/src/assets/images/edit.png" alt="edit"></p>
                         </div>
                       </div>
+                        <div id="end">
+                          <div class="third2">
+                          <p id="user_info" v-model="end">End date: {{end}}</p><br>
+                          <p id="user_info3"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
+                          <p id="user_info4"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
+                      </div>
+                    </div>
 
+                    </div>
+                    <div id="up_info">
+                      <div id="company_informations" class="tabcontent2">
+                        <div class="first1">
+                            <p id="input_text">Username:</p><br>
+                            <input type="text" id="Username" v-model="Username"><br>
+                            <p id="input_text">Password:</p><br>
+                            <input type="password" id="Password" v-model="Password"><br>
+                            <p id="input_text">Email:</p><br>
+                            <input type="email" id="Email" v-model="Email"><br>
+                            <p id="input_text">Phone_number:</p><br>
+                            <input type="text" id="Phone number" v-model="Phone"><br>
+                            <p id="input_text">Membership type:</p><br>
+                            <input type="text" id="Membership_type" v-model="Membership_type"><br>
+                            <p id="input_text">Company title:</p><br>
+                            <input type="password" id="Company_title" v-model="Company_title"><br>
+                            <p id="input_text">Company type:</p><br>
+                            <input type="email" id="Company_type" v-model="Company_type"><br>
+                            <p id="input_text">Registered trademark:</p><br>
+                            <input type="password" id="Registered_trademark" v-model="Registered_trademark"><br>
+                            <p id="input_text">Mersis no:</p><br>
+                            <input type="password" id="Mersis_no" v-model="Mersis_no"><br>
+                            <p id="input_text">Trade registration number:</p><br>
+                            <input type="password" id="Trade_registration_number" v-model="Trade_registration_number"><br>
+                            <p id="input_text">Company register number:</p><br>
+                            <input type="text" id="Company_register_number" v-model="Company_register_number"><br>
+                            <p id="input_text">Kep Address:</p><br>
+                            <input type="text" id="Kep_address" v-model="Kep_address"><br>
+                        </div>
+                            <div class="second1">
+                                <p id="input_text">Tax Office City:</p><br>
+                                <input type="text" id="Tax_office_city" v-model="Tax_office_city"><br>
+                                <p id="input_text">Tax Office:</p><br>
+                                <input type="password" id="Tax_office" v-model="Tax_office"><br>
+                                <p id="input_text">Tax number:</p><br>
+                                <input type="email" id="Tax_number" v-model="Tax_number"><br>
+                                <p id="notinput_text">Signature officer</p><br>
+                                <p id="input_text">Name surname:</p><br>
+                                <input type="text" id="Name_surname" v-model="Name_surname"><br>
+                                <p id="input_text">Titile of person:</p><br>
+                                <input type="text" id="Title_of_person" v-model="Title_of_person"><br>
+                                <p id="notinput_text">Company contact information</p><br>
+                                <p id="input_text">Local no:</p><br>
+                                <input type="password" id="Local_no" v-model="Local_no"><br>
+                                <p id="input_text">Mobile No</p><br>
+                                <input type="email" id="Mobile_no" v-model="Mobile_no"><br>
+                                </div>
+                            <div class="third1">
+                                <p id="input text">Fax:</p><br>
+                                <input id="Fax" type="text" v-model="Fax"><br>
+                                <p id="input text">Address:</p><br>
+                                <textarea name="Address" v-model="Address1" id="Address1" cols="21%" rows="4"></textarea>
+                                <p id="notinput_text">Authorized contact information</p>
+                                <p id="input text">GSM:</p><br>
+                                <input id="GSM" v-model="Contact_person_email" type="text">
+                                <p id="input text">Email:</p><br>
+                                <input id="Email1" v-model="Email1" type="emal">
+                            </div>
+                            <button id="button1" v-on:click="chekUsers">Save</button>
+                        </div>
+                    </div>
+                    <div id="get_pay">
+                      <div id="payments" class="tabcontent2">
+                        <div class="first3">
+                          <p id="card">Your cards</p>
+                          <div class="pay">
+                            <img id="card1" src="/src/assets/images/image 7.png" alt="logo">
+                            <p class="text_inside">Card number</p>
+                            <p class="nums_inside">**** **** **** 2345</p>
+                            <p class="text_inside2">Card holder name</p>
+                            <p class="tex_inside">Name Surname</p>
+                            <p class="text_inside1">Expiration date</p>
+                            <p class="tex_inside1">10/2027</p>
+                        </div>
+                        <p id="card_1">Payment history</p>
+                        <div class="demo">
+                          <ul class="hr">
+                            <li id="block1">$65.00</li>
+                             <li id="pending">Pending</li>
+                              <li id="right1">May 10, 2020</li>
+                               <li id="fit">Visa 5432</li>
+                          </ul>
+                              <input type="checkbox" id="hd-1" class="hide"/>
+                              <label id="hd-1-1" for="hd-1" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                              <div>
+                                <div class="history">
+                                  <div class="one">
+                                    <div class="pay2">
+                                        <p class="text_inside10">Card number</p>
+                                        <p class="nums_inside10">**** **** **** 2345</p>
+                                        <p class="text_inside20">Card holder name</p>
+                                        <p class="tex_inside10">Name Surname</p>
+                                        <img id="card1-1" src="/src/assets/images/image 7.png" alt="logo">
+                                        <p class="text_inside11">Expiration date</p>
+                                        <p class="tex_inside12">10/2027</p>
+                                  </div>
 
-    <!-- begin::Global Config(global config for global JS sciprts) -->
-    <script>
-      var KTAppOptions = {
-        "colors": {
-          "state": {
-            "brand": "#5d78ff",
-            "dark": "#282a3c",
-            "light": "#ffffff",
-            "primary": "#5867dd",
-            "success": "#34bfa3",
-            "info": "#36a3f7",
-            "warning": "#ffb822",
-            "danger": "#fd3995"
-          },
-          "base": {
-            "label": [
-              "#c5cbe3",
-              "#a1a8c3",
-              "#3d4465",
-              "#3e4466"
-            ],
-            "shape": [
-              "#f0f3ff",
-              "#d9dffa",
-              "#afb4d4",
-              "#646c9a"
-            ]
-          }
+                                  </div>
+                                  <div class="two">
+                                    <p class="ht">Status</p>
+                                    <p class="ht-1">Pending</p>
+                                    <p class="ht">ID number</p>
+                                    <p class="ht-1">EKG2SJFN</p>
+                                  </div>
+                                  <div class="three">
+                                    <p class="ht">Invoice date</p>
+                                    <p class="ht-1">May 10, 2020</p>
+                                    <p class="ht">Date paid</p>
+                                    <p class="ht-1">May 10, 2020</p>
+                                    <div class="vl"></div>
+                                  </div>
+                                  <div class="four">
+                                    <p class="ht">Amount due</p>
+                                    <p class="ht-2">$65</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <br/>
+                              <br/>
+                              <ul class="hr">
+                                  <li id="block1">$250.00</li>
+                                  <li id="completed1">Completed</li>
+                                    <li id="right3">Apr 10, 2020</li>
+                                    <li id="left">Visa 5432</li>
+                          </ul>
+                              <input type="checkbox" id="hd-2" class="hide"/>
+                              <label id="hd-1-1" for="hd-2"><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                              <div>
+                                <div class="history">
+                                  <div class="one">
+                                    <div class="pay3">
+                                        <p class="text_inside10">Card number</p>
+                                        <p class="nums_inside10">**** **** **** 2345</p>
+                                        <p class="text_inside20">Card holder name</p>
+                                        <p class="tex_inside10">Name Surname</p>
+                                        <img id="card1-2" src="/src/assets/images/image 7.png" alt="logo">
+                                        <p class="text_inside11">Expiration date</p>
+                                        <p class="tex_inside12">10/2027</p>
+
+                                  </div>
+                                  </div>
+                                  <div class="two">
+                                    <p class="ht">Status</p>
+                                    <p class="ht-1">Completed</p>
+                                    <p class="ht">ID number</p>
+                                    <p class="ht-1">EKG2SJFN</p>
+                                  </div>
+                                  <div class="three">
+                                    <p class="ht">Invoice date</p>
+                                    <p class="ht-1">Apr 10, 2020</p>
+                                    <p class="ht">Date paid</p>
+                                    <p class="ht-1">Apr 10, 2020</p>
+                                    <div class="vl"></div>
+                                  </div>
+                                  <div class="four">
+                                    <p class="ht">Amount due</p>
+                                    <p class="ht-2">$250</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <br/>
+                              <br/>
+                              <ul class="hr">
+                                  <li id="block1">$50.00</li>
+                                  <li id="completed">Completed</li>
+                                    <li id="right">Mar 10, 2020</li>
+                                    <li id="fit">Visa 5432</li>
+                          </ul>
+                              <input type="checkbox" id="hd-3" class="hide"/>
+                              <label id="hd-1-1" for="hd-3" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                              <div>
+                                <div class="history">
+                                  <div class="one">
+                                    <div class="pay4">
+                                      <img id="card1-3" src="/src/assets/images/image 7.png" alt="logo">
+                                      <p class="text_inside10">Card number</p>
+                                      <p class="nums_inside10">**** **** **** 2345</p>
+                                      <p class="text_inside20">Card holder name</p>
+                                      <p class="tex_inside10">Name Surname</p>
+                                      <p class="text_inside11">Expiration date</p>
+                                      <p class="tex_inside12">10/2027</p>
+                                  </div>
+                                  </div>
+                                  <div class="two">
+                                    <p class="ht">Status</p>
+                                    <p class="ht-1">Completed</p>
+                                    <p class="ht">ID number</p>
+                                    <p class="ht-1">EKG2SJFN</p>
+                                  </div>
+                                  <div class="three">
+                                    <p class="ht">Invoice date</p>
+                                    <p class="ht-1">Mar 10, 2020</p>
+                                    <p class="ht">Date paid</p>
+                                    <p class="ht-1">Mar 10, 2020</p>
+                                    <div class="vl"></div>
+                                  </div>
+                                  <div class="four">
+                                    <p class="ht">Amount due</p>
+                                    <p class="ht-2">$50</p>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="second3">
+                            </div>
+                        <div class="third3">
+                        </div>
+                    </div>
+                    </div>
+
+              </div>
+                  <div data-v-60a8d82a="" class="col-md-4 kt-margin-b-20-tablet-and-mobile"></div>
+                </div>
+              </div>
+              <div data-v-60a8d82a="" class="col-xl-4 order-1 order-xl-2 kt-align-right"><a data-v-60a8d82a="" href="#" class="btn btn-default kt-hidden"><i data-v-60a8d82a="" class="la la-cart-plus"></i> New Order
+    </a>
+                <div data-v-60a8d82a="" class="kt-separator kt-separator--border-dashed kt-separator--space-lg d-xl-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <!-- begin::Global Config(global config for global JS sciprts) -->
+  <script>
+    var KTAppOptions = {
+      "colors": {
+        "state": {
+          "brand": "#5d78ff",
+          "dark": "#282a3c",
+          "light": "#ffffff",
+          "primary": "#5867dd",
+          "success": "#34bfa3",
+          "info": "#36a3f7",
+          "warning": "#ffb822",
+          "danger": "#fd3995"
+        },
+        "base": {
+          "label": [
+            "#c5cbe3",
+            "#a1a8c3",
+            "#3d4465",
+            "#3e4466"
+          ],
+          "shape": [
+            "#f0f3ff",
+            "#d9dffa",
+            "#afb4d4",
+            "#646c9a"
+          ]
         }
-      };
-    </script>
-    <!-- end::Global Config -->
-
-    <script type="text/javascript">
-      function loadFile(filename, filetype) {
-        filename = filename + "?time=" + Date.now();
-        if (filetype == "js") { //if filename is a external JavaScript file
-          var fileref = document.createElement('script');
-          fileref.setAttribute("type", "text/javascript");
-          fileref.setAttribute("src", filename);
-        } else if (filetype == "css") { //if filename is an external CSS file
-          var fileref = document.createElement("link")
-          fileref.setAttribute("rel", "stylesheet")
-          fileref.setAttribute("type", "text/css")
-          fileref.setAttribute("href", filename)
-        }
-        if (typeof fileref != "undefined")
-          document.getElementsByTagName("head")[0].appendChild(fileref);
       }
-    </script>
+    };
+  </script>
+  <!-- end::Global Config -->
 
-    <!--begin::Global Theme Bundle(used by all pages) -->
-    <script src="/src/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-    <script src="/src/assets/js/scripts.bundle.js" type="text/javascript"></script>
-    <!--end::Global Theme Bundle -->
-
-    <!--begin::Page Vendors(used by this page) -->
-    <script src="/src/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-    <script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-    <script src="/src/assets/plugins/custom/gmaps/gmaps.js" type="text/javascript"></script>
-    <!--end::Page Vendors -->
-
-    <!--begin::Custom Page -->
-    <!--end::Custom Page -->
-
-    <!--begin::Page Scripts(used by this page) -->
-
-    <!-- Custom Functions -->
-    <script src="/src/assets/js/sprintf.min.js" type="text/javascript"></script>
-    <script src="/src/assets/js/custom/lang/tr/global.js" type="text/javascript"></script>
-    <script src="/src/assets/js/custom/global.js" type="text/javascript"></script>
-    <script src="/src/assets/js/custom/app.js" type="text/javascript"></script>
-
-    <!-- Dashboard Page -->
-    <script src="/src/assets/js/pages/dashboard.js" type="text/javascript"></script>
-
-    <!-- Login Page -->
-    <script src="/src/assets/js/pages/custom/login/login-general.js" type="text/javascript"></script>
-
-    <!--Build -->
-    <script src="/dist/build.js" type="text/javascript"></script>
-    <!--<script type="text/javascript">loadjscssfile("/dist/build.js", "js");</script>-->
-
-    <!-- One Signal -->
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-153396545-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
+  <script type="text/javascript">
+    function loadFile(filename, filetype) {
+      filename = filename + "?time=" + Date.now();
+      if (filetype == "js") { //if filename is a external JavaScript file
+        var fileref = document.createElement('script');
+        fileref.setAttribute("type", "text/javascript");
+        fileref.setAttribute("src", filename);
+      } else if (filetype == "css") { //if filename is an external CSS file
+        var fileref = document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
       }
-      gtag('js', new Date());
-      gtag('config', 'UA-153396545-1');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    <!--Start of Tawk.to Script-->
-    <!-- <script type="text/javascript">
-      var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-      (function() {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/5e6ca0498d24fc2265878c6f/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-      })();
-    </script> -->
-    <!--End of Tawk.to Script-->
-
-    <!-- B24 -->
-    <!-- B24 -->
-    <!--end::Page Scripts -->
-    <!-- Code injected by live-server -->
-    <!-- <script type="text/javascript">
-      // <![CDATA[  <-- For SVG support
-      if ('WebSocket' in window) {
-        (function() {
-          function refreshCSS() {
-            var sheets = [].slice.call(document.getElementsByTagName("link"));
-            var head = document.getElementsByTagName("head")[0];
-            for (var i = 0; i < sheets.length; ++i) {
-              var elem = sheets[i];
-              var parent = elem.parentElement || head;
-              parent.removeChild(elem);
-              var rel = elem.rel;
-              if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-              }
-              parent.appendChild(elem);
-            }
-          }
-          var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-          var address = protocol + window.location.host + window.location.pathname + '/ws';
-          var socket = new WebSocket(address);
-          socket.onmessage = function(msg) {
-            if (msg.data == 'reload') window.location.reload();
-            else if (msg.data == 'refreshcss') refreshCSS();
-          };
-          if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-            console.log('Live reload enabled.');
-            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-          }
-        })();
-      } else {
-        console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-      }
-      // ]]>
-    </script> --&gt; -->
-    <!-- end::Body -->
-
-    <!-- <div id="iLABH71-1592487454551" class="" style="display: block !important;">
-      <iframe id="lGk8l7y-1592487454551" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: auto !important; left: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; display: none !important; height: 120px !important;"></iframe>
-      <iframe id="GqfnXkc-1592487454551" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px !important; height: 60px !important; min-height: 60px !important; max-height: 60px !important; width: 60px !important; min-width: 60px !important; max-width: 60px !important; border-radius: 50% !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; top: auto !important; bottom: 20px !important; right: 20px !important; left: auto !important; display: block !important;"></iframe>
-      <iframe id="lVa00VY-1592487454552" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; display: none !important; z-index: 1000003 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; top: auto !important; bottom: 60px !important; right: 15px !important; left: auto !important; width: 21px !important; max-width: 21px !important; min-width: 21px !important; height: 21px !important; max-height: 21px !important; min-height: 21px !important;"></iframe>
-      <iframe id="RxIih3j-1592487454552" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; bottom: 30px !important; top: auto !important; right: 0px !important; left: auto !important; width: 124px !important; max-width: 124px !important; min-width: 124px !important; height: 95px !important; max-height: 95px !important; min-height: 95px !important; z-index: 1000002 !important; margin: 0px !important; display: none !important;"></iframe>
-      <div class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 100% !important; display: none !important; z-index: 1000001 !important; cursor: move !important; float: left !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-      <div id="CdRgYTt-1592487454551" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: w-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-      <div id="sRtgkaD-1592487454551" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: n-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-      <div id="NlZnp1T-1592487454551" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: nw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-      <iframe id="eRHtQ2c-1592487454580" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 378px !important; height: 830px !important; display: none !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; bottom: 100px !important; top: auto !important; right: 20px !important; left: auto !important;"></iframe>
-    </div> -->
-    <script>
-        function openPage(pageName, elmnt, color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent2");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+      if (typeof fileref != "undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref);
     }
-    document.getElementById(pageName).style.display = "grid";
+  </script>
+
+  <!--begin::Global Theme Bundle(used by all pages) -->
+  <script src="/src/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+  <script src="/src/assets/js/scripts.bundle.js" type="text/javascript"></script>
+  <!--end::Global Theme Bundle -->
+
+  <!--begin::Page Vendors(used by this page) -->
+  <script src="/src/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+  <script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
+  <script src="/src/assets/plugins/custom/gmaps/gmaps.js" type="text/javascript"></script>
+  <!--end::Page Vendors -->
+
+  <!--begin::Custom Page -->
+  <!--end::Custom Page -->
+
+  <!--begin::Page Scripts(used by this page) -->
+
+  <!-- Custom Functions -->
+  <script src="/src/assets/js/sprintf.min.js" type="text/javascript"></script>
+  <script src="/src/assets/js/custom/lang/tr/global.js" type="text/javascript"></script>
+  <script src="/src/assets/js/custom/global.js" type="text/javascript"></script>
+  <script src="/src/assets/js/custom/app.js" type="text/javascript"></script>
+
+  <!-- Dashboard Page -->
+  <script src="/src/assets/js/pages/dashboard.js" type="text/javascript"></script>
+
+  <!-- Login Page -->
+  <script src="/src/assets/js/pages/custom/login/login-general.js" type="text/javascript"></script>
+
+  <!--Build -->
+  <script src="/dist/build.js" type="text/javascript"></script>
+  <!--<script type="text/javascript">loadjscssfile("/dist/build.js", "js");</script>-->
+
+  <!-- One Signal -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-153396545-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-153396545-1');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <!--Start of Tawk.to Script-->
+
+
+  <!-- B24 -->
+  <!-- B24 -->
+  <!--end::Page Scripts -->
+  <!-- Code injected by live-server -->
+  <!-- <script type="text/javascript">
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function() {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function(msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    } else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script> --&gt; -->
+  <!-- end::Body -->
+
+  <!-- <div id="iLABH71-1592487454551" class="" style="display: block !important;">
+    <iframe id="lGk8l7y-1592487454551" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: auto !important; left: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; display: none !important; height: 120px !important;"></iframe>
+    <iframe id="GqfnXkc-1592487454551" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px !important; height: 60px !important; min-height: 60px !important; max-height: 60px !important; width: 60px !important; min-width: 60px !important; max-width: 60px !important; border-radius: 50% !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; top: auto !important; bottom: 20px !important; right: 20px !important; left: auto !important; display: block !important;"></iframe>
+    <iframe id="lVa00VY-1592487454552" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; display: none !important; z-index: 1000003 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; top: auto !important; bottom: 60px !important; right: 15px !important; left: auto !important; width: 21px !important; max-width: 21px !important; min-width: 21px !important; height: 21px !important; max-height: 21px !important; min-height: 21px !important;"></iframe>
+    <iframe id="RxIih3j-1592487454552" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; bottom: 30px !important; top: auto !important; right: 0px !important; left: auto !important; width: 124px !important; max-width: 124px !important; min-width: 124px !important; height: 95px !important; max-height: 95px !important; min-height: 95px !important; z-index: 1000002 !important; margin: 0px !important; display: none !important;"></iframe>
+    <div class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 100% !important; display: none !important; z-index: 1000001 !important; cursor: move !important; float: left !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+    <div id="CdRgYTt-1592487454551" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: w-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+    <div id="sRtgkaD-1592487454551" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: n-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+    <div id="NlZnp1T-1592487454551" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: nw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
+    <iframe id="eRHtQ2c-1592487454580" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 378px !important; height: 830px !important; display: none !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; bottom: 100px !important; top: auto !important; right: 20px !important; left: auto !important;"></iframe>
+  </div> -->
+  <script>
+    function openPage(pageName, elmnt, color) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent2");
+for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+document.getElementById(pageName).style.display = "grid";
 }
 
-    function payments() {
-        document.location.href = "http://127.0.0.1:5500/pay.html";
-    }
+function payments() {
+    document.location.href = "http://127.0.0.1:5500/pay.html";
+}
 
-    function changeStyle() {
-      let block = document.getElementById('history');
-      let check = document.getElementById('hd-1');
-      if (check.checked) {
-        block.style.backgroundColor = '#6485FF';
-      } else {
-        block.style.backgroundColor = '#ffffff';
-      }
+function changeStyle() {
+  let block = document.getElementById('history');
+  let check = document.getElementById('hd-1');
+  if (check.checked) {
+    block.style.backgroundColor = '#6485FF';
+  } else {
+    block.style.backgroundColor = '#ffffff';
+  }
 
-    }
+}
 
-    </script>
+</script>
 
-
- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
-    <!-- <script src="enter.js"></script>
-    <script src="api.js"></script> -->
-    <script src="information.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+  <script src="information.js"></script>
+</body>
 <!-- end::Body -->
 </html>

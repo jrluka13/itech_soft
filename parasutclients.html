@@ -59,15 +59,14 @@
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body >
-
+<body>
   <div data-v-9c90884e="">
     <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
       <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
         <div data-v-9c90884e="" class="kt-subheader__main">
-          <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
-        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="ggproductadd.html" class="btn btn-label-brand btn-bold">
-Ürün Ekle
+          <h3 data-v-9c90884e="" class="kt-subheader__title">Paraşüt Müşteri Listesi</h3></div>
+        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="parasutfatura.html" class="btn btn-label-brand btn-bold">
+Fatura Kes
 </a></div>
       </div>
     </div>
@@ -253,7 +252,6 @@
       </div>
     </div>
   </div>
-
   <!-- begin::Global Config(global config for global JS sciprts) -->
   <script>
     var KTAppOptions = {
@@ -309,7 +307,7 @@
     }
 
 var deleteIcon = function(value, data, cell, row, options){ //plain text value
-    return "<i class='fa fa-trash'></i>"
+    return "<i class='fa fa-eye'></i>"
 };
 
 //tabulator script
@@ -333,10 +331,10 @@ var table = new Tabulator("#example-table", {
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
-    modal.style.display = "block";
-    span.onclick = function() {
-    modal.style.display = "none";
-}
+ //  modal.style.display = "block";
+ //   span.onclick = function() {
+ //   modal.style.display = "none";
+//}
 
 
     },
@@ -350,16 +348,13 @@ var table = new Tabulator("#example-table", {
 		layout:"fitColumns",
 		columns:[
       {title:"ID", field:"row_id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
-      {title:"Ürün Id", field:"productId" ,sorter:"number",headerTooltip:true, },
-      {title:"Kategori Kodu", field:"categoryCode", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-      {title:"Başlık", field:"title", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
-			{title:"Altbaşlık", field:"subtitle", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Açıklama", visible:false,field:"description", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Fiyat", field:"buyNowPrice", sorter:"string", width:140,tooltip:true,},
-			{title:"Stok Adet", field:"productCount", sorter:"string",tooltip:true,},
-      {title:"Sil" , sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
+      {title:"Parşüt Id", field:"id" ,sorter:"number",headerTooltip:true, },
+      {title:"Adı", field:"name" ,sorter:"number",headerTooltip:true, },
+      {title:"Email", field:"email", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Telefon", field:"phone", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
+			{title:"Bakiye", field:"balance", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Sil" ,visible:false, sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
 
-        delProduct1(row.getData().productId);
     },}
 		],
 	});
@@ -380,19 +375,28 @@ var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function()  {
     if(this.readyState === 4) {
-      console.log(this.responseText);
+      //console.log(this.responseText);
       var resultText = xhr.responseText;
+
+
+
+
+      let tobj = JSON.parse(resultText);
+      delete tobj["meta"];
+      delete tobj["links"];
+      delete tobj["attributes"];
+
+     console.log(JSON.stringify(tobj).replace("{\"data\":[","").replace("}}]","}").replace(",\"meta\":{\"created_at\":\"2020-08-29T06:00:23.601Z\",\"updated_at\":\"2020-08-29T06:00:23.601Z\"}","").replace(",\"relationships\":{\"category\":{\"meta\":{}},\"price_list\":{\"meta\":{}},\"contact_portal\":{\"meta\":{}},\"contact_people\":{\"meta\":{}},\"activities\":{\"meta\":{}},\"e_invoice_inboxes\":{\"meta\":{}},\"sharings\":{\"meta\":{}}}","").replace("\"attributes\":{","").replace("}}","}"));
+
      // window.alert(resultText.replace("{\"product\":","").replace("}]}","}]"));
-      table.setData(resultText.replace("{\"product\":","").replace("}]}","}]"));
+     table.setData("[" + JSON.stringify(tobj).replace("{\"data\":[","").replace("}}]","}").replace(",\"meta\":{\"created_at\":\"2020-08-29T06:00:23.601Z\",\"updated_at\":\"2020-08-29T06:00:23.601Z\"}","").replace(",\"relationships\":{\"category\":{\"meta\":{}},\"price_list\":{\"meta\":{}},\"contact_portal\":{\"meta\":{}},\"contact_people\":{\"meta\":{}},\"activities\":{\"meta\":{}},\"e_invoice_inboxes\":{\"meta\":{}},\"sharings\":{\"meta\":{}}}","").replace("\"attributes\":{","").replace("}}","}") + "]");
 
     }
   })
 
-  var date = new Date();
-  var timestamp = date.getTime();
-  var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
 
-  xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductsgg?sign=" + md5Hash + "&timestamp=" + timestamp);
+  xhr.open("GET", "https://api.parasut.com/v4/373907/contacts");
+  xhr.setRequestHeader("Authorization", "Bearer 7d6054e0a47c74a68d83e6dbee14799ee86b179baad33f6c9e5a1989e6aa0d2d");
   xhr.send();
 
 
@@ -400,7 +404,7 @@ var xhr = new XMLHttpRequest();
   function setProductPrice() {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductGG";
+   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductGGaaaaa";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -472,7 +476,7 @@ var xhr = new XMLHttpRequest();
    function delProduct1(product_id) {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductGG";
+   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductGGaa";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -565,7 +569,7 @@ var xhr = new XMLHttpRequest();
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  
+
 </body>
 <!-- end::Body -->
 </html>

@@ -44,10 +44,7 @@
   <script src="/src/assets/js/custom/Utils.js" type="text/javascript"></script>
   <link href="/src/assets/css/custom/general.css" rel="stylesheet" type="text/css" />
 
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/css/tabulator.min.css" rel="stylesheet">
- <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/css/tabulator_bootstrap4.min.css" rel="stylesheet">-->
-
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/js/tabulator.min.js"></script>
   <script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
@@ -60,21 +57,14 @@
 
 <!-- begin::Body -->
 <body >
+
   <div data-v-9c90884e="">
     <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
       <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
         <div data-v-9c90884e="" class="kt-subheader__main">
           <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
-        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="n11productadd.html" class="btn btn-label-brand btn-bold">
+        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="trendyolproductadd.html" class="btn btn-label-brand btn-bold">
 Ürün Ekle
-</a></div>
-
-<div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="n11siparis.html" class="btn btn-label-brand btn-bold">
-Siparişler
-</a></div>
-
-<div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="n11siparis.html" class="btn btn-label-brand btn-bold">
-Kargo
 </a></div>
       </div>
     </div>
@@ -90,9 +80,13 @@ Kargo
               <div>
                 <button  class="btn btn-label-brand btn-bold" id="download-xlsx">Download XLSX</button>
                 <button  class="btn btn-label-brand btn-bold" id="download-pdf">Download PDF</button>
+             <!--   <select name="approved" id="approved" class="form-control input-md">
+                  <option value="false">Onaylanmamış Ürünler</option>
+                  <option value="true">Onaylanmış Ürünler</option>
+                </select> -->
                </div>
             <br/>
-              <div id="example-table" class="table-dark"></div>
+              <div id="example-table"></div>
 
               <style>
                 body {font-family: Arial, Helvetica, sans-serif;}
@@ -136,19 +130,6 @@ Kargo
                   text-decoration: none;
                   cursor: pointer;
                 }
-
-                .tabulator-header-filter {
-
-                 border-radius:4px;
-
-                }
-
-                .tabulator-headers, .tabulator-header {
-
-                -color:white;
-                -background-color: black;
-                }
-
                 </style>
 
               <!-- The Modal -->
@@ -159,85 +140,121 @@ Kargo
                 <span class="close">&times;</span>
 
 
-                <form  method="post" id="setproduct" action="http://localhost:8080/ws_iltech_n11/ws/setproductbasic">
+                <form  method="post" id="addproduct" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct">
 
 
-
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Barkod No:</label>
                   <div class="col-md-12">
-                    <input type="hidden" value="71faab12-d47e-432e-a4a2-5546c49cb1c4" name="appKey" class="form-control input-md">
+                    <input value="" id="barcode"  name="barcode" class="form-control input-md" disabled>
                   </div>
 
+                  <label class="col-md-6 control-label lblgeneral" for=""> *Başlık:(Maksimum 100 karakter)</label>
                   <div class="col-md-12">
-                    <input type="hidden" value="FrOoxTV9Mk4R5KI5" name="appSecret" class="form-control input-md">
+                    <input value="" id="title" name="title" maxlength="100" class="form-control input-md" >
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Ürün ID:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Ana Ürün Kodu:</label>
                   <div class="col-md-12">
-                    <input value="" id="productId" name="productId" class="form-control input-md" disabled>
+                    <input value="" id="productMainId" name="productMainId" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Başlık:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Marka Id:</label>
                   <div class="col-md-12">
-                    <input value="" id="title" name="title" class="form-control input-md">
+
+                    <input value="1791" id="brandId" name="brandId" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Altbaşlık:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Kategori Id:</label>
                   <div class="col-md-12">
-                    <input value="" id="subtitle" name="subtitle" class="form-control input-md">
+
+                    <input value="656" id="categoryId" name="categoryId" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Ürün Satış Kodu:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Stok Miktarı:</label>
                   <div class="col-md-12">
-                    <input value="" id="productSellerCode" name="productSellerCode" class="form-control input-md" disabled>
+                    <input value="" id="quantity"  name="quantity" class="form-control input-md" ∂>
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Fiyat:</label>
+                  <label class="col-md-9 control-label lblgeneral" for=""> *Stok Kodu:(Maksimum 100 karakter)</label>
                   <div class="col-md-12">
-                    <input value="" id="price" name="price" class="form-control input-md">
+                    <input value="" id="stockCode"  name="stockCode" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Stok ID:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Desi Miktarı:</label>
                   <div class="col-md-12">
-                    <input value="" id="stockItem_Id" name="stockItem_Id" class="form-control input-md" disabled>
+                    <input value="" id="dimensionalWeight"  name="dimensionalWeight" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for="">*Stok Adet:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Açıklama:</label>
                   <div class="col-md-12">
-                    <input value="" id="quantity" name="quantity" class="form-control input-md">
+                    <input value="" id="description"  name="description" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for="">*İndirim Tipi:</label>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Kur Tipi:</label>
                   <div class="col-md-12">
-                    <select name="discount_type" id="discount_type" class="form-control input-md">
-                      <option value="1" selected>İndirim Tutarı</option>
-                      <option value="2">İndirim Oranı(%)</option>
-                      <option value="3">İndirimli Fiyat</option>
+                    <select name="currencyType" id="currencyType" class="form-control input-md">
+                      <option value="TRY">TRY</option>
                     </select>
                   </div>
 
-                  <label class="col-md-5 control-label lblgeneral" for="">*İndirim Miktarı:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Liste Fiyatı:</label>
                   <div class="col-md-12">
-                    <input value="" id="discount_value" name="discount_value" class="form-control input-md">
+                    <input value="" id="listPrice" name="listPrice" class="form-control input-md" >
                   </div>
 
-                  <input type="hidden" value="https://n11scdn.akamaized.net/a1/178/elektronik/masaustu-bilgisayar/zeiron-intel-i5-346ghz-8gb-120gb-500gb-185-masaustu-pc__0142104110506610.jpg" id="image_url1" name="image_url1" class="form-control input-md">
-                  <input type="hidden" value="1" id="image_order1" name="image_order1" class="form-control input-md">
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Satış Fiyatı:</label>
+                  <div class="col-md-12">
+                    <input value="" id="salePrice" name="salePrice" class="form-control input-md">
+                  </div>
 
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Kargo Şirketi:</label>
+                  <div class="col-md-12">
+                    <select name="cargoCompanyId" id="cargoCompanyId" class="form-control input-md">
+                      <option value="2">MNG Kargo</option>
+                      <option value="3">Aras Kargo</option>
+                      <option value="4">Yurtçi Kargo Marketplace</option>
+                      <option value="10">MNG Kargo Marketplace</option>
+                      <option value="25">UPS Kargo</option>
+                      <option value="27">PTT</option>
+                    </select>
+                   </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Resim Linki:</label>
+                  <div class="col-md-12">
+                    <input value="https://n11scdn2.akamaized.net/a1/140/elektronik/masaustu-bilgisayar/intel-i5-turbo-346-ghz-8gb-ram-240gb-ssd-masaustu-bilgisayar__1461358992444367.jpg" id="image_url1"  name="image_url1" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Ürün KDV Oranı:</label>
+                  <div class="col-md-12">
+                    <input value="18"  id="vatRate" name="vatRate" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Ürün Özellik:</label>
+                  <div class="col-md-12">
+                    <input value="47" id="attributeId" name="attributeId" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label" for=""> *Ürün Özellik Değeri :</label>
+                  <div class="col-md-12">
+                    <input value="Kırmızı" id="customAttributeValue" name="customAttributeValue" class="form-control input-md">
+                  </div>
 
                 </br>
                 <input type="button" class="btn btn-label-brand btn-bold" value="Güncelle" onclick="setProduct1()">
 
-                </form>
+                </br>
+                <label class="col-md-4 control-label" id="counter2" name="counter2"></label>
 
-              </br>
-                <label class="col-md-4 control-label lblgeneral" style="font-size:20px" id="counter" name="counter"></label>
+
+                  </form>
+
+
 
 
                   </div>
 
                </div>
-
-
 
 
               <div data-v-9c90884e="" class="kt-portlet__body"></div>
@@ -260,7 +277,6 @@ Kargo
       </div>
     </div>
   </div>
-
   <!-- begin::Global Config(global config for global JS sciprts) -->
   <script>
     var KTAppOptions = {
@@ -393,27 +409,61 @@ function minMaxFilterFunction(headerValue, rowValue, rowData, filterParams){
 
 //for min-max filter:  headerFilter:minMaxFilterEditor, headerFilterFunc:minMaxFilterFunction, headerFilterLiveFilter:false
 
-var deleteIcon = function(value, data, cell, row, options){ //plain text value
-    return "<i class='fa fa-trash'></i>"
+
+
+function flattenData(data){
+	var output = [];
+	function flatternRow(row){
+		var outputRow = {};
+		for(var prop in row){
+			if(typeof row[prop] !== "object"){
+				outputRow[prop] = row[prop];
+			}else{
+				var flat = flattenRow(row[prop]);
+				for(var flatProp in flat){
+					outputRow[prop + "_" + flatProp] = flat[flatProp];
+				}
+			}
+		}
+		return outputRow;
+	}
+	data.forEach(function(row){
+		output.push(flatternRow(row));
+	});
+	return output;
+}
+
+var updateIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-folder-open'></i>"
+};
+
+var priceIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-folder-open'></i>"
 };
 
 //tabulator script
 var table = new Tabulator("#example-table", {
-
   rowDblClick:function(e, row){
     //e - the click event object
     //row - row component
     //window.alert(row.getData().price);
 
-    document.getElementById("productSellerCode").value = row.getData().productSellerCode;
-    document.getElementById("price").value = row.getData().price;
+    document.getElementById("barcode").value = row.getData().barcode;
     document.getElementById("title").value = row.getData().title;
-    document.getElementById("subtitle").value = row.getData().subtitle;
-    document.getElementById("productId").value = row.getData().productId;
+    document.getElementById("productMainId").value = row.getData().productMainId;
+    //document.getElementById("brandId").value = row.getData().brandId;
+    //document.getElementById("categoryId").value = row.getData().categoryId;
     document.getElementById("quantity").value = row.getData().quantity;
-    document.getElementById("stockItem_Id").value = row.getData().id;
-    //document.getElementById("discount_type").value = row.getData().discount_type;
-    //document.getElementById("discount_value").value = row.getData().discount_value;
+    document.getElementById("stockCode").value = row.getData().stockCode;
+    document.getElementById("dimensionalWeight").value = row.getData().dimensionalWeight;
+    document.getElementById("description").value = row.getData().description;
+    //document.getElementById("currencyType").value = row.getData().currencyType;
+    document.getElementById("listPrice").value = row.getData().listPrice;
+    document.getElementById("salePrice").value = row.getData().salePrice;
+   // document.getElementById("cargoCompanyId").value = row.getData().cargoCompanyId;
+   // document.getElementById("img").value = row.getData().salePrice;
+    document.getElementById("vatRate").value = row.getData().vatRate;
+    //document.getElementById("img").value = row.getData().at;
 
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("myBtn");
@@ -428,93 +478,119 @@ var table = new Tabulator("#example-table", {
     resizableRows:true,
     selectable:true,
     tooltips:true,
+    //dataTree:true,
+    //dataTreeChildField:"childRows",
 		height:"311px",
 		layout:"fitColumns",
 		placeholder:"No Data Set",
 		movableColumns:true,
 		layout:"fitColumns",
 		columns:[
-      {title:"ID", field:"row_id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
-      {title:"Ürün Id", field:"productId" ,sorter:"number",headerTooltip:true, },
-      {title:"Ürün Satış Kodu", field:"productSellerCode", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-      {title:"Başlık", field:"title", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
-			{title:"Altbaşlık", field:"subtitle", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Fiyat", field:"price", sorter:"number", width:140,tooltip:true,},
-			{title:"Stok Adet", field:"quantity", sorter:"string",tooltip:true,},
-    	{title:"Onay Durumu", field:"approvalStatus", sorter:"string",width:140, headerTooltip:true},
-			{title:"Kur Tipi",visible:false, field:"currencyType", sorter:"string",headerTooltip:true},
-			{title:"Stok Id", field:"id", sorter:"string",headerTooltip:true},
-			{title:"Indirim Tipi",visible:false, field:"discount_type", sorter:"string",headerTooltip:true},
-			{title:"Indirim Degeri",visible:false, field:"discount_value", sorter:"string",headerTooltip:true},
-      {title:"Sil" , sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
+			{title:"ID", field:"id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
+      {title:"Ürün Id", field:"id", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Ürün Adı", field:"name", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara"},
+			{title:"SKU", field:"sku",headerTooltip:true, },
+			{title:"Fiyat",visible:false, field:"price" ,sorter:"string",headerTooltip:true, },
 
-        delProduct1(row.getData().productId);
-    },}
+      {title:"Stok Miktarı", field:"stock_quantity", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Stok Kodu",visible:false, field:"stockCode", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Durum", field:"status", sorter:"string", headerTooltip:true},
+      {title:"dimensionalWeight",visible:false, field:"dimensionalWeight", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Kur tipi",visible:false, field:"currencyType", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Liste Fiyatı",visible:false, field:"listPrice", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Satış fiyatı",visible:false, field:"salePrice", sorter:"string",headerFilter:"input",headerTooltip:true},
+     // {title:"Kargo Şirket Id",visible:true, field:"cargoCompanyId", sorter:"string",headerFilter:"input",headerTooltip:true},
+    //  {title:"Kargo Id",visible:true, field:"attributes.name", sorter:"string",headerFilter:"input",headerTooltip:true},
+
+      {title:"Kdv Oranı",visible:false, field:"vatRate", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Güncelle" , sortable:false, formatter:updateIcon,cellClick:function(e, row){
+    //e - the click event object
+    //cell - cell component
+    document.getElementById("barcode").value = row.getData().barcode;
+
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+  //  modal.style.display = "block";
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+   // window.alert("clickedd" +  cell.getData.salePrice);
+    }, }
+
+
 		],
 	});
 
+
 	document.getElementById("download-xlsx").addEventListener("click", function(){
-    table.download("xlsx", "urunler_n11.xlsx", {sheetName:"Urun Listesi"});
+    table.download("xlsx", "urunler_woocommerce.xlsx", {sheetName:"Urun Listesi"});
 });
 
 	document.getElementById("download-pdf").addEventListener("click", function(){
-    table.download("pdf", "urunler_n11.pdf", {
+    table.download("pdf", "urunler_woocommerce.pdf", {
         orientation:"portrait", //set page orientation to portrait
         title:"Urun Listesi", //add title to report
     });
 });
 
 
+
+
 var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function()  {
     if(this.readyState === 4) {
-      console.log(this.responseText);
+     // console.log(this.responseText);
       var resultText = xhr.responseText;
 
-     // let tobj = JSON.parse(resultText);
-     // delete tobj["attributes"];
 
+      let tobj = JSON.parse(resultText);
 
-     // window.alert(resultText.replace("{\"product\":","").replace("}]}","}]"));
-      table.setData(resultText.replace("{\"product\":","").replace("}]}","}]"));
-    //table.setData(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
+     // delete tobj["default_attributes"];
+     // delete tobj["variations"];
+      delete tobj["attributes"];
+
+      console.log(JSON.stringify(tobj).replace("{\"data\":","").replace("}]}a","}]"));
+
+      table.setData(resultText.replace("\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("{\"totalElements\":2,","").replace("{\"totalElements\":3,","").replace("{\"totalElements\":4,","").replace("{\"totalElements\":5,","").replace("{\"totalElements\":6,","").replace("{\"totalElements\":7,","").replace("{\"totalElements\":8,",""));
+     // console.log(resultText.replace("\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]").replace("{\"totalElements\":2,","").replace("{\"totalElements\":3,","").replace("{\"totalElements\":4,","").replace("{\"totalElements\":5,","").replace("{\"totalElements\":6,","").replace("{\"totalElements\":7,","").replace("{\"totalElements\":8,",""));
     //window.alert(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
 
     }
   })
 
-  xhr.open("GET", "http://51.68.195.202:8080/ws_iltech_n11/ws/getproductsn11");
-  //xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductstrendyol");
 
-  //xhr.setRequestHeader("Authorization", "Basic " + auth);
+xhr.open("GET", "https://thasos.io/wp-json/wc/v3/products?consumer_key=ck_ea85bac42b1667c0a3ecb775fce036f40e03f6ee&consumer_secret=cs_a748421512b301156dcdcdeec5ae97231a7f8b0e");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "c4bcc391-452a-ebab-71cd-e5eba6b7a487");
 
-  xhr.send();
+xhr.send();
 
 
-  //Set Product
-  function setProduct1() {
+
+
+function setProduct1() {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductbasic";
+   var theUrl = "https://api.trendyol.com/sapigw/suppliers/106606/v2/products";
+
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
          console.log(this.responseText);
          var resultText = xhr.responseText;
-         window.alert(this.responseText);
+        // window.alert(this.responseText);
 
-         if(this.responseText.includes("error")) {
+         setProductStockPrice();
 
-           var count = 60, timer = setInterval(function() {
+         if(this.responseText.includes("message")) {
 
-         $("#counter").css("visibility", "visible");
-         $("#counter").html("Lütfen " +  count-- + " saniye bekleyiniz");
-         if(count == 0) {
-             clearInterval(timer);
-          $("#counter").css("visibility", "hidden");
-            }
-              }, 1000);
+          //window.alert("Lütfen 5 dk sonra tekrar deneyiniz");
+
 
          }
 
@@ -524,51 +600,76 @@ var xhr = new XMLHttpRequest();
        }
      })
 
-   var setProductData = {
-               "appKey":"___appKey___",
-               "appSecret":"___appSecret___",
-               "productId":"___productId___",
-               "productSellerCode":"___productSellerCode___",
-               "price":"___price___",
-               "discount_type":"___discount_type___",
-               "discount_value":"___discount_value___",
-               "description":"",
-               "stockItem_Id":"___stockItem_id___",
-               "stockItem_quantity1":"___quantity__"
-             //  "image_url1":"___img_url1___",
-             //  "image_order1":"___img_order1___"
 
-           }
+var setProductData = {
+  "items": [
+    {
+      "barcode": "___barcode___",
+      "title": "___title___",
+      "productMainId": "___productMainId___",
+      "brandId": "___brandId___",
+      "categoryId": "___categoryId___",
+      "quantity": "___quantity___",
+      "stockCode": "___stockCode___",
+      "dimensionalWeight": "___dimensionalWeight___",
+      "description": "___description___",
+      "currencyType": "___currencyType___",
+      "listPrice": "___listPrice___",
+      "salePrice": "___salePrice___",
+      "vatRate": "___vatRate___",
+      "cargoCompanyId": "___cargoCompanyId___",
+      "images": [
+        {
+          "url": "___imgurl___"
+        }
+      ],
+      "attributes": [
+       {
+           "attributeId": "___attributeId___",
+           "customAttributeValue": "___customAttributeValue___"
+         }
 
-   var postData = JSON.stringify(setProductData);
+      ]
+    }
+  ]
+}
 
-   postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
-   postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
-   postData = postData.replace("___productId___",document.getElementById("productId").value);
-   postData = postData.replace("___productSellerCode___",document.getElementById("productSellerCode").value);
-   postData = postData.replace("___price___",document.getElementById("price").value);
-   postData = postData.replace("___discount_type___",document.getElementById("discount_type").value);
-   postData = postData.replace("___discount_value___",document.getElementById("discount_value").value);
-   //postData = postData.replace("___description___",document.getElementById("description").value);
-   postData = postData.replace("___stockItem_id___",document.getElementById("stockItem_Id").value);
-   postData = postData.replace("___quantity__",document.getElementById("quantity").value);
-   postData = postData.replace("___img_url1___",document.getElementById("image_url1").value);
-   postData = postData.replace("___img_order1___",document.getElementById("image_order1").value);
+
+   var putData = JSON.stringify(setProductData);
+
+   putData = putData.replace("___barcode___",document.getElementById("barcode").value);
+   putData = putData.replace("___title___",document.getElementById("title").value);
+   putData = putData.replace("___productMainId___",document.getElementById("productMainId").value);
+   putData = putData.replace("___brandId___",document.getElementById("brandId").value);
+   putData = putData.replace("___categoryId___",document.getElementById("categoryId").value);
+   putData = putData.replace("___quantity___",document.getElementById("quantity").value);
+  putData = putData.replace("___stockCode___",document.getElementById("stockCode").value);
+  putData = putData.replace("___dimensionalWeight___",document.getElementById("dimensionalWeight").value);
+  putData = putData.replace("___description___",document.getElementById("description").value);
+  putData = putData.replace("___currencyType___",document.getElementById("currencyType").value);
+  putData = putData.replace("___listPrice___",document.getElementById("listPrice").value);
+  putData = putData.replace("___salePrice___",document.getElementById("salePrice").value);
+  putData = putData.replace("___vatRate___",document.getElementById("vatRate").value);
+  putData = putData.replace("___cargoCompanyId___",document.getElementById("cargoCompanyId").value);
+  putData = putData.replace("___imgurl___",document.getElementById("image_url1").value);
+  putData = putData.replace("___attributeId___",document.getElementById("attributeId").value);
+  putData = putData.replace("___customAttributeValue___",document.getElementById("customAttributeValue").value);
 
    //window.alert(postData);
-   console.log(postData);
+   console.log(putData);
 
 
-   xmlhttp.open("POST", theUrl);
+   xmlhttp.open("PUT", theUrl);
    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-   xmlhttp.send(postData);
+   xmlhttp.setRequestHeader("Authorization", "Basic Y2tfYjY1ZWRkOWFiMDAwZmQ1MDVhYzEyNTc1ZDJlOTNiMDI5NmNjNDlmZTpjc18xNDk3MTc1ZWZjNjc4NTRiNmFhMzNhODk0NjczYjI4ZGFjZGZhNjg3");
+   xmlhttp.send(putData);
    }
 
 
-   function delProduct1(product_id) {
+   function setProductStockPrice() {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductn11";
+   var theUrl = "https://aaaapi.trendyol.com/sapigw/suppliers/106606/products/price-and-inventory";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -576,32 +677,51 @@ var xhr = new XMLHttpRequest();
          var resultText = xhr.responseText;
          window.alert(this.responseText);
 
+
+
+         if(this.responseText.includes("message")) {
+
+          //window.alert("Lütfen 5 dk sonra tekrar deneyiniz");
+
+
+         }
+
        //var abc  = this.responseText.split("<");
         // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
 
        }
      })
 
-   var addProductData = {
-               "appKey":"___appKey___",
-               "appSecret":"___appSecret___",
-               "productId":"___productId___"
-   }
 
-   var postData = JSON.stringify(addProductData);
+var setProductData = {
 
-   postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
-   postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
-   postData = postData.replace("___productId___",product_id);
+
+  "items": [
+    {
+      "barcode": "___barcode___",
+      "quantity": "___quantity___",
+      "salePrice": "___salePrice___",
+      "listPrice": "___listPrice___"
+    }
+  ]
+}
+
+
+   var putData = JSON.stringify(setProductData);
+
+   putData = putData.replace("___barcode___",document.getElementById("barcode").value);
+   putData = putData.replace("___quantity___",document.getElementById("quantity").value);
+   putData = putData.replace("___listPrice___",document.getElementById("listPrice").value);
+   putData = putData.replace("___salePrice___",document.getElementById("salePrice").value);
 
    //window.alert(postData);
-   console.log(postData);
+   console.log(putData);
 
 
    xmlhttp.open("POST", theUrl);
    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-   xmlhttp.send(postData);
-
+   xmlhttp.setRequestHeader("Authorization", "Basic a2hoTnJPV0pzUmpwcTVKbHNvc2g6bGpMd294a1Y5N1M1TE15SDBLOE4=");
+   xmlhttp.send(putData);
    }
 
 

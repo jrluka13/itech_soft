@@ -30,7 +30,7 @@ var app = new Vue({
 
 
       },
-      
+
       changePsw(){
 
         let findObj = {};

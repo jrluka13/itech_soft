@@ -59,16 +59,15 @@
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body >
-
+<body>
   <div data-v-9c90884e="">
     <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
       <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
         <div data-v-9c90884e="" class="kt-subheader__main">
-          <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
-        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="ggproductadd.html" class="btn btn-label-brand btn-bold">
+          <h3 data-v-9c90884e="" class="kt-subheader__title">Kargo Listesi</h3></div>
+<!--        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="n11productadd.html" class="btn btn-label-brand btn-bold">
 Ürün Ekle
-</a></div>
+</a></div>-->
       </div>
     </div>
     <div data-v-9c90884e="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -144,12 +143,40 @@
 
                 </style>
 
-              <!-- The Modal -->
+
+              <!-- The Modal for kargo -->
+              <div id="modalKargo" class="modal">
+
+                <!-- Modal content -->
+                        <div class="modal-content" style="width: 80%;height: 700px;">
+
+                      <span class="close">&times;</span>
+
+                      <label id="takip_no" class="control-label lblgeneral" for=""> Takip Numarası:</label>
+
+                      <iframe id="kargo_sonuc" style="width: 100%;height: 600px;" src="https://social.araskargo.com.tr/" title="Kargo Detay">
+                      </iframe>
+
+
+
+
+                    </div>
+
+                  </div>
+
+
+
+
+              <!-- The Modal dobule click-->
             <div id="myModal" class="modal">
 
           <!-- Modal content -->
-                 <div class="modal-content">
+          <div class="modal-content">
+
+
                 <span class="close">&times;</span>
+
+
 
 
                 <form  method="post" id="setproduct" action="http://localhost:8080/ws_iltech_n11/ws/setproductbasic">
@@ -285,10 +312,6 @@
       }
     };
   </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
-
   <!-- end::Global Config -->
 
   <script type="text/javascript">
@@ -308,8 +331,90 @@
         document.getElementsByTagName("head")[0].appendChild(fileref);
     }
 
+
+
+//custom max min header filter
+var minMaxFilterEditor = function(cell, onRendered, success, cancel, editorParams){
+
+var end;
+
+var container = document.createElement("span");
+
+//create and style inputs
+var start = document.createElement("input");
+start.setAttribute("type", "number");
+start.setAttribute("placeholder", "Min");
+//start.setAttribute("min", 0);
+//start.setAttribute("max", 100);
+start.style.padding = "4px";
+start.style.width = "50%";
+start.style.boxSizing = "border-box";
+
+start.value = cell.getValue();
+
+function buildValues(){
+    success({
+        start:start.value,
+        end:end.value,
+    });
+}
+
+function keypress(e){
+    if(e.keyCode == 13){
+        buildValues();
+    }
+
+    if(e.keyCode == 27){
+        cancel();
+    }
+}
+
+end = start.cloneNode();
+end.setAttribute("placeholder", "Max");
+
+start.addEventListener("change", buildValues);
+start.addEventListener("blur", buildValues);
+start.addEventListener("keydown", keypress);
+
+end.addEventListener("change", buildValues);
+end.addEventListener("blur", buildValues);
+end.addEventListener("keydown", keypress);
+
+
+container.appendChild(start);
+container.appendChild(end);
+
+return container;
+}
+
+//custom max min filter function
+function minMaxFilterFunction(headerValue, rowValue, rowData, filterParams){
+    //headerValue - the value of the header filter element
+    //rowValue - the value of the column in this row
+    //rowData - the data for the row being filtered
+    //filterParams - params object passed to the headerFilterFuncParams property
+
+        if(rowValue){
+            if(headerValue.start != ""){
+                if(headerValue.end != ""){
+                    return rowValue >= headerValue.start && rowValue <= headerValue.end;
+                }else{
+                    return rowValue >= headerValue.start;
+                }
+            }else{
+                if(headerValue.end != ""){
+                    return rowValue <= headerValue.end;
+                }
+            }
+        }
+
+    return true; //must return a boolean, true if it passes the filter.
+}
+
+//for min-max filter:  headerFilter:minMaxFilterEditor, headerFilterFunc:minMaxFilterFunction, headerFilterLiveFilter:false
+
 var deleteIcon = function(value, data, cell, row, options){ //plain text value
-    return "<i class='fa fa-trash'></i>"
+    return "<i class='fa fa-eye'></i>"
 };
 
 //tabulator script
@@ -330,13 +435,13 @@ var table = new Tabulator("#example-table", {
     //document.getElementById("discount_type").value = row.getData().discount_type;
     //document.getElementById("discount_value").value = row.getData().discount_value;
 
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
-    modal.style.display = "block";
-    span.onclick = function() {
-    modal.style.display = "none";
-}
+   // var modal = document.getElementById("myModal");
+   // var btn = document.getElementById("myBtn");
+   // var span = document.getElementsByClassName("close")[0];
+   // modal.style.display = "block";
+   // span.onclick = function() {
+   // modal.style.display = "none";
+//}
 
 
     },
@@ -350,26 +455,72 @@ var table = new Tabulator("#example-table", {
 		layout:"fitColumns",
 		columns:[
       {title:"ID", field:"row_id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
-      {title:"Ürün Id", field:"productId" ,sorter:"number",headerTooltip:true, },
-      {title:"Kategori Kodu", field:"categoryCode", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-      {title:"Başlık", field:"title", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
-			{title:"Altbaşlık", field:"subtitle", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Açıklama", visible:false,field:"description", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Fiyat", field:"buyNowPrice", sorter:"string", width:140,tooltip:true,},
-			{title:"Stok Adet", field:"productCount", sorter:"string",tooltip:true,},
-      {title:"Sil" , sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
+      {title:"Sipariş No", field:"orderNumber" ,sorter:"number",headerTooltip:true, },
+      {title:"Sipariş Tarih", field:"createDate" ,sorter:"number",headerTooltip:true, },
+      {title:"Ürün Adı", field:"productName" ,sorter:"number",headerTooltip:true, },
+      {title:"Ürün Satış Kodu", field:"productSellerCode", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Ürün Id", field:"productId", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
+			{title:"Fiyat", field:"price", sorter:"number", width:75,tooltip:true,},
+			{title:"Adet", field:"quantity", sorter:"string",width:70,tooltip:true,},
+			{title:"Toplam Fiyat", field:"totalAmount", sorter:"string",tooltip:true,},
+    	{title:"Sipariş Durumu", field:"status", sorter:"string",width:100, headerTooltip:true},
+			{title:"Kargo Tarihi",visible:true, field:"shippingDate", sorter:"string",headerTooltip:true},
+			{title:"Takip No",visible:true, field:"trackingNumber", sorter:"string",headerTooltip:true},
+			{title:"Kargo Firma",visible:true, field:"name", sorter:"string",headerTooltip:true},
+      {title:"Kargoyu Göster" ,visible:true, sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
 
-        delProduct1(row.getData().productId);
+        if(row.getData().shippingDate.length > 1) {
+
+        document.getElementById("takip_no").innerHTML = "Takip Numarası:" + row.getData().trackingNumber;
+
+        if(row.getData().name == "Aras") {
+
+          document.getElementById("kargo_sonuc").src = "https://social.araskargo.com.tr/";
+
+        }
+
+        else {
+
+          document.getElementById("kargo_sonuc").src = "https://esube.kolaygelsin.com/shipments";
+
+
+        }
+
+
+        var modal = document.getElementById("modalKargo");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+        span.onclick = function() {
+        modal.style.display = "none";
+                    }
+
+          //window.alert("Ürün Kargoda");
+
+        }
+
+        else {
+
+          window.alert("Kargoya Verildmedi.!");
+        }
+
+
     },}
-		],
+		]
 	});
 
+  table.setFilter([
+    {field:"status", type:"in", value:["5","10"]} //name must be steve, bob or jim
+]);
+
+
+
 	document.getElementById("download-xlsx").addEventListener("click", function(){
-    table.download("xlsx", "urunler_gg.xlsx", {sheetName:"Urun Listesi"});
+    table.download("xlsx", "urunler_n11.xlsx", {sheetName:"Urun Listesi"});
 });
 
 	document.getElementById("download-pdf").addEventListener("click", function(){
-    table.download("pdf", "urunler_gg.pdf", {
+    table.download("pdf", "urunler_n11.pdf", {
         orientation:"portrait", //set page orientation to portrait
         title:"Urun Listesi", //add title to report
     });
@@ -383,24 +534,24 @@ var xhr = new XMLHttpRequest();
       console.log(this.responseText);
       var resultText = xhr.responseText;
      // window.alert(resultText.replace("{\"product\":","").replace("}]}","}]"));
-      table.setData(resultText.replace("{\"product\":","").replace("}]}","}]"));
+      table.setData(resultText.replace("{\"order\":","").replace("}]}","}]"));
+    //table.setData(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
+    //window.alert(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
 
     }
   })
 
-  var date = new Date();
-  var timestamp = date.getTime();
-  var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
-
-  xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductsgg?sign=" + md5Hash + "&timestamp=" + timestamp);
+  xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getordersn11");
+  //xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductstrendyol");
+  //xhr.setRequestHeader("Authorization", "Basic " + auth);
   xhr.send();
 
 
-  //Set Product Price
-  function setProductPrice() {
+  //Set Product
+  function setProduct1() {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductGG";
+   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductbasic";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -472,7 +623,7 @@ var xhr = new XMLHttpRequest();
    function delProduct1(product_id) {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductGG";
+   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductn11";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -487,19 +638,15 @@ var xhr = new XMLHttpRequest();
      })
 
    var addProductData = {
-               "sign":"___sign__",
-               "timestamp":"___timestamp___",
+               "appKey":"___appKey___",
+               "appSecret":"___appSecret___",
                "productId":"___productId___"
    }
 
-  var date = new Date();
-  var timestamp = date.getTime();
-  var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
-
    var postData = JSON.stringify(addProductData);
 
-   postData = postData.replace("___sign__",md5Hash);
-   postData = postData.replace("___timestamp___",timestamp);
+   postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
+   postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
    postData = postData.replace("___productId___",product_id);
 
    //window.alert(postData);

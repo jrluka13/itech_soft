@@ -59,202 +59,200 @@
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body>
+<body >
+
+  <div data-v-9c90884e="">
+    <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
+      <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
+        <div data-v-9c90884e="" class="kt-subheader__main">
+          <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
+        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="n11productadd.html" class="btn btn-label-brand btn-bold">
+Ürün Ekle
+</a></div>
+      </div>
+    </div>
+    <div data-v-9c90884e="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+      <div data-v-9c90884e="">
+        <div data-v-9c90884e="" class="row product-list-loading">
+          <div data-v-9c90884e="" class="col-xl-12">
+            <div data-v-9c90884e="" style="padding:10px" class="kt-portlet">
 
 
-              <div data-v-9c90884e="">
-                <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
-                  <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
-                    <div data-v-9c90884e="" class="kt-subheader__main">
-                      <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
-                    <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="n11productadd.html" class="btn btn-label-brand btn-bold">
-            Ürün Ekle
-          </a></div>
+              <br/>
+
+              <div>
+                <button  class="btn btn-label-brand btn-bold" id="download-xlsx">Download XLSX</button>
+                <button  class="btn btn-label-brand btn-bold" id="download-pdf">Download PDF</button>
+               </div>
+            <br/>
+              <div id="example-table" class="table-dark"></div>
+
+              <style>
+                body {font-family: Arial, Helvetica, sans-serif;}
+
+                /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  /*z-index: 1;  Sit on top */
+                  padding-top: 100px; /* Location of the box */
+                  left: 0;
+                  top: 1000;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: rgb(0,0,0); /* Fallback color */
+                  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                }
+
+                /* Modal Content */
+                .modal-content {
+                  background-color: #fefefe;
+                  margin: auto;
+                  padding: 20px;
+                  border: 1px solid #888;
+                  width: 40%;
+                }
+
+                /* The Close Button */
+                .close {
+                  color: #aaaaaa;
+                  float: right;
+                  font-size: 28px;
+                  font-weight: bold;
+                  align-self: flex-end;
+                }
+
+                .close:hover,
+                .close:focus {
+                  color: #000;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+
+                .tabulator-header-filter {
+
+                 border-radius:4px;
+
+                }
+
+                .tabulator-headers, .tabulator-header {
+
+                -color:white;
+                -background-color: black;
+                }
+
+                </style>
+
+              <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+                 <div class="modal-content">
+                <span class="close">&times;</span>
+
+
+                <form  method="post" id="setproduct" action="http://localhost:8080/ws_iltech_n11/ws/setproductbasic">
+
+
+
+                  <div class="col-md-12">
+                    <input type="hidden" value="71faab12-d47e-432e-a4a2-5546c49cb1c4" name="appKey" class="form-control input-md">
                   </div>
-                </div>
-                <div data-v-9c90884e="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-                  <div data-v-9c90884e="">
-                    <div data-v-9c90884e="" class="row product-list-loading">
-                      <div data-v-9c90884e="" class="col-xl-12">
-                        <div data-v-9c90884e="" style="padding:10px" class="kt-portlet">
 
-
-                          <br/>
-
-                          <div>
-                            <button  class="btn btn-label-brand btn-bold" id="download-xlsx">Download XLSX</button>
-                            <button  class="btn btn-label-brand btn-bold" id="download-pdf">Download PDF</button>
-                           </div>
-                        <br/>
-                          <div id="example-table" class="table-dark"></div>
-
-                          <style>
-                            body {font-family: Arial, Helvetica, sans-serif;}
-
-                            /* The Modal (background) */
-                            .modal {
-                              display: none; /* Hidden by default */
-                              position: fixed; /* Stay in place */
-                              /*z-index: 1;  Sit on top */
-                              padding-top: 100px; /* Location of the box */
-                              left: 0;
-                              top: 1000;
-                              width: 100%; /* Full width */
-                              height: 100%; /* Full height */
-                              overflow: auto; /* Enable scroll if needed */
-                              background-color: rgb(0,0,0); /* Fallback color */
-                              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                            }
-
-                            /* Modal Content */
-                            .modal-content {
-                              background-color: #fefefe;
-                              margin: auto;
-                              padding: 20px;
-                              border: 1px solid #888;
-                              width: 40%;
-                            }
-
-                            /* The Close Button */
-                            .close {
-                              color: #aaaaaa;
-                              float: right;
-                              font-size: 28px;
-                              font-weight: bold;
-                              align-self: flex-end;
-                            }
-
-                            .close:hover,
-                            .close:focus {
-                              color: #000;
-                              text-decoration: none;
-                              cursor: pointer;
-                            }
-
-                            .tabulator-header-filter {
-
-                             border-radius:4px;
-
-                            }
-
-                            .tabulator-headers, .tabulator-header {
-
-                            -color:white;
-                            -background-color: black;
-                            }
-
-                            </style>
-
-                          <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                      <!-- Modal content -->
-                             <div class="modal-content">
-                            <span class="close">&times;</span>
-
-
-                            <form  method="post" id="setproduct" action="http://localhost:8080/ws_iltech_n11/ws/setproductbasic">
-
-
-
-                              <div class="col-md-12">
-                                <input type="hidden" value="71faab12-d47e-432e-a4a2-5546c49cb1c4" name="appKey" class="form-control input-md">
-                              </div>
-
-                              <div class="col-md-12">
-                                <input type="hidden" value="FrOoxTV9Mk4R5KI5" name="appSecret" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> Ürün ID:</label>
-                              <div class="col-md-12">
-                                <input value="" id="productId" name="productId" class="form-control input-md" disabled>
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> Başlık:</label>
-                              <div class="col-md-12">
-                                <input value="" id="title" name="title" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> Altbaşlık:</label>
-                              <div class="col-md-12">
-                                <input value="" id="subtitle" name="subtitle" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> Ürün Satış Kodu:</label>
-                              <div class="col-md-12">
-                                <input value="" id="productSellerCode" name="productSellerCode" class="form-control input-md" disabled>
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> Fiyat:</label>
-                              <div class="col-md-12">
-                                <input value="" id="price" name="price" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> Stok ID:</label>
-                              <div class="col-md-12">
-                                <input value="" id="stockItem_Id" name="stockItem_Id" class="form-control input-md" disabled>
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for="">*Stok Adet:</label>
-                              <div class="col-md-12">
-                                <input value="" id="quantity" name="quantity" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for="">*İndirim Tipi:</label>
-                              <div class="col-md-12">
-                                <select name="discount_type" id="discount_type" class="form-control input-md">
-                                  <option value="1" selected>İndirim Tutarı</option>
-                                  <option value="2">İndirim Oranı(%)</option>
-                                  <option value="3">İndirimli Fiyat</option>
-                                </select>
-                              </div>
-
-                              <label class="col-md-5 control-label lblgeneral" for="">*İndirim Miktarı:</label>
-                              <div class="col-md-12">
-                                <input value="" id="discount_value" name="discount_value" class="form-control input-md">
-                              </div>
-
-                              <input type="hidden" value="https://n11scdn.akamaized.net/a1/178/elektronik/masaustu-bilgisayar/zeiron-intel-i5-346ghz-8gb-120gb-500gb-185-masaustu-pc__0142104110506610.jpg" id="image_url1" name="image_url1" class="form-control input-md">
-                              <input type="hidden" value="1" id="image_order1" name="image_order1" class="form-control input-md">
-
-
-                            </br>
-                            <input type="button" class="btn btn-label-brand btn-bold" value="Güncelle" onclick="setProduct1()">
-
-                            </form>
-
-                          </br>
-                            <label class="col-md-4 control-label lblgeneral" style="font-size:20px" id="counter" name="counter"></label>
-
-
-                              </div>
-
-                           </div>
-
-
-
-
-                          <div data-v-9c90884e="" class="kt-portlet__body"></div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-md-12">
+                    <input type="hidden" value="FrOoxTV9Mk4R5KI5" name="appSecret" class="form-control input-md">
                   </div>
-                </div>
-                <div data-v-9c90884e="" id="platformProductEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
-                  <div data-v-9c90884e="" role="document" class="modal-dialog modal-xl">
-                    <div data-v-9c90884e="" class="modal-content">
 
-                      <div data-v-9c90884e="" class="row">
-                        <div data-v-9c90884e="" class="col-12 modal-loading text-center mt-5 mb-5 pt-5 pb-5">&nbsp;</div>
-                      </div>
-                      <!---->
-                      <!---->
-                      <!---->
-                    </div>
+                  <label class="col-md-4 control-label lblgeneral" for=""> Ürün ID:</label>
+                  <div class="col-md-12">
+                    <input value="" id="productId" name="productId" class="form-control input-md" disabled>
                   </div>
-                </div>
-              </div>
 
+                  <label class="col-md-4 control-label lblgeneral" for=""> Başlık:</label>
+                  <div class="col-md-12">
+                    <input value="" id="title" name="title" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> Altbaşlık:</label>
+                  <div class="col-md-12">
+                    <input value="" id="subtitle" name="subtitle" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> Ürün Satış Kodu:</label>
+                  <div class="col-md-12">
+                    <input value="" id="productSellerCode" name="productSellerCode" class="form-control input-md" disabled>
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> Fiyat:</label>
+                  <div class="col-md-12">
+                    <input value="" id="price" name="price" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> Stok ID:</label>
+                  <div class="col-md-12">
+                    <input value="" id="stockItem_Id" name="stockItem_Id" class="form-control input-md" disabled>
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for="">*Stok Adet:</label>
+                  <div class="col-md-12">
+                    <input value="" id="quantity" name="quantity" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for="">*İndirim Tipi:</label>
+                  <div class="col-md-12">
+                    <select name="discount_type" id="discount_type" class="form-control input-md">
+                      <option value="1" selected>İndirim Tutarı</option>
+                      <option value="2">İndirim Oranı(%)</option>
+                      <option value="3">İndirimli Fiyat</option>
+                    </select>
+                  </div>
+
+                  <label class="col-md-5 control-label lblgeneral" for="">*İndirim Miktarı:</label>
+                  <div class="col-md-12">
+                    <input value="" id="discount_value" name="discount_value" class="form-control input-md">
+                  </div>
+
+                  <input type="hidden" value="https://n11scdn.akamaized.net/a1/178/elektronik/masaustu-bilgisayar/zeiron-intel-i5-346ghz-8gb-120gb-500gb-185-masaustu-pc__0142104110506610.jpg" id="image_url1" name="image_url1" class="form-control input-md">
+                  <input type="hidden" value="1" id="image_order1" name="image_order1" class="form-control input-md">
+
+
+                </br>
+                <input type="button" class="btn btn-label-brand btn-bold" value="Güncelle" onclick="setProduct1()">
+
+                </form>
+
+              </br>
+                <label class="col-md-4 control-label lblgeneral" style="font-size:20px" id="counter" name="counter"></label>
+
+
+                  </div>
+
+               </div>
+
+
+
+
+              <div data-v-9c90884e="" class="kt-portlet__body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-v-9c90884e="" id="platformProductEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+      <div data-v-9c90884e="" role="document" class="modal-dialog modal-xl">
+        <div data-v-9c90884e="" class="modal-content">
+
+          <div data-v-9c90884e="" class="row">
+            <div data-v-9c90884e="" class="col-12 modal-loading text-center mt-5 mb-5 pt-5 pb-5">&nbsp;</div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- begin::Global Config(global config for global JS sciprts) -->
   <script>
@@ -434,8 +432,8 @@ var table = new Tabulator("#example-table", {
       {title:"Ürün Adı", field:"name", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
       {title:"Açıklama", field:"description", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
 			{title:"Fiyat", field:"price", sorter:"number", width:140,tooltip:true,},
-			{title:"Özel Fiyat", field:"special", sorter:"string",tooltip:true,},
-			{title:"Kur Tipi",visible:false, field:"currencyType", sorter:"string",headerTooltip:true},
+			{title:"Stok Adet", field:"quantity", sorter:"string",tooltip:true,},
+			{title:"Durum",visible:true, field:"status", sorter:"string",headerTooltip:true},
 			{title:"Indirim Tipi",visible:false, field:"discount_type", sorter:"string",headerTooltip:true},
 			{title:"Indirim Degeri",visible:false, field:"discount_value", sorter:"string",headerTooltip:true},
       {title:"Sil" , sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
@@ -461,18 +459,33 @@ var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function()  {
     if(this.readyState === 4) {
-      console.log(this.responseText);
+      //console.log(this.responseText);
       var resultText = xhr.responseText;
      // window.alert(resultText.replace("{\"product\":","").replace("}]}","}]"));
-      table.setData(resultText.replace("{\"products\":","").replace("}]}","}]"));
+      //table.setData(resultText.replace("{\"products\":","").replace("}]}","}]"));
     //table.setData(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
     //window.alert(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
+
+
+      //setting
+      let tobj = JSON.parse(resultText);
+
+      delete tobj["success"];
+      delete tobj["error"];
+
+      console.log(JSON.stringify(tobj).replace("{\"data\":","").replace("}]}a","}]").slice(0,-1));
+      table.setData(JSON.stringify(tobj).replace("{\"data\":","").replace("}]}a","}]").slice(0,-1));
+
+
+
 
     }
   })
 
-  xhr.open("GET", "http://localhost/opencart/index.php?route=api/product&api_token=7f29fd4d4a69af3c7e592accd1");
+  //xhr.open("GET", "http://localhost/opencart/index.php?route=api/product&api_token=7f29fd4d4a69af3c7e592accd1");
   //xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductstrendyol");
+  xhr.open("GET", "http://primuscam.com/index.php?route=feed/rest_api/products");
+  xhr.setRequestHeader("X-Oc-Merchant-Id","OhDVT5mJCGUweNLQpSdCIfYFsHcB2i3j");
 
   //xhr.setRequestHeader("Authorization", "Basic " + auth);
 
@@ -483,7 +496,7 @@ var xhr = new XMLHttpRequest();
   function setProduct1() {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductbasic";
+   var theUrl = "http://localhost:808011/ws_iltech_n11/ws/setproductbasic";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -555,7 +568,7 @@ var xhr = new XMLHttpRequest();
    function delProduct1(product_id) {
 
    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductn11";
+   var theUrl = "http://localhost:808011/ws_iltech_n11/ws/delproductn11";
 
    xmlhttp.addEventListener("readystatechange", function()  {
        if(this.readyState === 4) {
@@ -644,75 +657,7 @@ var xhr = new XMLHttpRequest();
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  <!--Start of Tawk.to Script-->
-  <!-- <script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function() {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/5e6ca0498d24fc2265878c6f/default';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script> -->
-  <!--End of Tawk.to Script-->
 
-  <!-- B24 -->
-  <!-- B24 -->
-  <!--end::Page Scripts -->
-  <!-- Code injected by live-server -->
-  <!-- <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function() {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function(msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    } else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script> --&gt; -->
-  <!-- end::Body -->
-
-  <!-- <div id="sjs2GNb-1592488381485" class="" style="display: block !important;">
-    <iframe id="t22Y3Ge-1592488381485" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: auto !important; left: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; display: none !important; height: 120px !important;"></iframe>
-    <iframe id="Y0k4Yb2-1592488381486" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px !important; height: 60px !important; min-height: 60px !important; max-height: 60px !important; width: 60px !important; min-width: 60px !important; max-width: 60px !important; border-radius: 50% !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; top: auto !important; bottom: 20px !important; right: 20px !important; left: auto !important; display: block !important;"></iframe>
-    <iframe id="mjIwjq9-1592488381486" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; display: none !important; z-index: 1000003 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; top: auto !important; bottom: 60px !important; right: 15px !important; left: auto !important; width: 21px !important; max-width: 21px !important; min-width: 21px !important; height: 21px !important; max-height: 21px !important; min-height: 21px !important;"></iframe>
-    <iframe id="josKT1n-1592488381486" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; bottom: 30px !important; top: auto !important; right: 0px !important; left: auto !important; width: 124px !important; max-width: 124px !important; min-width: 124px !important; height: 95px !important; max-height: 95px !important; min-height: 95px !important; z-index: 1000002 !important; margin: 0px !important; display: none !important;"></iframe>
-    <div class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 100% !important; display: none !important; z-index: 1000001 !important; cursor: move !important; float: left !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <div id="nM180gw-1592488381485" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: w-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <div id="PeigG4m-1592488381485" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: n-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <div id="rOiUCLc-1592488381485" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: nw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <iframe id="OMDoTIx-1592488381512" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 378px !important; height: 830px !important; display: none !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; bottom: 100px !important; top: auto !important; right: 20px !important; left: auto !important;"></iframe>
-  </div> -->
 </body>
 <!-- end::Body -->
 </html>

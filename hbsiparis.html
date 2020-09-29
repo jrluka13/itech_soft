@@ -44,10 +44,7 @@
   <script src="/src/assets/js/custom/Utils.js" type="text/javascript"></script>
   <link href="/src/assets/css/custom/general.css" rel="stylesheet" type="text/css" />
 
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/css/tabulator.min.css" rel="stylesheet">
- <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/css/tabulator_bootstrap4.min.css" rel="stylesheet">-->
-
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.1/js/tabulator.min.js"></script>
   <script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
@@ -59,14 +56,13 @@
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body >
-
+<body>
   <div data-v-9c90884e="">
     <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
       <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
         <div data-v-9c90884e="" class="kt-subheader__main">
-          <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
-        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="ggproductadd.html" class="btn btn-label-brand btn-bold">
+          <h3 data-v-9c90884e="" class="kt-subheader__title">Hepsiburada Sipariş Listesi</h3></div>
+        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="#" class="btn btn-label-brand btn-bold">
 Ürün Ekle
 </a></div>
       </div>
@@ -85,7 +81,7 @@
                 <button  class="btn btn-label-brand btn-bold" id="download-pdf">Download PDF</button>
                </div>
             <br/>
-              <div id="example-table" class="table-dark"></div>
+              <div id="example-table"></div>
 
               <style>
                 body {font-family: Arial, Helvetica, sans-serif;}
@@ -129,19 +125,6 @@
                   text-decoration: none;
                   cursor: pointer;
                 }
-
-                .tabulator-header-filter {
-
-                 border-radius:4px;
-
-                }
-
-                .tabulator-headers, .tabulator-header {
-
-                -color:white;
-                -background-color: black;
-                }
-
                 </style>
 
               <!-- The Modal -->
@@ -152,85 +135,63 @@
                 <span class="close">&times;</span>
 
 
-                <form  method="post" id="setproduct" action="http://localhost:8080/ws_iltech_n11/ws/setproductbasic">
+                <form  method="post" id="addproduct" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct">
 
 
-
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Hepsiburada Id:</label>
                   <div class="col-md-12">
-                    <input type="hidden" value="71faab12-d47e-432e-a4a2-5546c49cb1c4" name="appKey" class="form-control input-md">
+                    <input value="" id="hepsiburadaSku"  name="hepsiburadaSku" class="form-control input-md" disabled>
                   </div>
 
+                  <label class="col-md-6 control-label lblgeneral" for=""> *Satıcı Id</label>
                   <div class="col-md-12">
-                    <input type="hidden" value="FrOoxTV9Mk4R5KI5" name="appSecret" class="form-control input-md">
+                    <input value="" id="merchantSku" name="merchantSku" maxlength="100" class="form-control input-md" disabled>
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Ürün ID:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Ürün Adı:</label>
                   <div class="col-md-12">
-                    <input value="" id="productId" name="productId" class="form-control input-md" disabled>
+                    <input value="" id="productName" name="productName" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Başlık:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Fiyat:</label>
                   <div class="col-md-12">
-                    <input value="" id="title" name="title" class="form-control input-md">
+
+                    <input value="1791" id="price" name="price" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Altbaşlık:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Stok Miktarı:</label>
                   <div class="col-md-12">
-                    <input value="" id="subtitle" name="subtitle" class="form-control input-md">
+
+                    <input value="656" id="availableStock" name="availableStock" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Ürün Satış Kodu:</label>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Kargoya Verilme Süresi:</label>
                   <div class="col-md-12">
-                    <input value="" id="productSellerCode" name="productSellerCode" class="form-control input-md" disabled>
+                    <input value="" id="dispatchTime"  name="dispatchTime" class="form-control input-md" >
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Fiyat:</label>
+                  <label class="col-md-6 control-label lblgeneral" for=""> Maksimum Satın Alma Adedi</label>
                   <div class="col-md-12">
-                    <input value="" id="price" name="price" class="form-control input-md">
+                    <input value="" id="maximumPurchasableQuantity"  name="maximumPurchasableQuantity" class="form-control input-md">
                   </div>
 
-                  <label class="col-md-4 control-label lblgeneral" for=""> Stok ID:</label>
-                  <div class="col-md-12">
-                    <input value="" id="stockItem_Id" name="stockItem_Id" class="form-control input-md" disabled>
-                  </div>
-
-                  <label class="col-md-4 control-label lblgeneral" for="">*Stok Adet:</label>
-                  <div class="col-md-12">
-                    <input value="" id="quantity" name="quantity" class="form-control input-md">
-                  </div>
-
-                  <label class="col-md-4 control-label lblgeneral" for="">*İndirim Tipi:</label>
-                  <div class="col-md-12">
-                    <select name="discount_type" id="discount_type" class="form-control input-md">
-                      <option value="1" selected>İndirim Tutarı</option>
-                      <option value="2">İndirim Oranı(%)</option>
-                      <option value="3">İndirimli Fiyat</option>
-                    </select>
-                  </div>
-
-                  <label class="col-md-5 control-label lblgeneral" for="">*İndirim Miktarı:</label>
-                  <div class="col-md-12">
-                    <input value="" id="discount_value" name="discount_value" class="form-control input-md">
-                  </div>
-
-                  <input type="hidden" value="https://n11scdn.akamaized.net/a1/178/elektronik/masaustu-bilgisayar/zeiron-intel-i5-346ghz-8gb-120gb-500gb-185-masaustu-pc__0142104110506610.jpg" id="image_url1" name="image_url1" class="form-control input-md">
-                  <input type="hidden" value="1" id="image_order1" name="image_order1" class="form-control input-md">
 
 
                 </br>
                 <input type="button" class="btn btn-label-brand btn-bold" value="Güncelle" onclick="setProduct1()">
 
-                </form>
+                </br>
+                <label class="col-md-4 control-label" id="counter2" name="counter2"></label>
 
-              </br>
-                <label class="col-md-4 control-label lblgeneral" style="font-size:20px" id="counter" name="counter"></label>
+
+                  </form>
+
+
 
 
                   </div>
 
                </div>
-
-
 
 
               <div data-v-9c90884e="" class="kt-portlet__body"></div>
@@ -285,13 +246,17 @@
       }
     };
   </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
-
   <!-- end::Global Config -->
 
   <script type="text/javascript">
+
+//Variables
+
+var baseUrl = "http://localhost:8080";
+
+
+
+
     function loadFile(filename, filetype) {
       filename = filename + "?time=" + Date.now();
       if (filetype == "js") { //if filename is a external JavaScript file
@@ -308,27 +273,136 @@
         document.getElementsByTagName("head")[0].appendChild(fileref);
     }
 
-var deleteIcon = function(value, data, cell, row, options){ //plain text value
-    return "<i class='fa fa-trash'></i>"
+
+
+//custom max min header filter
+var minMaxFilterEditor = function(cell, onRendered, success, cancel, editorParams){
+
+var end;
+
+var container = document.createElement("span");
+
+//create and style inputs
+var start = document.createElement("input");
+start.setAttribute("type", "number");
+start.setAttribute("placeholder", "Min");
+//start.setAttribute("min", 0);
+//start.setAttribute("max", 100);
+start.style.padding = "4px";
+start.style.width = "50%";
+start.style.boxSizing = "border-box";
+
+start.value = cell.getValue();
+
+function buildValues(){
+    success({
+        start:start.value,
+        end:end.value,
+    });
+}
+
+function keypress(e){
+    if(e.keyCode == 13){
+        buildValues();
+    }
+
+    if(e.keyCode == 27){
+        cancel();
+    }
+}
+
+end = start.cloneNode();
+end.setAttribute("placeholder", "Max");
+
+start.addEventListener("change", buildValues);
+start.addEventListener("blur", buildValues);
+start.addEventListener("keydown", keypress);
+
+end.addEventListener("change", buildValues);
+end.addEventListener("blur", buildValues);
+end.addEventListener("keydown", keypress);
+
+
+container.appendChild(start);
+container.appendChild(end);
+
+return container;
+}
+
+//custom max min filter function
+function minMaxFilterFunction(headerValue, rowValue, rowData, filterParams){
+    //headerValue - the value of the header filter element
+    //rowValue - the value of the column in this row
+    //rowData - the data for the row being filtered
+    //filterParams - params object passed to the headerFilterFuncParams property
+
+        if(rowValue){
+            if(headerValue.start != ""){
+                if(headerValue.end != ""){
+                    return rowValue >= headerValue.start && rowValue <= headerValue.end;
+                }else{
+                    return rowValue >= headerValue.start;
+                }
+            }else{
+                if(headerValue.end != ""){
+                    return rowValue <= headerValue.end;
+                }
+            }
+        }
+
+    return true; //must return a boolean, true if it passes the filter.
+}
+
+//for min-max filter:  headerFilter:minMaxFilterEditor, headerFilterFunc:minMaxFilterFunction, headerFilterLiveFilter:false
+
+
+
+function flattenData(data){
+	var output = [];
+	function flatternRow(row){
+		var outputRow = {};
+		for(var prop in row){
+			if(typeof row[prop] !== "object"){
+				outputRow[prop] = row[prop];
+			}else{
+				var flat = flattenRow(row[prop]);
+				for(var flatProp in flat){
+					outputRow[prop + "_" + flatProp] = flat[flatProp];
+				}
+			}
+		}
+		return outputRow;
+	}
+	data.forEach(function(row){
+		output.push(flatternRow(row));
+	});
+	return output;
+}
+
+var updateIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-folder-open'></i>"
+};
+
+var priceIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-folder-open'></i>"
 };
 
 //tabulator script
 var table = new Tabulator("#example-table", {
-
   rowDblClick:function(e, row){
     //e - the click event object
     //row - row component
     //window.alert(row.getData().price);
 
-    document.getElementById("productSellerCode").value = row.getData().productSellerCode;
+    document.getElementById("hepsiburadaSku").value = row.getData().hepsiburadaSku;
+    document.getElementById("merchantSku").value = row.getData().merchantSku;
+    //document.getElementById("productName").value = row.getData().productName;
     document.getElementById("price").value = row.getData().price;
-    document.getElementById("title").value = row.getData().title;
-    document.getElementById("subtitle").value = row.getData().subtitle;
-    document.getElementById("productId").value = row.getData().productId;
-    document.getElementById("quantity").value = row.getData().quantity;
-    document.getElementById("stockItem_Id").value = row.getData().id;
-    //document.getElementById("discount_type").value = row.getData().discount_type;
-    //document.getElementById("discount_value").value = row.getData().discount_value;
+    document.getElementById("availableStock").value = row.getData().availableStock;
+    document.getElementById("dispatchTime").value = row.getData().dispatchTime;
+    document.getElementById("maximumPurchasableQuantity").value = row.getData().maximumPurchasableQuantity;
+
+
 
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("myBtn");
@@ -343,174 +417,246 @@ var table = new Tabulator("#example-table", {
     resizableRows:true,
     selectable:true,
     tooltips:true,
+    //dataTree:true,
+    //dataTreeChildField:"childRows",
 		height:"311px",
 		layout:"fitColumns",
 		placeholder:"No Data Set",
 		movableColumns:true,
 		layout:"fitColumns",
 		columns:[
-      {title:"ID", field:"row_id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
-      {title:"Ürün Id", field:"productId" ,sorter:"number",headerTooltip:true, },
-      {title:"Kategori Kodu", field:"categoryCode", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-      {title:"Başlık", field:"title", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
-			{title:"Altbaşlık", field:"subtitle", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Açıklama", visible:false,field:"description", sorter:"string",tooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
-			{title:"Fiyat", field:"buyNowPrice", sorter:"string", width:140,tooltip:true,},
-			{title:"Stok Adet", field:"productCount", sorter:"string",tooltip:true,},
-      {title:"Sil" , sortable:false, formatter:deleteIcon,width:60,cellClick:function(e, row){
+			{title:"ID", field:"id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
+      {title:"Ürün Hepsib. Kodu", field:"sku", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Sipraiş Kodu", field:"orderId", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Sipariş Numarası", field:"orderNumber", sorter:"number", width:80,tooltip:true,},
+      {title:"Sipariş Tarihi", field:"orderDate", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Adet", field:"quantity", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Fiyat", field:"totalPrice.amount", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Müşteri", field:"customerName", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Kargo Şirketi", field:"cargoCompanyModel.name", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Durum", field:"status", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
 
-        delProduct1(row.getData().productId);
-    },}
+
+      {title:"Detay" , sortable:false, formatter:updateIcon,cellClick:function(e, row){
+    //e - the click event object
+    //cell - cell component
+    document.getElementById("barcode").value = row.getData().barcode;
+
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+  //  modal.style.display = "block";
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+    //window.alert("clickedd" +  cell.getData.salePrice);
+    }, }
+
+
 		],
 	});
 
 	document.getElementById("download-xlsx").addEventListener("click", function(){
-    table.download("xlsx", "urunler_gg.xlsx", {sheetName:"Urun Listesi"});
+    table.download("xlsx", "urunler_trendyol.xlsx", {sheetName:"Urun Listesi"});
 });
 
 	document.getElementById("download-pdf").addEventListener("click", function(){
-    table.download("pdf", "urunler_gg.pdf", {
+    table.download("pdf", "urunler_trendyol.pdf", {
         orientation:"portrait", //set page orientation to portrait
         title:"Urun Listesi", //add title to report
     });
 });
 
 
+function setProduct1() {
+
+   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+   var theUrl =baseUrl + "/ws_iltech_n11/ws/setproducthepsiburada";
+
+   xmlhttp.addEventListener("readystatechange", function()  {
+       if(this.readyState === 4) {
+         console.log(this.responseText);
+         var resultText = xhr.responseText;
+         window.alert(this.responseText);
+
+         if(this.responseText.includes("message")) {
+
+          window.alert("Lütfen Bilgileri Kontrol Ediniz.!");
+
+
+         }
+
+         else {
+
+          var obj = JSON.parse(this.responseText);
+        console.log(obj.id);
+
+
+         }
+
+
+
+
+
+       //var abc  = this.responseText.split("<");
+        // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
+
+       }
+     })
+
+
+var setProductData = {
+
+	"hepsiburadaSku" : "___hepsiburadaSku___",
+	"merchantSku" : "___merchantSku___",
+	"productName" : "___productName___",
+	"price" : "___price___",
+	"availableStock" : "___availableStock___",
+	"dispatchTime" : "___dispatchTime___",
+	"maximumPurchasableQuantity" : "0"
+}
+
+
+
+
+   var setData = JSON.stringify(setProductData);
+
+   setData = setData.replace("___hepsiburadaSku___",document.getElementById("hepsiburadaSku").value);
+   setData = setData.replace("___merchantSku___",document.getElementById("merchantSku").value);
+   setData = setData.replace("___productName___",document.getElementById("productName").value);
+   setData = setData.replace("___price___",document.getElementById("price").value);
+   setData = setData.replace("___availableStock___",document.getElementById("availableStock").value);
+   setData = setData.replace("___dispatchTime___",document.getElementById("dispatchTime").value);
+   //setData = setData.replace("___stockCode___",document.getElementById("stockCode").value);
+
+   //window.alert(postData);
+   console.log(setData);
+
+
+   xmlhttp.open("POST", theUrl);
+   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+   xmlhttp.setRequestHeader("Authorization", "Basic cHJpbXVzY2FtX2RldjpQczEyMzQ1IQ==");
+   xmlhttp.send(setData);
+   }
+
+   function setProduct111() {
+
+   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+   var theUrl =baseUrl + "/ws_iltech_n11/ws/setproducthepsiburada";
+
+   xmlhttp.addEventListener("readystatechange", function()  {
+       if(this.readyState === 4) {
+         console.log(this.responseText);
+         var resultText = xhr.responseText;
+         window.alert(this.responseText);
+
+         if(this.responseText.includes("message")) {
+
+          window.alert("Lütfen Bilgileri Kontrol Ediniz.!");
+
+
+         }
+
+         else {
+
+          var obj = JSON.parse(this.responseText);
+        console.log(obj.id);
+
+
+         }
+
+
+
+
+
+       //var abc  = this.responseText.split("<");
+        // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
+
+       }
+     })
+
+
+var getProductUpdateStatus = {
+
+	"hepsiburadaSku" : "___hepsiburadaSku___",
+	"merchantSku" : "___merchantSku___",
+	"productName" : "___productName___",
+	"price" : "___price___",
+	"availableStock" : "___availableStock___",
+	"dispatchTime" : "___dispatchTime___",
+	"maximumPurchasableQuantity" : "0"
+}
+
+
+
+
+   var setData = JSON.stringify(setProductData);
+
+   setData = setData.replace("___hepsiburadaSku___",document.getElementById("hepsiburadaSku").value);
+   setData = setData.replace("___merchantSku___",document.getElementById("merchantSku").value);
+   setData = setData.replace("___productName___",document.getElementById("productName").value);
+   setData = setData.replace("___price___",document.getElementById("price").value);
+   setData = setData.replace("___availableStock___",document.getElementById("availableStock").value);
+   setData = setData.replace("___dispatchTime___",document.getElementById("dispatchTime").value);
+   //setData = setData.replace("___stockCode___",document.getElementById("stockCode").value);
+
+   //window.alert(postData);
+   console.log(setData);
+
+
+   xmlhttp.open("POST", theUrl);
+   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+   xmlhttp.setRequestHeader("Authorization", "Basic cHJpbXVzY2FtX2RldjpQczEyMzQ1IQ==");
+   xmlhttp.send(setData);
+   }
+
+
+
+
+
+
+  //qqq
+
+
+
 var xhr = new XMLHttpRequest();
 
   xhr.addEventListener("readystatechange", function()  {
     if(this.readyState === 4) {
-      console.log(this.responseText);
+     // console.log(this.responseText);
       var resultText = xhr.responseText;
-     // window.alert(resultText.replace("{\"product\":","").replace("}]}","}]"));
-      table.setData(resultText.replace("{\"product\":","").replace("}]}","}]"));
+
+
+      console.log(this.responseText.replace("\"limit\":2147483647,","").replace("\"offset\":0,","").replace("\"totalCount\":1,","").replace("\"pageCount\":1,","").replace("\"items\":[{","").replace("}]}","}"));
+      table.setData("[" + this.responseText.replace("\"limit\":2147483647,","").replace("\"offset\":0,","").replace("\"totalCount\":1,","").replace("\"pageCount\":1,","").replace("\"items\":[{","").replace("}]}","}") + "]");
+     // table.setData(this.responseText.replace("{\"listings\":","").replace(",\"totalCount\":34,\"limit\":34,\"offset\":0}",""));
+
+     // var objj = JSON.parse(this.responseText);
+
+      //window.alert( "___" + objj.limit);
+
+    //table.setData(resultText.replace("{\"listaings\":[{","").replace("}]}","}]").replace("\"totalCount\": 34, \"limit\": 34, \"offset\": 0","").replace("{\"totalElements\":3,","").replace("{\"totalElements\":4,","").replace("{\"totalElements\":5,",""));
+
+    //table.setData(tableData222);
+    //window.alert(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
 
     }
   })
 
-  var date = new Date();
-  var timestamp = date.getTime();
-  var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
 
-  xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductsgg?sign=" + md5Hash + "&timestamp=" + timestamp);
+
+  //xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/xmltojsonT");
+  xhr.open("GET", "https://oms-external-sit.hepsiburada.com/orders/merchantid/a7ecfcdc-8a5d-4760-8f30-ae8d7ee74be4");
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.setRequestHeader("Authorization", "Basic cHJpbXVzY2FtX2RldjpQczEyMzQ1IQ==");
+
+  //xhr.setRequestHeader("Authorization", "Basic " + auth);
+
   xhr.send();
 
-
-  //Set Product Price
-  function setProductPrice() {
-
-   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/setproductGG";
-
-   xmlhttp.addEventListener("readystatechange", function()  {
-       if(this.readyState === 4) {
-         console.log(this.responseText);
-         var resultText = xhr.responseText;
-         window.alert(this.responseText);
-
-         if(this.responseText.includes("error")) {
-
-           var count = 60, timer = setInterval(function() {
-
-         $("#counter").css("visibility", "visible");
-         $("#counter").html("Lütfen " +  count-- + " saniye bekleyiniz");
-         if(count == 0) {
-             clearInterval(timer);
-          $("#counter").css("visibility", "hidden");
-            }
-              }, 1000);
-
-         }
-
-       //var abc  = this.responseText.split("<");
-        // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
-
-       }
-     })
-
-   var setProductData = {
-               "appKey":"___appKey___",
-               "appSecret":"___appSecret___",
-               "productId":"___productId___",
-               "productSellerCode":"___productSellerCode___",
-               "price":"___price___",
-               "discount_type":"___discount_type___",
-               "discount_value":"___discount_value___",
-               "description":"",
-               "stockItem_Id":"___stockItem_id___",
-               "stockItem_quantity1":"___quantity__"
-             //  "image_url1":"___img_url1___",
-             //  "image_order1":"___img_order1___"
-
-           }
-
-   var postData = JSON.stringify(setProductData);
-
-   postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
-   postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
-   postData = postData.replace("___productId___",document.getElementById("productId").value);
-   postData = postData.replace("___productSellerCode___",document.getElementById("productSellerCode").value);
-   postData = postData.replace("___price___",document.getElementById("price").value);
-   postData = postData.replace("___discount_type___",document.getElementById("discount_type").value);
-   postData = postData.replace("___discount_value___",document.getElementById("discount_value").value);
-   //postData = postData.replace("___description___",document.getElementById("description").value);
-   postData = postData.replace("___stockItem_id___",document.getElementById("stockItem_Id").value);
-   postData = postData.replace("___quantity__",document.getElementById("quantity").value);
-   postData = postData.replace("___img_url1___",document.getElementById("image_url1").value);
-   postData = postData.replace("___img_order1___",document.getElementById("image_order1").value);
-
-   //window.alert(postData);
-   console.log(postData);
-
-
-   xmlhttp.open("POST", theUrl);
-   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-   xmlhttp.send(postData);
-   }
-
-
-   function delProduct1(product_id) {
-
-   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-   var theUrl = "http://localhost:8080/ws_iltech_n11/ws/delproductGG";
-
-   xmlhttp.addEventListener("readystatechange", function()  {
-       if(this.readyState === 4) {
-         console.log(this.responseText);
-         var resultText = xhr.responseText;
-         window.alert(this.responseText);
-
-       //var abc  = this.responseText.split("<");
-        // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
-
-       }
-     })
-
-   var addProductData = {
-               "sign":"___sign__",
-               "timestamp":"___timestamp___",
-               "productId":"___productId___"
-   }
-
-  var date = new Date();
-  var timestamp = date.getTime();
-  var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
-
-   var postData = JSON.stringify(addProductData);
-
-   postData = postData.replace("___sign__",md5Hash);
-   postData = postData.replace("___timestamp___",timestamp);
-   postData = postData.replace("___productId___",product_id);
-
-   //window.alert(postData);
-   console.log(postData);
-
-
-   xmlhttp.open("POST", theUrl);
-   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-   xmlhttp.send(postData);
-
-   }
 
 
 
@@ -565,7 +711,7 @@ var xhr = new XMLHttpRequest();
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  
+
 </body>
 <!-- end::Body -->
 </html>

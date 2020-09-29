@@ -8,10 +8,6 @@
   <title>İltechSoft | Dashboard</title>
   <meta name="description" content="Updates and statistics">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://unpkg.com/vue@latest"></script>
-  <link href="https://unpkg.com/tabulator-tables@4.4.1/dist/css/tabulator.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.4.1/dist/js/tabulator.min.js"></script>
-  <script src="https://unpkg.com/vue-tabulator@latest"></script>
 
   <!--begin::Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
@@ -60,168 +56,165 @@
 <!-- end::Head -->
 
 <!-- begin::Body -->
-<body>
+<body >
+  <div data-v-9c90884e="">
+    <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
+      <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
+        <div data-v-9c90884e="" class="kt-subheader__main">
+          <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
+        <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="#" class="btn btn-label-brand btn-bold">
+Ürün Ekle
+</a></div>
+      </div>
+    </div>
+    <div data-v-9c90884e="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+      <div data-v-9c90884e="">
+        <div data-v-9c90884e="" class="row product-list-loading">
+          <div data-v-9c90884e="" class="col-xl-12">
+            <div data-v-9c90884e="" style="padding:10px" class="kt-portlet">
 
 
-              <div data-v-9c90884e="">
-                <div data-v-9c90884e="" id="kt_subheader" class="kt-subheader kt-grid__item">
-                  <div data-v-9c90884e="" class="kt-container  kt-container--fluid ">
-                    <div data-v-9c90884e="" class="kt-subheader__main">
-                      <h3 data-v-9c90884e="" class="kt-subheader__title">Ürün Listesi</h3></div>
-                    <div data-v-9c90884e="" class="kt-subheader__toolbar"><a data-v-9c90884e="" href="#" class="btn btn-label-brand btn-bold">
-            Ürün Ekle
-          </a></div>
+              <br/>
+
+              <div>
+                <button  class="btn btn-label-brand btn-bold" id="download-xlsx">Download XLSX</button>
+                <button  class="btn btn-label-brand btn-bold" id="download-pdf">Download PDF</button>
+               </div>
+            <br/>
+              <div id="example-table"></div>
+
+              <style>
+                body {font-family: Arial, Helvetica, sans-serif;}
+
+                /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  /*z-index: 1;  Sit on top */
+                  padding-top: 100px; /* Location of the box */
+                  left: 0;
+                  top: 1000;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: rgb(0,0,0); /* Fallback color */
+                  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                }
+
+                /* Modal Content */
+                .modal-content {
+                  background-color: #fefefe;
+                  margin: auto;
+                  padding: 20px;
+                  border: 1px solid #888;
+                  width: 40%;
+                }
+
+                /* The Close Button */
+                .close {
+                  color: #aaaaaa;
+                  float: right;
+                  font-size: 28px;
+                  font-weight: bold;
+                  align-self: flex-end;
+                }
+
+                .close:hover,
+                .close:focus {
+                  color: #000;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+                </style>
+
+              <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+                 <div class="modal-content">
+                <span class="close">&times;</span>
+
+
+                <form  method="post" id="addproduct" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct">
+
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Hepsiburada Id:</label>
+                  <div class="col-md-12">
+                    <input value="" id="hepsiburadaSku"  name="hepsiburadaSku" class="form-control input-md" disabled>
                   </div>
-                </div>
-                <div data-v-9c90884e="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-                  <div data-v-9c90884e="">
-                    <div data-v-9c90884e="" class="row product-list-loading">
-                      <div data-v-9c90884e="" class="col-xl-12">
-                        <div data-v-9c90884e="" style="padding:10px" class="kt-portlet">
 
-
-                          <br/>
-
-                          <div>
-                            <button  class="btn btn-label-brand btn-bold" id="download-xlsx">Download XLSX</button>
-                            <button  class="btn btn-label-brand btn-bold" id="download-pdf">Download PDF</button>
-                           </div>
-                        <br/>
-                          <div id="example-table">
-                            <Vue-Tabulator v-model="dados" :options="options" />
-                          </div>
-
-                          <style>
-                            body {font-family: Arial, Helvetica, sans-serif;}
-
-                            /* The Modal (background) */
-                            .modal {
-                              display: none; /* Hidden by default */
-                              position: fixed; /* Stay in place */
-                              /*z-index: 1;  Sit on top */
-                              padding-top: 100px; /* Location of the box */
-                              left: 0;
-                              top: 1000;
-                              width: 100%; /* Full width */
-                              height: 100%; /* Full height */
-                              overflow: auto; /* Enable scroll if needed */
-                              background-color: rgb(0,0,0); /* Fallback color */
-                              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                            }
-
-                            /* Modal Content */
-                            .modal-content {
-                              background-color: #fefefe;
-                              margin: auto;
-                              padding: 20px;
-                              border: 1px solid #888;
-                              width: 40%;
-                            }
-
-                            /* The Close Button */
-                            .close {
-                              color: #aaaaaa;
-                              float: right;
-                              font-size: 28px;
-                              font-weight: bold;
-                              align-self: flex-end;
-                            }
-
-                            .close:hover,
-                            .close:focus {
-                              color: #000;
-                              text-decoration: none;
-                              cursor: pointer;
-                            }
-                            </style>
-
-                          <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                      <!-- Modal content -->
-                             <div class="modal-content">
-                            <span class="close">&times;</span>
-
-
-                            <form  method="post" id="addproduct" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct">
-
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> *Hepsiburada Id:</label>
-                              <div class="col-md-12">
-                                <input value="" id="hepsiburadaSku"  name="hepsiburadaSku" class="form-control input-md" disabled>
-                              </div>
-
-                              <label class="col-md-6 control-label lblgeneral" for=""> *Satıcı Id</label>
-                              <div class="col-md-12">
-                                <input value="" id="merchantSku" name="merchantSku" maxlength="100" class="form-control input-md" disabled>
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> *Ürün Adı:</label>
-                              <div class="col-md-12">
-                                <input value="" id="productName" name="productName" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> *Fiyat:</label>
-                              <div class="col-md-12">
-
-                                <input value="1791" id="price" name="price" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> *Stok Miktarı:</label>
-                              <div class="col-md-12">
-
-                                <input value="656" id="availableStock" name="availableStock" class="form-control input-md">
-                              </div>
-
-                              <label class="col-md-4 control-label lblgeneral" for=""> *Kargoya Verilme Süresi:</label>
-                              <div class="col-md-12">
-                                <input value="" id="dispatchTime"  name="dispatchTime" class="form-control input-md" >
-                              </div>
-
-                              <label class="col-md-6 control-label lblgeneral" for=""> Maksimum Satın Alma Adedi</label>
-                              <div class="col-md-12">
-                                <input value="" id="maximumPurchasableQuantity"  name="maximumPurchasableQuantity" class="form-control input-md">
-                              </div>
-
-
-
-                            </br>
-                            <input type="button" class="btn btn-label-brand btn-bold" value="Güncelle" onclick="setProduct1()">
-
-                            </br>
-                            <label class="col-md-4 control-label" id="counter2" name="counter2"></label>
-
-
-                              </form>
-
-
-
-
-                              </div>
-
-                           </div>
-
-
-                          <div data-v-9c90884e="" class="kt-portlet__body"></div>
-                        </div>
-                      </div>
-                    </div>
+                  <label class="col-md-6 control-label lblgeneral" for=""> *Satıcı Id</label>
+                  <div class="col-md-12">
+                    <input value="" id="merchantSku" name="merchantSku" maxlength="100" class="form-control input-md" disabled>
                   </div>
-                </div>
-                <div data-v-9c90884e="" id="platformProductEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
-                  <div data-v-9c90884e="" role="document" class="modal-dialog modal-xl">
-                    <div data-v-9c90884e="" class="modal-content">
 
-                      <div data-v-9c90884e="" class="row">
-                        <div data-v-9c90884e="" class="col-12 modal-loading text-center mt-5 mb-5 pt-5 pb-5">&nbsp;</div>
-                      </div>
-                      <!---->
-                      <!---->
-                      <!---->
-                    </div>
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Ürün Adı:</label>
+                  <div class="col-md-12">
+                    <input value="" id="productName" name="productName" class="form-control input-md">
                   </div>
-                </div>
-              </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Fiyat:</label>
+                  <div class="col-md-12">
+
+                    <input value="1791" id="price" name="price" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Stok Miktarı:</label>
+                  <div class="col-md-12">
+
+                    <input value="656" id="availableStock" name="availableStock" class="form-control input-md">
+                  </div>
+
+                  <label class="col-md-4 control-label lblgeneral" for=""> *Kargoya Verilme Süresi:</label>
+                  <div class="col-md-12">
+                    <input value="" id="dispatchTime"  name="dispatchTime" class="form-control input-md" >
+                  </div>
+
+                  <label class="col-md-6 control-label lblgeneral" for=""> Maksimum Satın Alma Adedi</label>
+                  <div class="col-md-12">
+                    <input value="" id="maximumPurchasableQuantity"  name="maximumPurchasableQuantity" class="form-control input-md">
+                  </div>
+
+
+
+                </br>
+                <input type="button" class="btn btn-label-brand btn-bold" value="Güncelle" onclick="setProduct1()">
+
+                </br>
+                <label class="col-md-4 control-label" id="counter2" name="counter2"></label>
+
+
+                  </form>
+
+
+
+
+                  </div>
+
+               </div>
+
+
+              <div data-v-9c90884e="" class="kt-portlet__body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-v-9c90884e="" id="platformProductEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+      <div data-v-9c90884e="" role="document" class="modal-dialog modal-xl">
+        <div data-v-9c90884e="" class="modal-content">
+
+          <div data-v-9c90884e="" class="row">
+            <div data-v-9c90884e="" class="col-12 modal-loading text-center mt-5 mb-5 pt-5 pb-5">&nbsp;</div>
+          </div>
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- begin::Global Config(global config for global JS sciprts) -->
   <script>
@@ -256,7 +249,411 @@
   </script>
   <!-- end::Global Config -->
 
-  <script src="hburunler.js"></script>
+  <script type="text/javascript">
+
+//Variables
+
+var baseUrl = "http://localhost:8080";
+
+
+
+
+    function loadFile(filename, filetype) {
+      filename = filename + "?time=" + Date.now();
+      if (filetype == "js") { //if filename is a external JavaScript file
+        var fileref = document.createElement('script');
+        fileref.setAttribute("type", "text/javascript");
+        fileref.setAttribute("src", filename);
+      } else if (filetype == "css") { //if filename is an external CSS file
+        var fileref = document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+      }
+      if (typeof fileref != "undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+    }
+
+
+
+//custom max min header filter
+var minMaxFilterEditor = function(cell, onRendered, success, cancel, editorParams){
+
+var end;
+
+var container = document.createElement("span");
+
+//create and style inputs
+var start = document.createElement("input");
+start.setAttribute("type", "number");
+start.setAttribute("placeholder", "Min");
+//start.setAttribute("min", 0);
+//start.setAttribute("max", 100);
+start.style.padding = "4px";
+start.style.width = "50%";
+start.style.boxSizing = "border-box";
+
+start.value = cell.getValue();
+
+function buildValues(){
+    success({
+        start:start.value,
+        end:end.value,
+    });
+}
+
+function keypress(e){
+    if(e.keyCode == 13){
+        buildValues();
+    }
+
+    if(e.keyCode == 27){
+        cancel();
+    }
+}
+
+end = start.cloneNode();
+end.setAttribute("placeholder", "Max");
+
+start.addEventListener("change", buildValues);
+start.addEventListener("blur", buildValues);
+start.addEventListener("keydown", keypress);
+
+end.addEventListener("change", buildValues);
+end.addEventListener("blur", buildValues);
+end.addEventListener("keydown", keypress);
+
+
+container.appendChild(start);
+container.appendChild(end);
+
+return container;
+}
+
+//custom max min filter function
+function minMaxFilterFunction(headerValue, rowValue, rowData, filterParams){
+    //headerValue - the value of the header filter element
+    //rowValue - the value of the column in this row
+    //rowData - the data for the row being filtered
+    //filterParams - params object passed to the headerFilterFuncParams property
+
+        if(rowValue){
+            if(headerValue.start != ""){
+                if(headerValue.end != ""){
+                    return rowValue >= headerValue.start && rowValue <= headerValue.end;
+                }else{
+                    return rowValue >= headerValue.start;
+                }
+            }else{
+                if(headerValue.end != ""){
+                    return rowValue <= headerValue.end;
+                }
+            }
+        }
+
+    return true; //must return a boolean, true if it passes the filter.
+}
+
+//for min-max filter:  headerFilter:minMaxFilterEditor, headerFilterFunc:minMaxFilterFunction, headerFilterLiveFilter:false
+
+
+
+function flattenData(data){
+	var output = [];
+	function flatternRow(row){
+		var outputRow = {};
+		for(var prop in row){
+			if(typeof row[prop] !== "object"){
+				outputRow[prop] = row[prop];
+			}else{
+				var flat = flattenRow(row[prop]);
+				for(var flatProp in flat){
+					outputRow[prop + "_" + flatProp] = flat[flatProp];
+				}
+			}
+		}
+		return outputRow;
+	}
+	data.forEach(function(row){
+		output.push(flatternRow(row));
+	});
+	return output;
+}
+
+var updateIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-folder-open'></i>"
+};
+
+var priceIcon = function(value, data, cell, row, options){ //plain text value
+    return "<i class='fa fa-folder-open'></i>"
+};
+
+//tabulator script
+var table = new Tabulator("#example-table", {
+  rowDblClick:function(e, row){
+    //e - the click event object
+    //row - row component
+    //window.alert(row.getData().price);
+
+    document.getElementById("hepsiburadaSku").value = row.getData().hepsiburadaSku;
+    document.getElementById("merchantSku").value = row.getData().merchantSku;
+    //document.getElementById("productName").value = row.getData().productName;
+    document.getElementById("price").value = row.getData().price;
+    document.getElementById("availableStock").value = row.getData().availableStock;
+    document.getElementById("dispatchTime").value = row.getData().dispatchTime;
+    document.getElementById("maximumPurchasableQuantity").value = row.getData().maximumPurchasableQuantity;
+
+
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+    },
+    resizableRows:true,
+    selectable:true,
+    tooltips:true,
+    //dataTree:true,
+    //dataTreeChildField:"childRows",
+		height:"311px",
+		layout:"fitColumns",
+		placeholder:"No Data Set",
+		movableColumns:true,
+		layout:"fitColumns",
+		columns:[
+			{title:"ID", field:"id", formatter:"rownum" ,sorter:"number", width:50,headerTooltip:true, },
+      {title:"hepsiburadaSku", field:"hepsiburadaSku", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"MerchantSku", field:"merchantSku", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Fiyatı", field:"price", sorter:"number", width:80,tooltip:true,},
+      {title:"Stok Adet", field:"availableStock", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Kargo veriliş Süresi",visible:false, field:"dispatchTime", sorter:"string",tooltip:true,headerTooltip:true,headerFilter:"input",headerFilterPlaceholder:"ara"},
+      {title:"Karog Şirketi", field:"cargoCompany1", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Kargo Adres", field:"shippingAddressLabel", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
+      {title:"Komisyon Oranı", field:"commissionRate", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
+
+      {title:"Açıklama",visible:false, field:"description", sorter:"string",  tooltip:true ,headerFilter:"input",headerFilterPlaceholder:"ara" },
+      {title:"Onay Durumu",visible:false, field:"approved", sorter:"string", headerTooltip:true},
+      {title:"dimensionalWeight",visible:false, field:"dimensionalWeight", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Kur tipi",visible:false, field:"currencyType", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Liste Fiyatı",visible:false, field:"listPrice", sorter:"string",headerFilter:"input",headerTooltip:true},
+      {title:"Satış fiyatı",visible:false, field:"salePrice", sorter:"string",headerFilter:"input",headerTooltip:true},
+
+      {title:"Güncelle" , sortable:false, formatter:updateIcon,cellClick:function(e, row){
+    //e - the click event object
+    //cell - cell component
+    document.getElementById("barcode").value = row.getData().barcode;
+
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+  //  modal.style.display = "block";
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+    //window.alert("clickedd" +  cell.getData.salePrice);
+    }, }
+
+
+		],
+	});
+
+	document.getElementById("download-xlsx").addEventListener("click", function(){
+    table.download("xlsx", "urunler_trendyol.xlsx", {sheetName:"Urun Listesi"});
+});
+
+	document.getElementById("download-pdf").addEventListener("click", function(){
+    table.download("pdf", "urunler_trendyol.pdf", {
+        orientation:"portrait", //set page orientation to portrait
+        title:"Urun Listesi", //add title to report
+    });
+});
+
+
+function setProduct1() {
+
+   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+   var theUrl =baseUrl + "/ws_iltech_n11/ws/setproducthepsiburada";
+
+   xmlhttp.addEventListener("readystatechange", function()  {
+       if(this.readyState === 4) {
+         console.log(this.responseText);
+         var resultText = xhr.responseText;
+         window.alert(this.responseText);
+
+         if(this.responseText.includes("message")) {
+
+          window.alert("Lütfen Bilgileri Kontrol Ediniz.!");
+
+
+         }
+
+         else {
+
+          var obj = JSON.parse(this.responseText);
+        console.log(obj.id);
+
+
+         }
+
+
+
+
+
+       //var abc  = this.responseText.split("<");
+        // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
+
+       }
+     })
+
+
+var setProductData = {
+
+	"hepsiburadaSku" : "___hepsiburadaSku___",
+	"merchantSku" : "___merchantSku___",
+	"productName" : "___productName___",
+	"price" : "___price___",
+	"availableStock" : "___availableStock___",
+	"dispatchTime" : "___dispatchTime___",
+	"maximumPurchasableQuantity" : "0"
+}
+
+
+
+
+   var setData = JSON.stringify(setProductData);
+
+   setData = setData.replace("___hepsiburadaSku___",document.getElementById("hepsiburadaSku").value);
+   setData = setData.replace("___merchantSku___",document.getElementById("merchantSku").value);
+   setData = setData.replace("___productName___",document.getElementById("productName").value);
+   setData = setData.replace("___price___",document.getElementById("price").value);
+   setData = setData.replace("___availableStock___",document.getElementById("availableStock").value);
+   setData = setData.replace("___dispatchTime___",document.getElementById("dispatchTime").value);
+   //setData = setData.replace("___stockCode___",document.getElementById("stockCode").value);
+
+   //window.alert(postData);
+   console.log(setData);
+
+
+   xmlhttp.open("POST", theUrl);
+   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+   xmlhttp.setRequestHeader("Authorization", "Basic cHJpbXVzY2FtX2RldjpQczEyMzQ1IQ==");
+   xmlhttp.send(setData);
+   }
+
+   function setProduct111() {
+
+   var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+   var theUrl =baseUrl + "/ws_iltech_n11/ws/setproducthepsiburada";
+
+   xmlhttp.addEventListener("readystatechange", function()  {
+       if(this.readyState === 4) {
+         console.log(this.responseText);
+         var resultText = xhr.responseText;
+         window.alert(this.responseText);
+
+         if(this.responseText.includes("message")) {
+
+          window.alert("Lütfen Bilgileri Kontrol Ediniz.!");
+
+
+         }
+
+         else {
+
+          var obj = JSON.parse(this.responseText);
+        console.log(obj.id);
+
+
+         }
+
+
+
+
+
+       //var abc  = this.responseText.split("<");
+        // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
+
+       }
+     })
+
+
+var getProductUpdateStatus = {
+
+	"hepsiburadaSku" : "___hepsiburadaSku___",
+	"merchantSku" : "___merchantSku___",
+	"productName" : "___productName___",
+	"price" : "___price___",
+	"availableStock" : "___availableStock___",
+	"dispatchTime" : "___dispatchTime___",
+	"maximumPurchasableQuantity" : "0"
+}
+
+
+
+
+   var setData = JSON.stringify(setProductData);
+
+   setData = setData.replace("___hepsiburadaSku___",document.getElementById("hepsiburadaSku").value);
+   setData = setData.replace("___merchantSku___",document.getElementById("merchantSku").value);
+   setData = setData.replace("___productName___",document.getElementById("productName").value);
+   setData = setData.replace("___price___",document.getElementById("price").value);
+   setData = setData.replace("___availableStock___",document.getElementById("availableStock").value);
+   setData = setData.replace("___dispatchTime___",document.getElementById("dispatchTime").value);
+   //setData = setData.replace("___stockCode___",document.getElementById("stockCode").value);
+
+   //window.alert(postData);
+   console.log(setData);
+
+
+   xmlhttp.open("POST", theUrl);
+   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+   xmlhttp.setRequestHeader("Authorization", "Basic cHJpbXVzY2FtX2RldjpQczEyMzQ1IQ==");
+   xmlhttp.send(setData);
+   }
+
+
+
+
+
+var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("readystatechange", function()  {
+    if(this.readyState === 4) {
+     // console.log(this.responseText);
+      var resultText = xhr.responseText;
+      console.log(this.responseText.replace("{\"listings\":","").replace(",\"totalCount\":34,\"limit\":34,\"offset\":0}",""));
+      table.setData(this.responseText.replace("{\"listings\":","").replace(",\"totalCount\":34,\"limit\":34,\"offset\":0}",""));
+
+    //table.setData(resultText.replace("{\"listaings\":[{","").replace("}]}","}]").replace("\"totalCount\": 34, \"limit\": 34, \"offset\": 0","").replace("{\"totalElements\":3,","").replace("{\"totalElements\":4,","").replace("{\"totalElements\":5,",""));
+
+    //table.setData(tableData222);
+    //window.alert(resultText.replace("{\"totalElements\":1,\"totalPages\":1,\"page\":0,\"size\":10,\"content\":","").replace("}]}","}]"));
+
+    }
+  })
+
+
+
+  //xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/xmltojsonT");
+  xhr.open("GET", "http://localhost:8080/ws_iltech_n11/ws/getproductshepsiburada");
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.setRequestHeader("Authorization", "Basic cHJpbXVzY2FtX2RldjpQczEyMzQ1IQ==");
+
+  //xhr.setRequestHeader("Authorization", "Basic " + auth);
+
+  xhr.send();
+
+
+
+  </script>
 
   <!--begin::Global Theme Bundle(used by all pages) -->
   <script src="/src/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
@@ -306,75 +703,7 @@
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  <!--Start of Tawk.to Script-->
-  <!-- <script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function() {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/5e6ca0498d24fc2265878c6f/default';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script> -->
-  <!--End of Tawk.to Script-->
-
-  <!-- B24 -->
-  <!-- B24 -->
-  <!--end::Page Scripts -->
-  <!-- Code injected by live-server -->
-  <!-- <script type="text/javascript">
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function() {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function(msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    } else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script> --&gt; -->
-  <!-- end::Body -->
-
-  <!-- <div id="sjs2GNb-1592488381485" class="" style="display: block !important;">
-    <iframe id="t22Y3Ge-1592488381485" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: auto !important; left: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; display: none !important; height: 120px !important;"></iframe>
-    <iframe id="Y0k4Yb2-1592488381486" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px !important; height: 60px !important; min-height: 60px !important; max-height: 60px !important; width: 60px !important; min-width: 60px !important; max-width: 60px !important; border-radius: 50% !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; top: auto !important; bottom: 20px !important; right: 20px !important; left: auto !important; display: block !important;"></iframe>
-    <iframe id="mjIwjq9-1592488381486" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; display: none !important; z-index: 1000003 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; top: auto !important; bottom: 60px !important; right: 15px !important; left: auto !important; width: 21px !important; max-width: 21px !important; min-width: 21px !important; height: 21px !important; max-height: 21px !important; min-height: 21px !important;"></iframe>
-    <iframe id="josKT1n-1592488381486" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; bottom: 30px !important; top: auto !important; right: 0px !important; left: auto !important; width: 124px !important; max-width: 124px !important; min-width: 124px !important; height: 95px !important; max-height: 95px !important; min-height: 95px !important; z-index: 1000002 !important; margin: 0px !important; display: none !important;"></iframe>
-    <div class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 100% !important; display: none !important; z-index: 1000001 !important; cursor: move !important; float: left !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <div id="nM180gw-1592488381485" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 6px !important; height: 100% !important; display: block !important; z-index: 999998 !important; cursor: w-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <div id="PeigG4m-1592488381485" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: 0px !important; bottom: auto !important; left: auto !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 100% !important; height: 6px !important; display: block !important; z-index: 999998 !important; cursor: n-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <div id="rOiUCLc-1592488381485" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: 0px !important; right: auto !important; bottom: auto !important; left: 0px !important; position: absolute !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 12px !important; height: 12px !important; display: block !important; z-index: 999998 !important; cursor: nw-resize !important; float: none !important; border-radius: unset !important; pointer-events: auto !important;"></div>
-    <iframe id="OMDoTIx-1592488381512" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 378px !important; height: 830px !important; display: none !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; bottom: 100px !important; top: auto !important; right: 20px !important; left: auto !important;"></iframe>
-  </div> -->
+  
 </body>
 <!-- end::Body -->
 </html>

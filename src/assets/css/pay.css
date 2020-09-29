@@ -6,7 +6,7 @@ padding: 0;
 
 .container {
 display: grid;
-grid-template-columns: 40% 60%;
+grid-template-columns: 38% 60%;
 grid-template-rows: 100%;
 height: 949px;
 }
@@ -19,19 +19,19 @@ height: 949px;
     margin-top: 74px;
     width: 200px;
     height: 158.73px;
-    margin-left: 230px;
+    margin-left: 120px;
     }
     
 #group {
     margin-top: 100px;
-    margin-left: 155px;
-    width: 492px;
-    height: 383px;
+    margin-left: 50px;
+    width: 400px;
+    height: 350px;
     }
     
 #card1{
     position: absolute;
-    left: 79%;
+    left: 78%;
     top:220px;
 }
 #card2{
@@ -42,20 +42,20 @@ height: 949px;
 
 .pay{
         position: absolute;
-        width: 729px;
+        width: 700px;
         height: 462px;
-        left: 35%;
+        left: 25%;
         top: 236px;
         background:url(/src/assets/images/Rectangle.png);
         border-radius: 20px;
-        margin-left: 310px;
+        margin-left: 290px;
         
 }
 #card_number{
     position: absolute;
     left: 21%;
     top: 45px;
-    width: 88px;
+    width: 130px;
     height: 16px;
 }
 #credit_card{
@@ -87,6 +87,9 @@ h3{
     top:85px;
     width: 420px;
     height: 40px;
+    color:white;
+    font-size: 15px;
+    padding: 10px;
 }
 
 
@@ -103,13 +106,14 @@ h3{
     height: 40px;
     cursor: pointer;
     color: #ffffff;
+
 }
 
 #card_holder_name{
     position: absolute;
     left: 21%;
     top: 225px;
-    width: 110px;
+    width: 150px;
     height: 16px;
 }
 
@@ -145,6 +149,7 @@ h3{
     height: 40px;
     cursor: pointer;
     color: #FFFFFF;
+
 }
 
 #list_input2{
