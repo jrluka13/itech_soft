@@ -17,6 +17,7 @@ Ana_Sayfa.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -42,6 +43,7 @@ Kurulum.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -66,6 +68,7 @@ let Ürünler = document.getElementById("Ürünler");
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -90,6 +93,7 @@ Satın_Al.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -114,6 +118,7 @@ Fatura_Design.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -138,6 +143,7 @@ OPENCART.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -162,6 +168,7 @@ woocommerceurunler.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -187,6 +194,7 @@ parasutclients.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -214,6 +222,7 @@ N11.onclick = function(){
   document.getElementById("N").classList.add("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -238,6 +247,7 @@ n11siparis.onclick = function(){
   document.getElementById("PA").classList.remove("kt-menu__item--active");
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.add("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
@@ -264,6 +274,7 @@ n11kargo.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.add("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -273,6 +284,32 @@ n11kargo.onclick = function(){
   document.getElementById("TRS").classList.remove("kt-menu__item--active");
   document.getElementById("My").classList.remove("kt-menu__item--active");
 }
+let n11productadd = document.getElementById("n11productadd");
+n11productadd.onclick = function(){
+  var iframe = document.getElementById("myiframe");  // One of the many ways to select your iframe
+  iframe.src = "n11productadd.html";
+  document.getElementById("Kuru").classList.remove("kt-menu__item--active");
+  document.getElementById("Anna").classList.remove("kt-menu__item--active");
+  document.getElementById("Uru").classList.remove("kt-menu__item--active");
+  document.getElementById("Sat").classList.remove("kt-menu__item--active");
+  document.getElementById("Fat").classList.remove("kt-menu__item--active");
+  document.getElementById("OP").classList.remove("kt-menu__item--active");
+  document.getElementById("WO").classList.remove("kt-menu__item--active");
+  document.getElementById("PA").classList.remove("kt-menu__item--active");
+  document.getElementById("N").classList.remove("kt-menu__item--active");
+  document.getElementById("NS").classList.remove("kt-menu__item--active");
+  document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.add("kt-menu__item--active");
+  document.getElementById("G").classList.remove("kt-menu__item--active");
+  document.getElementById("GG").classList.remove("kt-menu__item--active");
+  document.getElementById("He").classList.remove("kt-menu__item--active");
+  document.getElementById("HS").classList.remove("kt-menu__item--active");
+  document.getElementById("HK").classList.remove("kt-menu__item--active");
+  document.getElementById("Tr").classList.remove("kt-menu__item--active");
+  document.getElementById("TRS").classList.remove("kt-menu__item--active");
+  document.getElementById("My").classList.remove("kt-menu__item--active");
+}
+
   let Gittigidiyor = document.getElementById("Gittigidiyor");
   Gittigidiyor.onclick = function(){
     var iframe = document.getElementById("myiframe");  // One of the many ways to select your iframe
@@ -288,6 +325,7 @@ n11kargo.onclick = function(){
     document.getElementById("N").classList.remove("kt-menu__item--active");
     document.getElementById("NS").classList.remove("kt-menu__item--active");
     document.getElementById("NK").classList.remove("kt-menu__item--active");
+    document.getElementById("NP").classList.remove("kt-menu__item--active");
     document.getElementById("G").classList.add("kt-menu__item--active");
     document.getElementById("He").classList.remove("kt-menu__item--active");
     document.getElementById("HS").classList.remove("kt-menu__item--active");
@@ -312,6 +350,7 @@ n11kargo.onclick = function(){
     document.getElementById("N").classList.remove("kt-menu__item--active");
     document.getElementById("NS").classList.remove("kt-menu__item--active");
     document.getElementById("NK").classList.remove("kt-menu__item--active");
+    document.getElementById("NP").classList.remove("kt-menu__item--active");
     document.getElementById("G").classList.remove("kt-menu__item--active");
     document.getElementById("GG").classList.add("kt-menu__item--active");
     document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -337,6 +376,7 @@ Hepsiburada.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.add("kt-menu__item--active");
@@ -361,6 +401,7 @@ hbsiparis.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -385,6 +426,7 @@ hbkargo.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -409,6 +451,7 @@ Trendyol.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -433,6 +476,7 @@ trendyolsiparis.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
@@ -457,6 +501,7 @@ My_profile.onclick = function(){
   document.getElementById("N").classList.remove("kt-menu__item--active");
   document.getElementById("NS").classList.remove("kt-menu__item--active");
   document.getElementById("NK").classList.remove("kt-menu__item--active");
+  document.getElementById("NP").classList.remove("kt-menu__item--active");
   document.getElementById("G").classList.remove("kt-menu__item--active");
   document.getElementById("GG").classList.remove("kt-menu__item--active");
   document.getElementById("He").classList.remove("kt-menu__item--active");
