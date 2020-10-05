@@ -1,0 +1,291 @@
+{
+  "id": 387,
+  "name": "Saat",
+  "displayName": "Saat",
+  "categoryAttributes": [
+    {
+      "categoryId": 387,
+      "attribute": { "id": 302, "name": "Kasa Renk" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 3028, "name": "Çok Renkli" },
+        { "id": 3035, "name": "Kahverengi" },
+        { "id": 3040, "name": "Mor" },
+        { "id": 3037, "name": "Lacivert" },
+        { "id": 3038, "name": "Mavi" },
+        { "id": 3034, "name": "İki Renk" },
+        { "id": 3041, "name": "Pembe" },
+        { "id": 3029, "name": "Desenli" },
+        { "id": 3043, "name": "Sarı" },
+        { "id": 3048, "name": "Turuncu" },
+        { "id": 3031, "name": "Füme" },
+        { "id": 3046, "name": "Şeffaf" },
+        { "id": 3049, "name": "Yeşil" },
+        { "id": 3032, "name": "Gri" },
+        { "id": 3039, "name": "Metalik" },
+        { "id": 3023, "name": "Bakır" },
+        { "id": 3025, "name": "Beyaz" },
+        { "id": 3022, "name": "Altın" },
+        { "id": 3036, "name": "Kırmızı" },
+        { "id": 3042, "name": "Rose Gold" },
+        { "id": 3045, "name": "Siyah" },
+        { "id": 3044, "name": "Sedef" },
+        { "id": 3026, "name": "Bordo" },
+        { "id": 3033, "name": "Gümüş" },
+        { "id": 3024, "name": "Bej" },
+        { "id": 3027, "name": "Bronz" },
+        { "id": 3030, "name": "Fuşya" },
+        { "id": 3047, "name": "Turkuaz" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 303, "name": "Kordon Renk" },
+      "required": true,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": true,
+      "attributeValues": [
+        { "id": 3063, "name": "Kahverengi" },
+        { "id": 3067, "name": "Metalik" },
+        { "id": 3069, "name": "Pembe" },
+        { "id": 3075, "name": "Turkuaz" },
+        { "id": 3050, "name": "Altın" },
+        { "id": 3073, "name": "Siyah" },
+        { "id": 3072, "name": "Sedef" },
+        { "id": 3055, "name": "Bronz" },
+        { "id": 3056, "name": "Çok Renkli" },
+        { "id": 3052, "name": "Bej" },
+        { "id": 3070, "name": "Rose Gold" },
+        { "id": 3061, "name": "Gümüş" },
+        { "id": 3066, "name": "Mavi" },
+        { "id": 3058, "name": "Fuşya" },
+        { "id": 3077, "name": "Yeşil" },
+        { "id": 3054, "name": "Bordo" },
+        { "id": 3064, "name": "Kırmızı" },
+        { "id": 3074, "name": "Şeffaf" },
+        { "id": 3071, "name": "Sarı" },
+        { "id": 3051, "name": "Bakır" },
+        { "id": 3068, "name": "Mor" },
+        { "id": 3060, "name": "Gri" },
+        { "id": 3053, "name": "Beyaz" },
+        { "id": 3076, "name": "Turuncu" },
+        { "id": 3057, "name": "Desenli" },
+        { "id": 3062, "name": "İki Renk" },
+        { "id": 3059, "name": "Füme" },
+        { "id": 3065, "name": "Lacivert" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 251, "name": "Su Geçirmezlik" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 2435, "name": "3 ATM" },
+        { "id": 2437, "name": "10 ATM" },
+        { "id": 2438, "name": "20 ATM" },
+        { "id": 2434, "name": "1 ATM" },
+        { "id": 2436, "name": "5 ATM" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 34, "name": "Tip" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 1081, "name": "Kol Saati" },
+        { "id": 1082, "name": "Köstekli Cep Saati" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 10, "name": "Kasa Çapı" },
+      "required": true,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": true,
+      "attributeValues": [
+        { "id": 617, "name": "46-50 mm" },
+        { "id": 618, "name": "51-55 mm" },
+        { "id": 614, "name": "31-35 mm" },
+        { "id": 615, "name": "36-40 mm" },
+        { "id": 612, "name": "20-25 mm" },
+        { "id": 619, "name": "55 mm ve üzeri" },
+        { "id": 611, "name": "20 mm altı" },
+        { "id": 613, "name": "26-30 mm" },
+        { "id": 616, "name": "41-45 mm" },
+        { "id": 20026, "name": "37 mm" },
+        { "id": 16770, "name": "38 mm" },
+        { "id": 19945, "name": "39 mm" },
+        { "id": 19947, "name": "45 mm" },
+        { "id": 19948, "name": "43 mm" },
+        { "id": 16772, "name": "42 mm" },
+        { "id": 20025, "name": "36 mm" },
+        { "id": 16771, "name": "40 mm" },
+        { "id": 16773, "name": "44 mm" },
+        { "id": 19946, "name": "41 mm" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 173, "name": "Kadran Şekli" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 1970, "name": "Oval" },
+        { "id": 1967, "name": "Dikdörtgen" },
+        { "id": 1969, "name": "Kare" },
+        { "id": 1968, "name": "Geometrik" },
+        { "id": 1971, "name": "Yuvarlak" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 186, "name": "Kasa Materyali" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 2105, "name": "Alüminyum" },
+        { "id": 2109, "name": "Plastik" },
+        { "id": 2108, "name": "Metal" },
+        { "id": 2111, "name": "Seramik" },
+        { "id": 2112, "name": "Silikon" },
+        { "id": 2106, "name": "Çelik" },
+        { "id": 2110, "name": "Polikarbon" },
+        { "id": 2113, "name": "Titanyum" },
+        { "id": 2107, "name": "İyon Kaplama" },
+        { "id": 2104, "name": "Ahşap" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 3, "name": "Cam Tipi" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 583, "name": "Organik" },
+        { "id": 586, "name": "Touch Screen" },
+        { "id": 581, "name": "Kristal" },
+        { "id": 580, "name": "Hardlex Kristal" },
+        { "id": 585, "name": "Safir" },
+        { "id": 582, "name": "Mika" },
+        { "id": 584, "name": "Plastik" },
+        { "id": 579, "name": "Cam" },
+        { "id": 18, "name": "Mineral" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 15, "name": "Mekanizma" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 754, "name": "Kurmalı" },
+        { "id": 756, "name": "Solar" },
+        { "id": 753, "name": "Kinetik" },
+        { "id": 111, "name": "Otomatik" },
+        { "id": 750, "name": "Analog & Dijital" },
+        { "id": 751, "name": "Dijital" },
+        { "id": 752, "name": "Dokunmaktik" },
+        { "id": 755, "name": "Quartz" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 193, "name": "Kordon Materyali" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 2160, "name": "Silikon" },
+        { "id": 2159, "name": "Plastik" },
+        { "id": 2157, "name": "Kanvas" },
+        { "id": 2154, "name": "Ahşap" },
+        { "id": 2158, "name": "Metal" },
+        { "id": 2156, "name": "Deri" },
+        { "id": 2155, "name": "Çelik" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 97, "name": "Cam Şekli" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 1593, "name": "Düz" },
+        { "id": 1592, "name": "Bombeli" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 124, "name": "Ek Özellik" },
+      "required": false,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 1709, "name": "Takvim" },
+        { "id": 1705, "name": "Alarm" },
+        { "id": 1706, "name": "Aydınlatma" },
+        { "id": 1708, "name": "Pusula" },
+        { "id": 1707, "name": "Kronometre" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 343, "name": "Cinsiyet" },
+      "required": true,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 4294, "name": "Erkek" },
+        { "id": 4295, "name": "Kadın / Kız" },
+        { "id": 4296, "name": "Unisex" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 346, "name": "Yaş Grubu" },
+      "required": true,
+      "allowCustom": false,
+      "varianter": false,
+      "slicer": false,
+      "attributeValues": [
+        { "id": 4293, "name": "Yetişkin" },
+        { "id": 4292, "name": "Genç" },
+        { "id": 4291, "name": "Çocuk" },
+        { "id": 4290, "name": "Bebek" }
+      ]
+    },
+    {
+      "categoryId": 387,
+      "attribute": { "id": 47, "name": "Renk" },
+      "required": true,
+      "allowCustom": true,
+      "varianter": false,
+      "slicer": true,
+      "attributeValues": []
+    }
+  ]
+}
