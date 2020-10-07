@@ -12,11 +12,13 @@
   <!--begin::Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
   <!--end::Fonts -->
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <!--begin::Page Custom Styles(used by this page) -->
   <link href="/src/assets/css/pages/login/login-6.css" rel="stylesheet" type="text/css" />
   <link href="/src/assets/css/pages/pricing/pricing-3.css" rel="stylesheet" type="text/css" />
   <link href="/src/assets/css/pages/wizard/wizard-3.css" rel="stylesheet" type="text/css" />
+  <link href="/src/assets/css/n11productadd.css" rel="stylesheet" type="text/css" />
+
   <!--end::Page Custom Styles -->
 
   <!--begin::Page Vendors Styles(used by this page) -->
@@ -284,7 +286,51 @@
               </div>
 
               <label class="col-md-4 control-label lblgeneral"  for="">Kategori Adı:</label>
-              <div class="col-md-4" style="display: block;">
+              <!-- <div class="col-md-4">
+                <select class="form-control input-md" name="cat1" id="cat1">
+                  <option value="0">Select item...</option>
+                </select>
+               </div>
+               <div id="list_block">
+                <div class="col-md-4" id="list_box" >
+                  <select style="display: none;" class="form-control input-md" name="cat2" id="cat2">
+                    <option value="0">Select item...</option></select>
+                 </div>
+                 <div class="col-md-4" id="list_box1">
+                  <select style="display: none;" class="form-control input-md" name="cat3" id="cat3">
+                    <option value="0">Select item...</option></select>
+                 </div>
+
+               </div>
+
+               <div class="col-md-4">
+                 <div class="col-md-4" id="listAttr">
+
+                 </div>
+
+               </div> -->
+
+               <!-- <div class="col-md-4">
+                <select class="form-control input-md" name="cat1" id="cat1">
+                  <option value="0">Select item...</option>
+                </select>
+               </div>
+
+              <div id="list_block" >
+                <div class="col-md-7 list-group" style="display: none;"  id="list_box">
+                  <ul id="li1">
+
+                  </ul>
+                </div>
+                <div class="col-md-7 list-group" style="display: none;" id="list_box1">
+                  <ul id="li2">
+
+                  </ul>
+                </div>
+              </div> -->
+
+
+              <div class="col-md-4" style="display: none;" >
 
                 <select  class="form-control input-md" name="category_name" id="category_name" onchange="getSubCategories(1,document.getElementById('category_name').value)">
 
@@ -426,8 +472,8 @@
 
             </br>
             <div class="buttons" >
-              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeConten33()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 140px !important; margin-left: -55% !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" value="post" onclick="changeContent1()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 140px !important; margin-left: 5% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeConten33()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 200px !important; margin-left: -55% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" value="post" onclick="changeContent1()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 200px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -444,26 +490,57 @@
               <form  method="post" id="addproduct1" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct" style="display: block;">
 
 
-                <div class="colum_form" style="display: flex; flex-direction: row; width: 100%; margin-top: 50px;" >
-                  <div class="col_1" style="width: 30%; margin-left: 20%">
 
-                    <label class="col-md-4 control-label lblgeneral" for=""> Name:</label>
+
+                <div class="colum_form" style="display: flex; flex-direction: row; width: 100%; margin-top: 50px;" >
+                  <div class="col_1" style="width: 30%; ">
+<!--
+                    <div class="col-md-4">
+                      <select class="form-control input-md" name="cat1" id="cat1">
+                        <option value="0">Select item...</option>
+                      </select>
+                     </div> -->
+
+                    <div id="list_block" >
+                      <div class="col-md-7 list-group"  id="list_box0">
+                        <ul id="li0">
+                        </ul>
+                      </div>
+                      <div class="col-md-7 list-group" style="display: none;"  id="list_box">
+                        <ul id="li1">
+                        </ul>
+                      </div>
+                      <div class="col-md-7 list-group" style="display: none;" id="list_box1">
+                        <ul id="li2">
+                        </ul>
+                      </div>
+                      <div class="col-md-7 list-group" style="display: none;" id="list_box2">
+                        <ul id="li3">
+                        </ul>
+                      </div>
+                      <div class="col-md-7 list-group" style="display: none;" id="list_box3">
+                        <ul id="li4">
+                        </ul>
+                      </div>
+
+                    </div>
+                    <!-- <label class="col-md-4 control-label lblgeneral" for=""> Name:</label>
                     <div class="col-md-4">
                       <input value="" name="appKey" class="form-control input-md">
-                    </div>
+                    </div> -->
 
                 </div>
               <div class="col_2" style="width: 30%; margin-left: 7%;">
 
 
-              <label class="col-md-12 control-label lblgeneral" for=""> Surname:</label>
+              <!-- <label class="col-md-12 control-label lblgeneral" for=""> Surname:</label>
               <div class="col-md-4">
                 <input value="" id="image_url1"  name="image_url1" class="form-control input-md">
-              </div>
+              </div> -->
             </br>
             <div class="buttons" >
-              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeContent11()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 140px !important; margin-left: -55% !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" value="confirm" onclick="changeContent1()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 140px !important; margin-left: 5% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeContent11()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 250px !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" value="confirm" onclick="changeContent1()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 250px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -1181,9 +1258,9 @@ var count = 10, timer = setInterval(function() {
     gtag('config', 'UA-153396545-1');
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-
-  
-  <script src="trendyoladd.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="n11productadd.js"></script>
+  <!-- <script src="trendyoladd.js"></script> -->
   <script src="/n11.js"></script>
 </body>
 <!-- end::Body -->

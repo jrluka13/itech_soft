@@ -1,330 +1,336 @@
-// function loadFile(filename, filetype) {
-//   filename = filename + "?time=" + Date.now();
-//   if (filetype == "js") { //if filename is a external JavaScript file
-//     var fileref = document.createElement('script');
-//     fileref.setAttribute("type", "text/javascript");
-//     fileref.setAttribute("src", filename);
-//   } else if (filetype == "css") { //if filename is an external CSS file
-//     var fileref = document.createElement("link")
-//     fileref.setAttribute("rel", "stylesheet")
-//     fileref.setAttribute("type", "text/css")
-//     fileref.setAttribute("href", filename)
-//   }
-//   if (typeof fileref != "undefined")
-//     document.getElementsByTagName("head")[0].appendChild(fileref);
-// }
 
-
-
-// //custom max min header filter
-// var minMaxFilterEditor = function(cell, onRendered, success, cancel, editorParams){
-
-// var end;
-
-// var container = document.createElement("span");
-
-// //create and style inputs
-// var start = document.createElement("input");
-// start.setAttribute("type", "number");
-// start.setAttribute("placeholder", "Min");
-// //start.setAttribute("min", 0);
-// //start.setAttribute("max", 100);
-// start.style.padding = "4px";
-// start.style.width = "50%";
-// start.style.boxSizing = "border-box";
-
-// start.value = cell.getValue();
-
-// function buildValues(){
-// success({
-//     start:start.value,
-//     end:end.value,
-// });
-// }
-
-// function keypress(e){
-// if(e.keyCode == 13){
-//     buildValues();
-// }
-
-// if(e.keyCode == 27){
-//     cancel();
-// }
-// }
-
-// end = start.cloneNode();
-// end.setAttribute("placeholder", "Max");
-
-// start.addEventListener("change", buildValues);
-// start.addEventListener("blur", buildValues);
-// start.addEventListener("keydown", keypress);
-
-// end.addEventListener("change", buildValues);
-// end.addEventListener("blur", buildValues);
-// end.addEventListener("keydown", keypress);
-
-
-// container.appendChild(start);
-// container.appendChild(end);
-
-// return container;
-// }
-
-// //custom max min filter function
-// function minMaxFilterFunction(headerValue, rowValue, rowData, filterParams){
-// //headerValue - the value of the header filter element
-// //rowValue - the value of the column in this row
-// //rowData - the data for the row being filtered
-// //filterParams - params object passed to the headerFilterFuncParams property
-
-//     if(rowValue){
-//         if(headerValue.start != ""){
-//             if(headerValue.end != ""){
-//                 return rowValue >= headerValue.start && rowValue <= headerValue.end;
-//             }else{
-//                 return rowValue >= headerValue.start;
-//             }
-//         }else{
-//             if(headerValue.end != ""){
-//                 return rowValue <= headerValue.end;
-//             }
-//         }
-//     }
-
-// return true; //must return a boolean, true if it passes the filter.
-// }
-
-// //for min-max filter:  headerFilter:minMaxFilterEditor, headerFilterFunc:minMaxFilterFunction, headerFilterLiveFilter:false
-
-// //tabulator script
-
-
-
-
-
-
-// function addProduct1() {
-
-// var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-// var theUrl = "http://localhost:8080/ws_iltech_n11/ws/saveproduct";
-
-// xmlhttp.addEventListener("readystatechange", function()  {
-// if(this.readyState === 4) {
-//   console.log(this.responseText);
-//  // var resultText = xhr.responseText;
-//   window.alert(this.responseText);
-
-//  //var abc  = this.responseText.split("<");
-//  // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
-
-//  if(this.resultText.includes("success")) {
-
-//   //window.location.href = "http://127.0.0.1:5500/urunler.html#/";
-//  }
-
-
-
-// }
-// })
-
-// var addProductData = {
-//         "appKey":"___appKey___",
-//         "appSecret":"___appSecret___",
-//         "productSellerCode":"___productSellerCode___",
-//         "title":"___title___",
-//         "subtitle":"___subtitle___",
-//         "description":"___description___",
-//         "category_id":"___categoryid___",
-//         "specialProductInfo_key1":"___specialProductInfo_key1___",
-//         "specialProductInfo_value1":"___specialProductInfo_value1___",
-//         "price":"___price___",
-//         "currencyType":"___curr_type___",
-//         "image_url1":"___img_url1___",
-//         "image_order1":"___img_order1___",
-//         "approvalStatus":"2",
-//         "productCondition":"2",
-//         "preparingDay":"___preparingDay__",
-//         "shipmentTemplate":"test",
-//         "stockItem_gtin1":"___stockItem_gtin1___",
-//         "stockItem_attribute_name1":"___stockItem_attribute_name1___",
-//         "stockItem_attribute_value1":"___stockItem_attribute_value1___",
-//         "stockItem_quantity1":"___stockItem_quantity1___"
-//     }
-
-// var postData = JSON.stringify(addProductData);
-
-// postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
-// postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
-// postData = postData.replace("___productSellerCode___",document.getElementById("productSellerCode").value);
-// postData = postData.replace("___title___",document.getElementById("title").value);
-// postData = postData.replace("___subtitle___",document.getElementById("subtitle").value);
-// postData = postData.replace("___description___",document.getElementById("description").value);
-// postData = postData.replace("___categoryid___",document.getElementById("category_id").value);
-// postData = postData.replace("___specialProductInfo_key1___",document.getElementById("specialProductInfo_key1").value);
-// postData = postData.replace("___specialProductInfo_value1___",document.getElementById("specialProductInfo_value1").value);
-// postData = postData.replace("___price___",document.getElementById("price").value);
-// postData = postData.replace("___curr_type___",document.getElementById("currencyType").value);
-// postData = postData.replace("___img_url1___",document.getElementById("image_url1").value);
-// postData = postData.replace("___img_order1___",document.getElementById("image_order1").value);
-// postData = postData.replace("___approvalStatus___",document.getElementById("approvalStatus").value);
-// postData = postData.replace("___productCondition___",document.getElementById("productCondition").value);
-// postData = postData.replace("___preparingDay__",document.getElementById("preparingDay").value);
-// postData = postData.replace("___shipmentTemplate___",document.getElementById("shipmentTemplate").value);
-// postData = postData.replace("___stockItem_gtin1___",document.getElementById("stockItem_gtin1").value);
-// postData = postData.replace("___stockItem_attribute_name1___",document.getElementById("stockItem_attribute_name1").value);
-// postData = postData.replace("___stockItem_attribute_value1___",document.getElementById("stockItem_attribute_value1").value);
-// postData = postData.replace("___stockItem_quantity1___",document.getElementById("stockItem_quantity1").value);
-
-
-
-// xmlhttp.open("POST", theUrl);
-// xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-// xmlhttp.send(postData);
-
-
-// //counter for another post request
-// var count = 10, timer = setInterval(function() {
-
-// $("#counter").css("visibility", "visible");
-// $("#counter").html("Lütfen " +  count-- + " saniye bekleyiniz");
-// if(count == 0) {
-// clearInterval(timer);
-// $("#counter").css("visibility", "hidden");
-// }
-// }, 1000);
-
-// //window.alert(postData);
-// //console.log(postData);
-
-
-// }
-
-
-var n11productadd = new Vue ({
-  el: '#n11productadd',
-  data: {
-    appKey: '',
-    appSecret: '',
-    productSellerCode: '',
-    title: '',
-    subtitle: '',
-    description: '',
-    category_id: '',
-    specialProductInfo_key1: '',
-    specialProductInfo_value1: '',
-    price: '',
-    stockItem_quantity1: '',
-    currencyType: '',
-    image_url1: '',
-    image_order1: '',
-    approvalStatus: '',
-    productCondition: '',
-    preparingDay: '',
-    shipmentTemplate: '',
-    stockItem_gtin1: '',
-    stockItem_attribute_name1: '',
-    stockItem_attribute_value1: '',
-    currencyTypes: ["TL", "USD", "EUR"],
-    approvalStatuses: ["Aktif(Satışta)", "Beklemede", "Yasaklı"],
-  },
-  methods:{
-    addProduct1() {
-
-      var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
-      var theUrl = "http://localhost:8080/ws_iltech_n11/ws/saveproduct";
-
-      xmlhttp.addEventListener("readystatechange", function()  {
-      if(this.readyState === 4) {
-        console.log(this.responseText);
-       // var resultText = xhr.responseText;
-        window.alert(this.responseText);
-
-       //var abc  = this.responseText.split("<");
-       // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
-
-       if(this.resultText.includes("success")) {
-
-        //window.location.href = "http://127.0.0.1:5500/urunler.html#/";
-       }
-
-
-
-      }
-      })
-
-      var addProductData = {
-              "appKey":"___appKey___",
-              "appSecret":"___appSecret___",
-              "productSellerCode":"___productSellerCode___",
-              "title":"___title___",
-              "subtitle":"___subtitle___",
-              "description":"___description___",
-              "category_id":"___categoryid___",
-              "specialProductInfo_key1":"___specialProductInfo_key1___",
-              "specialProductInfo_value1":"___specialProductInfo_value1___",
-              "price":"___price___",
-              "currencyType":"___curr_type___",
-              "image_url1":"___img_url1___",
-              "image_order1":"___img_order1___",
-              "approvalStatus":"2",
-              "productCondition":"2",
-              "preparingDay":"___preparingDay__",
-              "shipmentTemplate":"test",
-              "stockItem_gtin1":"___stockItem_gtin1___",
-              "stockItem_attribute_name1":"___stockItem_attribute_name1___",
-              "stockItem_attribute_value1":"___stockItem_attribute_value1___",
-              "stockItem_quantity1":"___stockItem_quantity1___"
-          }
-
-      var postData = JSON.stringify(addProductData);
-
-      postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
-            postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
-            postData = postData.replace("___productSellerCode___", productSellerCode.value);
-            postData = postData.replace("___title___",title.value);
-            postData = postData.replace("___subtitle___",subtitle.value);
-            postData = postData.replace("___description___",description.value);
-            postData = postData.replace("___categoryid___",category_id.value);
-            postData = postData.replace("___specialProductInfo_key1___",specialProductInfo_key1.value);
-            postData = postData.replace("___specialProductInfo_value1___",specialProductInfo_value1.value);
-            postData = postData.replace("___price___",price.value);
-            postData = postData.replace("___curr_type___",currencyType.value);
-            postData = postData.replace("___img_url1___",image_url1.value);
-            postData = postData.replace("___img_order1___",image_order1.value);
-            postData = postData.replace("___approvalStatus___",approvalStatus.value);
-            postData = postData.replace("___productCondition___",productCondition.value);
-            postData = postData.replace("___preparingDay__",preparingDay.value);
-            postData = postData.replace("___shipmentTemplate___",shipmentTemplate.value);
-            postData = postData.replace("___stockItem_gtin1___",stockItem_gtin1.value);
-            postData = postData.replace("___stockItem_attribute_name1___",stockItem_attribute_name1.value);
-            postData = postData.replace("___stockItem_attribute_value1___",stockItem_attribute_value1.value);
-            postData = postData.replace("___stockItem_quantity1___",stockItem_quantity1.value);
-            console.log(postData);
-
-
-
-      // xmlhttp.open("POST", theUrl);
-      // xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      // xmlhttp.send(postData);
-
-
-      //counter for another post request
-      var count = 10, timer = setInterval(function() {
-
-      $("#counter").css("visibility", "visible");
-      $("#counter").html("Lütfen " +  count-- + " saniye bekleyiniz");
-      if(count == 0) {
-      clearInterval(timer);
-      $("#counter").css("visibility", "hidden");
-      }
-      }, 1000);
-
-      //window.alert(postData);
-      //console.log(postData);
-
-
-      }
-  }
-});
-
-
+let get_sub;
+let get_cat;
+let get_cat1;
+let get_cat2;
+let get_cat3;
+let get_cat4;
+
+
+(async function loadData() {
+    let url = 'https://api.trendyol.com/sapigw/product-categories';
+    let response = await fetch(url);
+    let commits = await response.json(); // читаем ответ в формате JSON
+    get_cat = commits.categories;
+
+    if(get_cat.length !=0){
+        console.log(get_cat);
+
+
+        for (let i = 0; i < get_cat.length; i++) {
+            $('<li class="list-group-item-action list-group-item" value="' + get_cat[i].name + '">'+get_cat[i].name+'</li>').appendTo('#li0');
+        };
+        // for (let i = 0; i < get_cat.length; i++) {
+        //     $('<li class="list-group-item-action list-group-item" value="' + get_cat[i].name + '">'+get_cat[i].name+'</li>').appendTo('#li1');
+        // };
+
+        document.getElementById('li0').onclick = function(event){
+
+
+            var value = event.target.innerHTML;
+            value = value.replace('&amp;','&');
+            console.log(value);
+            for(let i =0;i<get_cat.length;i++){
+                if(value == get_cat[i].name && get_cat[i].subCategories.length ==0){
+                    console.log(get_cat[i].id)
+                }
+                if(value == get_cat[i].name && get_cat[i].subCategories.length != 0){
+                    get_sub = document.getElementById('list_box');
+                    get_sub.style.display = "inline";
+                    get_cat1 = get_cat[i].subCategories;
+                    console.log(get_cat[i].id);
+                    console.log(get_cat1)
+                    for (let i = 0; i < get_cat1.length; i++) {
+                        $('<li class="list-group-item-action list-group-item" value="' + get_cat1[i].name + '">'+get_cat1[i].name+'</li>').appendTo('#li1');
+                    };
+
+                }
+            };
+
+        }
+
+        document.getElementById('li1').onclick = function (event){
+             let value = event.target.innerHTML;
+             value = value.replace('&amp;','&');
+
+            console.log(value);
+
+            for(let i =0;i<get_cat1.length;i++){
+                if(value == get_cat1[i].name && get_cat1[i].subCategories.length ==0){
+                    console.log(get_cat1[i].id)
+                }
+                // console.log(125);
+                // console.log(get_cat1[i].name);
+                // if(value == get_cat1[i].name && get_cat1[i].subCategories.length ==0){
+                //     console.log(get_cat1[i].id)
+                //     let arr_id387 = [];
+                //     let arr_name = [];
+                //     let arr_name_val = [];
+                //     let get_attr_val = [];
+                //     $.getJSON("id387.json", function (data) {
+                //         arr_id387 = data.categoryAttributes;
+                //         console.log(arr_id387);
+                //         for(let i=0;i<arr_id387.length;i++){
+                //             arr_name.push(arr_id387[i].attribute.name);
+                //             get_attr_val.push(arr_id387[i].attributeValues);
+
+                //         }
+                //         console.log(arr_name);
+                //         console.log(get_attr_val);
+
+                //         for(let i = 0;i<get_attr_val.length;i++){
+                //             for(let k = 0;k<get_attr_val[i].length;k++){
+                //                 arr_name_val.push(get_attr_val[i][k].name)
+                //             }
+                //             arr_name_val.push("");
+                //         }
+                //         console.log(arr_name_val);
+
+                //         let objAll = {};
+
+
+                //         for(let i =0;i<arr_name.length;i++){
+                //             let arr = [];
+                //             for(let k = 0;k< arr_name_val.length;k++){
+                //                     if(arr_name_val[k] == ""){
+                //                         arr_name_val.splice(0,k+1);
+                //                         break;
+                //                     }else{
+                //                         arr.push(arr_name_val[k]);
+                //                         objAll[arr_name[i]] = arr;
+                //                     }
+
+
+
+                //             }
+
+                //         }
+                //         console.log(objAll);
+
+                //         let n = 0;
+                //         for(let key in objAll){
+                //             let arrr =objAll[key];
+
+                //             console.log(arrr);
+
+                //             for(n;n<arr_name.length;n++){
+                //                 $('<span>' + arr_name[n] + '</span>' + '<br/>').appendTo('#listAttr');
+                //                 n++;
+                //                 break;
+
+                //             }
+                //             for(let i=0;i<arrr.length;i++){
+                //                 $('<ul>' + '<li>' + arrr[i] + '</li>' + '</ul>' ).appendTo('#listAttr');
+                //             }
+
+
+
+                //         }
+
+
+
+                //     });
+
+
+                //     // axios.get(`
+                //     // https://api.trendyol.com/sapigw/product-categories/${get_cat1[i].id}/attributes
+                //     // `)
+                //     // .then((response) => {
+                //     // const data = response.data;
+                //     // let get_attr = data.categoryAttributes;
+                //     // console.log(get_attr);
+                //     // let arr_name = [];
+                //     // let arr_name_val = [];
+                //     // let get_attr_val = [];
+                //     // for(let i=0;i<get_attr.length;i++){
+                //     //     arr_name.push(get_attr[i].attribute.name);
+                //     //     get_attr_val.push(get_attr[i].attributeValues);
+                //     //     // arr_name_val.push(get_attr[i].attributeValues[k].name)
+                //     // }
+                //     // console.log(arr_name);
+                //     // console.log(get_attr_val);
+                //     // for(let i = 0;i<get_attr_val.length;i++){
+                //     //     if(get_attr_val[i].length != 0){
+                //     //         for(let k = 0;i<get_attr_val[i].length;k++){
+                //     //             // console.log(get_attr_val[i].length);
+                //     //             console.log(get_attr_val[i][k]);
+                //     //             if(get_attr_val[i][k] != 0 ){
+                //     //                 arr_name_val.push(get_attr_val[i][k].name);
+                //     //             }else{
+                //     //                 continue;
+                //     //             }
+
+                //     //         }
+                //     //     }
+
+                //     // }
+                //     // console.log(arr_name_val);
+                //     // for (let i = 0; i < get_cat1.length; i++) {
+                //     //     $('<span value="' + arr_name[i] + '">' + arr_name[i] + '</span>').appendTo('#listAttr');
+                //     //     // $('<li value="' + arr_name[i] + '">' + arr_name[i] + '</span>').appendTo('#listAttr');
+
+                //     // };
+
+                //     // });
+                // }
+                if(value == get_cat1[i].name && get_cat1[i].subCategories.length != 0){
+                    get_sub = document.getElementById('list_box1');
+                    get_sub.style.display = "inline";
+                    get_cat2 = get_cat1[i].subCategories;
+
+                    console.log(get_cat2);
+                    for (let i = 0; i < get_cat2.length; i++) {
+                        $('<li class="list-group-item-action list-group-item" value="' + get_cat2[i].name + '">'+get_cat2[i].name+'</li>').appendTo('#li2');
+                    };
+                }
+            };
+        }
+
+        document.getElementById('li2').onclick = function(event){
+            var value = event.target.innerHTML;
+            value = value.replace('&amp;','&');
+
+            console.log(value);
+            for(let i =0;i<get_cat2.length;i++){
+                if(value == get_cat2[i].name && get_cat2[i].subCategories.length ==0){
+                    console.log(get_cat2[i].id)
+                }
+                if(value == get_cat2[i].name && get_cat2[i].subCategories.length != 0){
+                    get_sub = document.getElementById('list_box2');
+                    get_sub.style.display = "inline";
+                    get_cat3 = get_cat2[i].subCategories;
+                    console.log(get_cat[i].id);
+                    console.log(get_cat3)
+                    for (let i = 0; i < get_cat3.length; i++) {
+                        $('<li class="list-group-item-action list-group-item" value="' + get_cat3[i].name + '">'+get_cat3[i].name+'</li>').appendTo('#li3');
+                    };
+
+                }
+            };
+
+        }
+        document.getElementById('li3').onclick = function(event){
+            var value = event.target.innerHTML;
+            value = value.replace('&amp;','&');
+
+            console.log(value);
+            for(let i =0;i<get_cat3.length;i++){
+                if(value == get_cat3[i].name && get_cat3[i].subCategories.length ==0){
+                    console.log(get_cat3[i].id)
+                }
+                if(value == get_cat3[i].name && get_cat3[i].subCategories.length != 0){
+                    console.log(15)
+                    get_sub = document.getElementById('list_box3');
+                    get_sub.style.display = "inline";
+                    get_cat4 = get_cat3[i].subCategories;
+                    console.log(get_cat[i].id);
+                    console.log(get_cat3)
+                    for (let i = 0; i < get_cat4.length; i++) {
+                        $('<li class="list-group-item-action list-group-item" value="' + get_cat4[i].name + '">'+get_cat4[i].name+'</li>').appendTo('#li4');
+                    };
+
+                }
+            };
+
+        }
+
+        // for (let i = 0; i < get_cat.length; i++) {
+        //     $('<input type="button" class="list-group-item-action list-group-item opt " value="' + get_cat[i].name + '"></input>').appendTo('#list_box');
+        // };
+
+        // var elements = document.querySelectorAll(".opt");
+        // for (var i = 0; i < elements.length; i++) {
+        //     let value;
+        //     if(i==0){
+        //         elements[i].onclick = function(){
+        //             value = elements[0].value;
+        //             for(let i =0;i<get_cat.length;i++){
+        //                 if(value == get_cat[i].name && get_cat[i].subCategories.length ==0){
+        //                     console.log(get_cat[i].id)
+        //                 }
+        //                 if(value == get_cat[i].name && get_cat[i].subCategories.length != 0){
+        //                     get_cat1 = get_cat[i].subCategories;
+        //                     for (let i = 0; i < get_cat1.length; i++) {
+        //                         $('<input type="button" class="list-group-item-action list-group-item opt " value="' + get_cat1[i].name + '"></input>').appendTo('#list_box1');
+        //                     };
+        //                     get_sub = document.getElementById('list_box1');
+        //                     get_sub.style.display = "inline";
+        //                     // get_cat1 = get_cat[i].subCategories;
+        //                     // console.log(get_cat[i].id);
+        //                     // console.log(get_cat1)
+        //                     // for (let i = 0; i < get_cat1.length; i++) {
+        //                     //     $('<option value="' + get_cat1[i].name + '">' + get_cat1[i].name + '</option>').appendTo('#cat2');
+        //                     // };
+
+
+        //                 }
+
+        //             };
+
+        //           };
+        //     }
+        //     else if(i==1){
+        //         elements[i].onclick = function(){
+        //             alert(elements[1].value);
+        //           };
+        //     }
+
+        //     if(i==2){
+        //         elements[i].onclick = function(){
+        //             alert(elements[2].value);
+        //           };
+        //     }
+
+        //     if(i==3){
+        //         elements[i].onclick = function(){
+        //             alert(elements[3].value);
+        //           };
+        //     }
+
+        //     if(i==4){
+        //         elements[i].onclick = function(){
+        //             alert(elements[4].value);
+        //           };
+        //     }
+
+        //     if(i==5){
+        //         elements[i].onclick = function(){
+        //             alert(elements[5].value);
+        //           };
+        //     }
+
+        //     if(i==6){
+        //         elements[i].onclick = function(){
+        //             alert(elements[6].value);
+        //           };
+        //     }
+
+        //     if(i==7){
+        //         elements[i].onclick = function(){
+        //             alert(elements[7].value);
+        //           };
+        //     }
+
+        //     if(i==8){
+        //         elements[i].onclick = function(){
+        //             alert(elements[8].value);
+        //           };
+        //     }
+
+        //     if(i==9){
+        //         elements[i].onclick = function(){
+        //             alert(elements[9].value);
+        //           };
+        //     }
+        //     if(i==10){
+        //         elements[i].onclick = function(){
+        //             alert(elements[10].value);
+        //           };
+        //     }
+
+
+        // }
+
+
+    }
+}());
