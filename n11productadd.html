@@ -73,6 +73,7 @@
       <div data-v-9c90884e="">
         <div data-v-9c90884e="" class="row product-list-loading">
           <div data-v-9c90884e="" class="col-xl-12">
+
             <div data-v-9c90884e="" style="padding:10px" class="kt-portlet">
 
 
@@ -233,7 +234,8 @@
                </style>
 
               <!--<div id="example-table"></div>-->
-              <div class="circles">
+
+              <div class="circles" >
                 <div id="circle5" class="circle1">
                   <p id="circle1">1</p>
                 </div>
@@ -248,98 +250,56 @@
                 </div>
               </div>
               <hr id="line">
+              <div id="divv">
               <form  method="post" id="addproduct" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct" style="display: none;">
 
 
                 <div class="colum_form" style="display: flex; flex-direction: row; width: 100%; margin-top: 50px;" >
                   <div class="col_1" style="width: 30%; margin-left: 20%">
 
-              <label class="col-md-4 control-label lblgeneral" for=""> App Key:</label>
+              <label class="col-md-4 control-label lblgeneral"  for=""> App Key:</label>
               <div class="col-md-4">
-                <input value="71faab12-d47e-432e-a4a2-5546c49cb1c4" name="appKey" class="form-control input-md">
+                <input value="" name="appKey" v-model="App_Key" class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral"for=""> App Secret:</label>
               <div class="col-md-4">
-                <input value="FrOoxTV9Mk4R5KI5" name="appSecret" class="form-control input-md">
+                <input value="" v-model="App_Secret" name="appSecret" class="form-control input-md">
               </div>
 
               <label class="col-md-6 control-label lblgeneral" for=""> *Ürün Satış Kodu :</label>
               <div class="col-md-4">
-                <input value="" id="productSellerCode"  name="productSellerCode" class="form-control input-md">
+                <input value="" id="productSellerCode" v-model="Satış"  name="productSellerCode" class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral" for=""> *Başlık:</label>
               <div class="col-md-4">
-                <input value="" id="title" name="title" class="form-control input-md">
+                <input value="" id="title" name="title" v-model="Başlık" class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral" for=""> *Altbaşlık:</label>
               <div class="col-md-4">
 
-                <input value="" id="subtitle" name="subtitle" class="form-control input-md">
+                <input value="" id="subtitle" name="subtitle" v-model="Altbaşlık" class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral" for=""> *Açıklama:</label>
               <div class="col-md-4">
-                <input value="" id="description" name="description" class="form-control input-md">
+                <input value="" id="description" name="description" v-model="Açıklama"  class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral"  for="">Kategori Adı:</label>
-              <!-- <div class="col-md-4">
-                <select class="form-control input-md" name="cat1" id="cat1">
-                  <option value="0">Select item...</option>
-                </select>
-               </div>
-               <div id="list_block">
-                <div class="col-md-4" id="list_box" >
-                  <select style="display: none;" class="form-control input-md" name="cat2" id="cat2">
-                    <option value="0">Select item...</option></select>
-                 </div>
-                 <div class="col-md-4" id="list_box1">
-                  <select style="display: none;" class="form-control input-md" name="cat3" id="cat3">
-                    <option value="0">Select item...</option></select>
-                 </div>
 
-               </div>
+              <div class="col-md-4"  >
 
-               <div class="col-md-4">
-                 <div class="col-md-4" id="listAttr">
-
-                 </div>
-
-               </div> -->
-
-               <!-- <div class="col-md-4">
-                <select class="form-control input-md" name="cat1" id="cat1">
-                  <option value="0">Select item...</option>
-                </select>
-               </div>
-
-              <div id="list_block" >
-                <div class="col-md-7 list-group" style="display: none;"  id="list_box">
-                  <ul id="li1">
-
-                  </ul>
-                </div>
-                <div class="col-md-7 list-group" style="display: none;" id="list_box1">
-                  <ul id="li2">
-
-                  </ul>
-                </div>
-              </div> -->
-
-
-              <div class="col-md-4" style="display: none;" >
-
-                <select  class="form-control input-md" name="category_name" id="category_name" onchange="getSubCategories(1,document.getElementById('category_name').value)">
+                <select  class="form-control input-md" v-model="Kategori" name="category_name" id="category_name" onchange="getSubCategories(1,document.getElementById('category_name').value)">
 
                 </select>
               </div>
 
               <div id="subcategory1" style="display: none;" class="col-md-4">
 
-                <select  class="form-control input-md" name="subcategory_name1" id="subcategory_name1" onchange="getSubCategories(2,document.getElementById('subcategory_name1').value)">
+                <select  class="form-control input-md" v-model="Kategori1" name="subcategory_name1" id="subcategory_name1" onchange="getSubCategories(2,document.getElementById('subcategory_name1').value)">
 
                 </select>
 
@@ -347,7 +307,7 @@
 
               <div id="subcategory2"  style="display: none;" class="col-md-4">
 
-                <select  class="form-control input-md" name="subcategory_name2" id="subcategory_name2" onchange="getSubCategories(3,document.getElementById('subcategory_name2').value)">
+                <select  class="form-control input-md" v-model="Kategori2" name="subcategory_name2" id="subcategory_name2" onchange="getSubCategories(3,document.getElementById('subcategory_name2').value)">
 
                 </select>
 
@@ -355,7 +315,7 @@
 
               <div id="subcategory3"  style="display: none;" class="col-md-4">
 
-                <select  class="form-control input-md" name="subcategory_name3" id="subcategory_name3" onchange="getSubCategories(4,document.getElementById('subcategory_name3').value)">
+                <select  class="form-control input-md" v-model="Kategori3" name="subcategory_name3" id="subcategory_name3" onchange="getSubCategories(4,document.getElementById('subcategory_name3').value)">
 
                 </select>
 
@@ -364,7 +324,7 @@
 
               <div id="subcategory4"  style="display: none;" class="col-md-4">
 
-                <select  class="form-control input-md" name="subcategory_name4" id="subcategory_name4" onchange="">
+                <select  class="form-control input-md" v-model="Kategori4" name="subcategory_name4" id="subcategory_name4" onchange="">
 
                 </select>
 
@@ -375,22 +335,22 @@
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Özel Ürün Bilgi Adı:</label>
               <div class="col-md-4">
-                <input value="test" id="specialProductInfo_key1"  name="specialProductInfo_key1" class="form-control input-md">
+                <input value="" id="specialProductInfo_key1" v-model="Özel_Ürün_Bilgi_Adı"  name="specialProductInfo_key1" class="form-control input-md">
               </div>
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Özel Ürün Bilgi Değeri:</label>
               <div class="col-md-4">
-                <input value="test" id="specialProductInfo_value1"  name="specialProductInfo_value1" class="form-control input-md">
+                <input value="" id="specialProductInfo_value1" v-model="Özel_Ürün_Bilgi_Değeri" name="specialProductInfo_value1" class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral" for=""> *Fiyat:</label>
               <div class="col-md-4">
-                <input value="5700" id="price" name="price" class="form-control input-md">
+                <input value="5700" id="price" name="price" v-model="Fiyat" class="form-control input-md">
               </div>
 
               <label class="col-md-4 control-label lblgeneral" for=""> *Stok Adet:</label>
               <div class="col-md-4">
-                <input value="1" id="stockItem_quantity1" name="stockItem_quantity1" class="form-control input-md">
+                <input value="1" id="stockItem_quantity1" v-model="Stok_Adet" name="stockItem_quantity1" class="form-control input-md">
               </div>
 
             </div>
@@ -399,7 +359,7 @@
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Kur Tipi:</label>
               <div class="col-md-4">
-                <select name="currencyType" id="currencyType" class="form-control input-md">
+                <select name="currencyType" id="currencyType" v-model="Tipi" class="form-control input-md">
                   <option value="1">TL</option>
                   <option value="2">USD</option>
                   <option value="3">EUR</option>
@@ -409,19 +369,19 @@
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Resim Linki:</label>
               <div class="col-md-4">
-                <input value="https://i2.milimaj.com/i/milliyet/75/0x410/5ca1ca0b45d2a029641a947f.jpg" id="image_url1"  name="image_url1" class="form-control input-md">
+                <input value="" v-model="Linki" id="image_url1"  name="image_url1" class="form-control input-md">
               </div>
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Resim Sırası:</label>
               <div class="col-md-4">
 
-                <input value="1"  id="image_order1" name="image_order1" class="form-control input-md">
+                <input value=""  id="image_order1" v-model="Sırası" name="image_order1" class="form-control input-md">
               </div>
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Onay Durumu:</label>
               <div class="col-md-4">
 
-                <select name="approvalStatus" id="approvalStatus" class="form-control input-md">
+                <select name="approvalStatus" id="approvalStatus" v-model="Durumu" class="form-control input-md">
                   <option value="1">Aktif(Satışta)</option>
                   <option value="2" selected>Beklemede</option>
                   <option value="3">Yasaklı</option>
@@ -431,7 +391,7 @@
               <label class="col-md-12 control-label lblgeneral" for=""> *Ürün Durumu:</label>
               <div class="col-md-4">
 
-                <select name="productCondition" id="productCondition" class="form-control input-md">
+                <select name="productCondition" id="productCondition" v-model="Ürün_Durumu" class="form-control input-md">
                   <option value="1">Yeni</option>
                   <option value="2">2. el</option>
                 </select>
@@ -439,13 +399,13 @@
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Kargo Hazırlanma Süresi:</label>
               <div class="col-md-4">
-                <input value="10" id="preparingDay" name="preparingDay" class="form-control input-md">
+                <input value="" id="preparingDay" v-model="Kargo_Hazırlanma_Süresi" name="preparingDay" class="form-control input-md">
               </div>
 
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Kargo Şablonu:</label>
               <div class="col-md-4">
-                <select  class="form-control input-md" name="shipment_template" id="shipment_template">
+                <select  class="form-control input-md" v-model="Kargo_Şablonu" name="shipment_template" id="shipment_template">
 
                 </select>
               </div>
@@ -453,18 +413,18 @@
               <label class="col-md-12 control-label lblgeneral" for=""> *Stok Gtin Numarası:</label>
               <div class="col-md-4">
 
-                <input value="" id="stockItem_gtin1" name="stockItem_gtin1" class="form-control input-md">
+                <input value="" id="stockItem_gtin1" v-model="Stok_Gtin_Numarası" name="stockItem_gtin1" class="form-control input-md">
               </div>
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Stok Ürün Özellik Adı:</label>
               <div class="col-md-4">
 
-                <input value="Marka" id="stockItem_attribute_name1" name="stockItem_attribute_name1" class="form-control input-md">
+                <input value="" id="stockItem_attribute_name1" v-model="Stok_Ürün_Özellik_Adı" name="stockItem_attribute_name1" class="form-control input-md">
               </div>
 
               <label class="col-md-12 control-label lblgeneral" for=""> *Stok Ürün Özellik Değeri:</label>
               <div class="col-md-4">
-                <input value="Noki" id="stockItem_attribute_value1" name="stockItem_attribute_value1" class="form-control input-md">
+                <input value="" id="stockItem_attribute_value1" v-model="Stok_Ürün_Özellik_Değeri" name="stockItem_attribute_value1" class="form-control input-md">
               </div>
 
 
@@ -472,8 +432,8 @@
 
             </br>
             <div class="buttons" >
-              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeConten33()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 200px !important; margin-left: -55% !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" value="post" onclick="changeContent1()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 200px !important; margin-left: 5% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" v-model="btn4p" type="button"  @click="changeConten33" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 200px !important; margin-left: -55% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" v-model="btn4c" type="button"  style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 200px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -486,6 +446,9 @@
           </div>
         </div>
               </form>
+            </div>
+            <div id="step1">
+
 
               <form  method="post" id="addproduct1" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct" style="display: block;">
 
@@ -501,21 +464,22 @@
                       </select>
                      </div> -->
 
+
                     <div id="list_block" >
                       <div class="col-md-7 list-group"  id="list_box0">
-                        <ul id="li0">
+                        <ul v-on:click="cat1($event)" id="li0">
                         </ul>
                       </div>
                       <div class="col-md-7 list-group" style="display: none;"  id="list_box">
-                        <ul id="li1">
+                        <ul v-on:click="cat2($event)" id="li1">
                         </ul>
                       </div>
                       <div class="col-md-7 list-group" style="display: none;" id="list_box1">
-                        <ul id="li2">
+                        <ul v-on:click="cat3($event)" id="li2">
                         </ul>
                       </div>
                       <div class="col-md-7 list-group" style="display: none;" id="list_box2">
-                        <ul id="li3">
+                        <ul v-on:click="cat4($event)" id="li3">
                         </ul>
                       </div>
                       <div class="col-md-7 list-group" style="display: none;" id="list_box3">
@@ -539,8 +503,8 @@
               </div> -->
             </br>
             <div class="buttons" >
-              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeContent11()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 250px !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" value="confirm" onclick="changeContent1()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 250px !important; margin-left: 5% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn1p"  style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 250px !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn1c"  @click="changeContent1" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 250px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -553,6 +517,9 @@
           </div>
         </div>
               </form>
+            </div>
+              <div id="step2">
+
 
               <form  method="post" id="addproduct2" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct" style="display: none;">
 
@@ -562,7 +529,7 @@
 
                     <label class="col-md-4 control-label lblgeneral" for=""> Age:</label>
                     <div class="col-md-4">
-                      <input value="" name="appKey" class="form-control input-md">
+                      <input value="" name="appKey" v-model="Age" class="form-control input-md">
                     </div>
 
                 </div>
@@ -571,12 +538,12 @@
 
               <label class="col-md-12 control-label lblgeneral" for=""> Country:</label>
               <div class="col-md-4">
-                <input value="" id="image_url1"  name="image_url1" class="form-control input-md">
+                <input value="" id="image_url1" v-model="Country"  name="image_url1" class="form-control input-md">
               </div>
             </br>
             <div class="buttons" >
-              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeContent11()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 140px !important; margin-left: -55% !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" value="confirm" onclick="changeConten2()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 140px !important; margin-left: 5% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn2p"  @click="changeContent11" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 140px !important; margin-left: -55% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn2c"  @click="changeConten2" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 140px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -589,6 +556,9 @@
           </div>
         </div>
               </form>
+            </div>
+              <div id="step3">
+
 
               <form  method="post" id="addproduct3" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct" style="display: none;">
 
@@ -598,7 +568,7 @@
 
                     <label class="col-md-4 control-label lblgeneral" for=""> City:</label>
                     <div class="col-md-4">
-                      <input value="" name="appKey" class="form-control input-md">
+                      <input value="" name="appKey" v-model="city" class="form-control input-md">
                     </div>
 
                 </div>
@@ -607,12 +577,12 @@
 
               <label class="col-md-12 control-label lblgeneral" for=""> Address:</label>
               <div class="col-md-4">
-                <input value="" id="image_url1"  name="image_url1" class="form-control input-md">
+                <input value="" id="image_url1" v-model="Address" name="image_url1" class="form-control input-md">
               </div>
             </br>
             <div class="buttons" >
-              <input class="btn btn-label-brand btn-bold" type="button" value="previous step" onclick="changeConten22()" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 140px !important; margin-left: -55% !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" value="confirm" onclick="changeConten3()" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 140px !important; margin-left: 5% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn3p" @click="changeConten22" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 140px !important; margin-left: -55% !important; text-transform: uppercase;">
+              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn3c"  @click="changeConten3" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 140px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -625,7 +595,7 @@
           </div>
         </div>
               </form>
-
+            </div>
 
 
 
@@ -1258,6 +1228,7 @@ var count = 10, timer = setInterval(function() {
     gtag('config', 'UA-153396545-1');
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="n11productadd.js"></script>
   <!-- <script src="trendyoladd.js"></script> -->
