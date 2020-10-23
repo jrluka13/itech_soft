@@ -1,3 +1,36 @@
+
+// let body = {
+//   "username" : "primuscam_dev",
+//   "password" : "Ps12345!",
+//   "authenticationType" : "INTEGRATOR"
+// }
+
+// axios({
+//   method: 'post',
+//   url: 'https://mpop-sit.hepsiburada.com/api/authenticate',
+//   data: body,
+// })
+// .then(function (response) {
+//   console.log(response);
+// })
+// .catch(function (error) {
+//   console.log(error);
+// });
+// let url = 'https://mpop-sit.hepsiburada.com/api/authenticate';
+
+// axios.get(url,{headers:{'Authorization' : 'Bearer ' + localStorage.getItem('token')}})
+//   .then((response) =>{
+//     const data = response.data;
+//     console.log(data);
+//   });
+  // axios.post(url,{headers:[{'Authorization' : 'Bearer ' + token},{'Accept' : data}]})
+  // .then((response) =>{
+  //   const data = response.data;
+  //   console.log(data);
+  // });
+
+
+
 (async function loadData() {
   let url = "https://api.trendyol.com/sapigw/product-categories";
   let response = await fetch(url);
@@ -179,7 +212,10 @@
       },
     });
   }
-})();
+})(); 
+
+
+
 
 // new Vue({
 //     el:'#step1',

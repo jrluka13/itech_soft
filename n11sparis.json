@@ -1,0 +1,564 @@
+{
+  "order": [
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "8.3",
+            "id": "150905240",
+            "name": "Aras",
+            "price": "83",
+            "productId": "359961321",
+            "productName": "Dome Kamera Güvenlik Kamerası 2MP AHD Gece Görüşlü Kamera",
+            "productSellerCode": "DOME",
+            "quantity": "1",
+            "shipmentCode": "141452706",
+            "shippingDate": "02/07/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9080996055051"
+          }
+        ]
+      },
+      "citizenshipId": "50029792936",
+      "createDate": "02/07/2019 14:56",
+      "id": "196222099",
+      "orderNumber": "208429464785",
+      "status": "5",
+      "totalAmount": "83"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "54.9",
+            "id": "151435381",
+            "name": "Aras",
+            "price": "549",
+            "productId": "359960844",
+            "productName": "Primuscam AHD 16 Kanal DVR Kayıt Cihazı  Xmeye Yazılım Full HD",
+            "productSellerCode": "DVR-7016",
+            "quantity": "1",
+            "shipmentCode": "141957460",
+            "shippingDate": "06/07/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9080999518035"
+          }
+        ]
+      },
+      "citizenshipId": "",
+      "createDate": "05/07/2019 22:44",
+      "id": "196556530",
+      "orderNumber": "208116514786",
+      "status": "5",
+      "totalAmount": "549"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "12.9",
+            "id": "152053623",
+            "name": "Aras",
+            "price": "129",
+            "productId": "359960830",
+            "productName": "Primuscam 20A Güvenlik Kamera Adaptörü 12v DC 20Amper Adaptör",
+            "productSellerCode": "ADAPTOR20A",
+            "quantity": "1",
+            "shipmentCode": "142532121",
+            "shippingDate": "10/07/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256001861695"
+          }
+        ]
+      },
+      "citizenshipId": "23783499106",
+      "createDate": "10/07/2019 08:51",
+      "id": "196944413",
+      "orderNumber": "207839672788",
+      "status": "5",
+      "totalAmount": "129"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "2.9",
+            "id": "153248457",
+            "name": "Aras",
+            "price": "29",
+            "productId": "359960837",
+            "productName": "Primuscam 10Mt Güvenlik kamera VGA Kablosu LCD Monitör 10 Metre",
+            "productSellerCode": "VGA-KABLO10",
+            "quantity": "1",
+            "shipmentCode": "143652824",
+            "shippingDate": "18/07/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256007492463"
+          }
+        ]
+      },
+      "citizenshipId": "57061634552",
+      "createDate": "17/07/2019 23:46",
+      "id": "197684775",
+      "orderNumber": "204186136787",
+      "status": "5",
+      "totalAmount": "29"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "9.9",
+            "id": "154060924",
+            "name": "Aras",
+            "price": "99",
+            "productId": "359961234",
+            "productName": "Analog Güvenlik Kamera 700 TVL Gece Görüşlü 42 big LED",
+            "productSellerCode": "ANALOG",
+            "quantity": "1",
+            "shipmentCode": "144422151",
+            "shippingDate": "23/07/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256011553522"
+          }
+        ]
+      },
+      "citizenshipId": "35363014678",
+      "createDate": "23/07/2019 15:21",
+      "id": "198197084",
+      "orderNumber": "206769839782",
+      "status": "5",
+      "totalAmount": "99"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "155106079",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "145408581",
+            "shippingDate": "30/07/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256017493724"
+          }
+        ]
+      },
+      "citizenshipId": "",
+      "createDate": "30/07/2019 15:23",
+      "id": "198857033",
+      "orderNumber": "203473727785",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.77",
+            "id": "158417512",
+            "name": "Aras",
+            "price": "83",
+            "productId": "359961321",
+            "productName": "Dome Kamera Güvenlik Kamerası 2MP AHD Gece Görüşlü Kamera",
+            "productSellerCode": "DOME",
+            "quantity": "2",
+            "shipmentCode": "148515937",
+            "shippingDate": "23/08/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256033962108"
+          }
+        ]
+      },
+      "citizenshipId": "62350424332",
+      "createDate": "23/08/2019 11:47",
+      "id": "200917479",
+      "orderNumber": "209533844584",
+      "status": "5",
+      "totalAmount": "157.70"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "159916573",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "149917952",
+            "shippingDate": "02/09/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256040708526"
+          }
+        ]
+      },
+      "citizenshipId": "32854302726",
+      "createDate": "02/09/2019 14:36",
+      "id": "201834762",
+      "orderNumber": "205261412582",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "161303045",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "151208311",
+            "shippingDate": "10/09/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9256047109894"
+          }
+        ]
+      },
+      "citizenshipId": "14468224236",
+      "createDate": "10/09/2019 09:51",
+      "id": "202663370",
+      "orderNumber": "206314299584",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "64.9",
+            "id": "165068407",
+            "name": "Aras",
+            "price": "649",
+            "productId": "359961116",
+            "productName": "Dome Güvenlik Kamera Seti İç Ortam 4 lü Gece Görüşlü 2MP AHD",
+            "productSellerCode": "DOMESET4",
+            "quantity": "1",
+            "shipmentCode": "154704970",
+            "shippingDate": "30/09/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257915965593"
+          }
+        ]
+      },
+      "citizenshipId": "",
+      "createDate": "29/09/2019 13:25",
+      "id": "204856983",
+      "orderNumber": "204739681583",
+      "status": "5",
+      "totalAmount": "649"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "63.6",
+            "id": "165944047",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "4",
+            "shipmentCode": "155519434",
+            "shippingDate": "03/10/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257918658504"
+          }
+        ]
+      },
+      "citizenshipId": "3310514633",
+      "createDate": "03/10/2019 11:35",
+      "id": "205375973",
+      "orderNumber": "207118483585",
+      "status": "5",
+      "totalAmount": "636"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "122.5",
+            "id": "166619291",
+            "name": "Aras",
+            "price": "1225",
+            "productId": "359960876",
+            "productName": "8 li Set Gece Görüşlü Güvenlik Kamerası 2MP AHD DVR Plastik Kasa",
+            "productSellerCode": "UYGUNKASASET8",
+            "quantity": "1",
+            "shipmentCode": "156152652",
+            "shippingDate": "07/10/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257920575852"
+          }
+        ]
+      },
+      "citizenshipId": "29207483140",
+      "createDate": "07/10/2019 08:57",
+      "id": "205773721",
+      "orderNumber": "201682124183",
+      "status": "5",
+      "totalAmount": "1225"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "167644027",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "157103328",
+            "shippingDate": "11/10/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257925191478"
+          }
+        ]
+      },
+      "citizenshipId": "26293662466",
+      "createDate": "11/10/2019 15:36",
+      "id": "206382587",
+      "orderNumber": "207253492180",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "168048453",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "157477635",
+            "shippingDate": "14/10/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257926480564"
+          }
+        ]
+      },
+      "citizenshipId": "28135066494",
+      "createDate": "14/10/2019 09:00",
+      "id": "206625128",
+      "orderNumber": "207893212188",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "168668563",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "158056840",
+            "shippingDate": "17/10/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257929170895"
+          }
+        ]
+      },
+      "citizenshipId": "12029999876",
+      "createDate": "16/10/2019 15:27",
+      "id": "206997224",
+      "orderNumber": "207617886185",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.9",
+            "id": "169529055",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "158862632",
+            "shippingDate": "21/10/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257932297668"
+          }
+        ]
+      },
+      "citizenshipId": "64330306904",
+      "createDate": "21/10/2019 10:23",
+      "id": "207518551",
+      "orderNumber": "201934989183",
+      "status": "5",
+      "totalAmount": "159"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.11",
+            "id": "173396828",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "162506021",
+            "shippingDate": "08/11/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257947969407"
+          }
+        ]
+      },
+      "citizenshipId": "58810522786",
+      "createDate": "08/11/2019 15:19",
+      "id": "209937824",
+      "orderNumber": "203381643181",
+      "status": "5",
+      "totalAmount": "151.05"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "15.11",
+            "id": "173754310",
+            "name": "Aras",
+            "price": "159",
+            "productId": "359961246",
+            "productName": "Çift Yönlü Çift Kameralı Araç Kamera İçi Dışı HD Gece Görüşlü",
+            "productSellerCode": "ARAC-CIFT",
+            "quantity": "1",
+            "shipmentCode": "162833676",
+            "shippingDate": "11/11/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9257949156353"
+          }
+        ]
+      },
+      "citizenshipId": "27607084172",
+      "createDate": "10/11/2019 19:20",
+      "id": "210163303",
+      "orderNumber": "202512283181",
+      "status": "5",
+      "totalAmount": "151.05"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "7.89",
+            "id": "175313613",
+            "name": "Aras",
+            "price": "83",
+            "productId": "359961321",
+            "productName": "Dome Kamera Güvenlik Kamerası 2MP AHD Gece Görüşlü Kamera",
+            "productSellerCode": "DOME",
+            "quantity": "1",
+            "shipmentCode": "164273163",
+            "shippingDate": "13/11/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9262980913087"
+          }
+        ]
+      },
+      "citizenshipId": "",
+      "createDate": "11/11/2019 23:47",
+      "id": "210982669",
+      "orderNumber": "201614442388",
+      "status": "5",
+      "totalAmount": "78.85"
+    },
+    {
+      "orderItemList": {
+        "orderItem": [
+          {
+            "cargoId": "345",
+            "commission": "1.3",
+            "id": "176134612",
+            "name": "Aras",
+            "price": "13",
+            "productId": "359960833",
+            "productName": "Primuscam 10 Adet Güvenlik Kamerası Power JACK Erkek",
+            "productSellerCode": "JACK10",
+            "quantity": "1",
+            "shipmentCode": "165040020",
+            "shippingDate": "18/11/2019",
+            "shortName": "ARAS",
+            "status": "10",
+            "trackingNumber": "9262986066779"
+          }
+        ]
+      },
+      "citizenshipId": "",
+      "createDate": "14/11/2019 17:11",
+      "id": "211460506",
+      "orderNumber": "201863432386",
+      "status": "5",
+      "totalAmount": "13"
+    }
+  ]
+}

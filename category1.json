@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "categoryId": 60002259,
+            "name": "3. Sınıf",
+            "parentCategoryId": 60002256,
+            "paths": [
+                "Kitap Film Müzik",
+                "Kitap",
+                "Eğitim",
+                "Sınav Hazırlık",
+                "Açıköğretim Kitapları ve Setleri",
+                "Güz Dönemi",
+                "Lisans",
+                "3. Sınıf"
+            ],
+            "leaf": false,
+            "status": "INACTIVE",
+            "available" : false
+        },
+        {
+            "categoryId": 60002260,
+            "name": "4. Sınıf",
+            "parentCategoryId": 60002256,
+            "paths": [
+                "Kitap Film Müzik",
+                "Kitap",
+                "Eğitim",
+                "Sınav Hazırlık",
+                "Açıköğretim Kitapları ve Setleri",
+                "Güz Dönemi",
+                "Lisans",
+                "4. Sınıf"
+            ],
+            "leaf": false,
+            "status": "INACTIVE",
+            "available" : false
+        },
+        {
+            "categoryId": 273122,
+            "name": "OFİSDARK5",
+            "parentCategoryId": 80459065,
+            "paths": [
+                "Kırtasiye / Ofis",
+                "Arşivlenecek",
+                "OFİSDARK5"
+            ],
+            "leaf": false,
+            "status": "INACTIVE",
+            "available" : false
+        }
+    ]
+}

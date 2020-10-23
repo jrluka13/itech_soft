@@ -65,3 +65,131 @@
 
 }
 
+
+.imgBig{
+    margin-top: 50px;
+}
+.mainImg{
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #434349;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 11%;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+}
+.image{
+
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #767789;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+#img{
+    margin-right: 3px;
+    border-radius: 10px;
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+
+}
+.img1{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: url(/src/assets/images/Vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.pct{
+    display: none;
+}
+
+.btnImg{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: 6%;
+    margin-right: 10%;
+    /* float: right; */
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    z-index: 5;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#trash{
+    background-image: url(/src/assets/images/crest.png);
+}
+#refresh{
+    background-image: url(/src/assets/images/Group.png);
+}
+
+
+.btns_el{
+
+    margin-top: -55%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_img{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 50px;
+
+}
+
+
+.plus{
+    margin-left: 30%;
+    margin-top: 28%;
+}
+
+.cart{
+
+    /* display: none; */
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cart1_class{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    opacity: 0.5;
+    z-index: 1;
+
+}
+.trash{
+
+}

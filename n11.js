@@ -27,7 +27,7 @@ new Vue({
     Stok_Ürün_Özellik_Adı:'Marka',
     Stok_Ürün_Özellik_Değeri:'Noki',
     btn4p:'previous step',
-    btn4c:'post'
+    btn4c:'confirm'
   },
   methods:{
     changeConten33() {
@@ -42,9 +42,48 @@ new Vue({
         tab4.style.color = '#3758FF'
       }
 
+    },
+    changeConten1() {
+      let first = document.getElementById("addproduct");
+      let four = document.getElementById("addproduct4");
+      let tab3 = document.getElementById('circle8')
+      let tab4 = document.getElementById('circle4')
+      if (first.style.display === 'block') {
+        first.style.display = 'none'
+        four.style.display = 'block'
+        tab3.style.background = '#3758FF'
+        tab4.style.color = '#ffffff'
+      }
+
     }
+
+
   }
 });
+new Vue({
+  el:'#step4',
+  data:{
+    btn5p:'previous step',
+    btn5c: 'post',
+  },
+  methods:{
+    changeContent44(){
+
+
+      let second = document.getElementById("addproduct4");
+      let third = document.getElementById("addproduct");
+      let tab = document.getElementById('circle8')
+      let tab1 = document.getElementById('circle4')
+      if (second.style.display === 'block') {
+        console.log(15)
+        third.style.display = 'block'
+        second.style.display = 'none'
+        tab.style.background = '#ffffff'
+        tab1.style.color = '#3758FF'
+      }
+    },
+  }
+})
 
 
 
@@ -120,6 +159,7 @@ new Vue({
     }
   }
 });
+
 
 // function changeContent() {
 //   let first = document.getElementById("addproduct");

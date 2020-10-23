@@ -9,8 +9,6 @@
   <meta name="description" content="Updates and statistics">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!--begin::Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
   <!--end::Fonts -->
@@ -140,15 +138,6 @@
                     color: #3758FF;
                     border-radius: 25px;
                   }
-                  .circle5 {
-                    display: grid;
-                    border: 2px solid #3758FF;
-                    width: 50px;
-                    height: 50px;
-                    background-color: #ffffff;
-                    color: #3758FF;
-                    border-radius: 25px;
-                  }
 
                   .circles {
                     display: grid;
@@ -156,7 +145,7 @@
                     margin-left: 15%;
                     margin-top: 50px;
                     margin-bottom: 50px;
-                    grid-template-columns: 20% 20% 20% 20% 20%;
+                    grid-template-columns: 25% 25% 25% 25%;
                     z-index: 2;
                     margin-bottom: 50px;
                   }
@@ -230,27 +219,13 @@
                     line-height: 23px;
                     z-index: 2;
                   }
-                  #circle10 {
-                    grid-column-start: 2;
-                    position: relative;
-                    grid-column-end: 3;
-                    grid-row-start: 20;
-                    grid-row-end: 21;
-                    font-family: Roboto;
-                    font-style: normal;
-                    font-weight: 900;
-                    font-size: 20px;
-                    line-height: 23px;
-                    z-index: 2;
-                  }
-
 
                   #line {
                   position: relative;
                   background-color: #3758FF;
                   color:#3758FF;
                   height: 2px;
-                  width: 70%;
+                  width: 66%;
                   margin-top: -79px;
                   z-index: 1;
                   margin-left: 15%;
@@ -273,10 +248,6 @@
                 <div id="circle8" class="circle4">
                   <p id="circle4">4</p>
                 </div>
-                <div id="circle9" class="circle5">
-                  <p id="circle10">5</p>
-                </div>
-
               </div>
               <hr id="line">
               <div id="divv">
@@ -462,9 +433,7 @@
             </br>
             <div class="buttons" >
               <input class="btn btn-label-brand btn-bold" v-model="btn4p" type="button"  @click="changeConten33" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 200px !important; margin-left: -55% !important; text-transform: uppercase;">
-              <input class="btn btn-label-brand btn-bold" type="button" v-model="btn4c"  @click="changeConten1" style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 200px !important; margin-left: 5% !important; text-transform: uppercase;">
-
-              <!-- <input class="btn btn-label-brand btn-bold" v-model="btn4c" type="button"  style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 200px !important; margin-left: 5% !important; text-transform: uppercase;"> -->
+              <input class="btn btn-label-brand btn-bold" v-model="btn4c" type="button"  style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 200px !important; margin-left: 5% !important; text-transform: uppercase;">
             </div>
 
 
@@ -517,7 +486,6 @@
                         <ul id="li4">
                         </ul>
                       </div>
-
 
                     </div>
                     <!-- <label class="col-md-4 control-label lblgeneral" for=""> Name:</label>
@@ -629,155 +597,7 @@
               </form>
             </div>
 
-            <div id="step4">
 
-
-              <form  method="post" id="addproduct4" action="http://localhost:8080/ws_iltech_n11/ws/saveproduct" style="display: none;">
-
-
-                <div class="imgBig">
-                  <div class="mainImg" id="mainImg">
-                    <div class="img" >
-                      <img id="img" src="/src/assets/images/images2.png" alt="">
-                    </div>
-                  </div>
-                  <input type="button" value="get data" style="margin-left:48%; margin-top: 30px; border: none; background-color: #3aad7f; color: #ffffff;" onclick="getData()">
-                </div>
-
-                <div class="images">
-                  <div style="display: none;" id="btn_img1" class="btn_img">
-                    <label class="cart"  for="pct1"><img class="cart1_class" id="cart1" src="" alt=""></label>
-                    <div class="btns_el">
-                      <input type="button" class="btnImg" id="trash" onclick="deleteImg('img1','image1','btn_img1')"></input>
-
-                     <input type="button" class="btnImg" onclick="refreshImg()" id="refresh" ></input>
-
-                    </div>
-
-                  </div>
-
-                  <div class="image" id="image1">
-                    <div class="plus">
-                      <label id="img1" class="img1" for="pct1" onclick="dispImg('pct1','cart1','img1','image1','btn_img1')"></label>
-                  </div>
-                  </div>
-                  <input class="pct" type="file" id="pct1">
-
-                  <div style="display: none;" id="btn_img2" class="btn_img">
-                    <label class="cart"  for="pct2"><img class="cart1_class" id="cart2" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-
-                  </div>
-
-                  <div class="image" id="image2">
-                    <div class="plus">
-                      <label class="img1" id="img2" for="pct2" onclick="dispImg('pct2','cart2','img2','image2','btn_img2')"></label>
-                    </div>
-                  </div>
-                  <input class="pct" type="file" id="pct2">
-
-                  <div style="display: none;" id="btn_img3" class="btn_img">
-                    <label class="cart"  for="pct3"><img class="cart1_class" id="cart3" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-                  </div>
-
-                  <div class="image" id="image3">
-                    <div class="plus">
-                      <label class="img1" id="img3" for="pct3" onclick="dispImg('pct3','cart3','img3','image3','btn_img3')"></label>
-                    </div>
-                  </div>
-                  <input class="pct" type="file" id="pct3">
-
-                  <div style="display: none;" id="btn_img4" class="btn_img">
-                    <label class="cart"  for="pct4"><img class="cart1_class" id="cart4" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-                  </div>
-
-                  <div class="image" id="image4">
-                    <div class="plus">
-                      <label class="img1" id="img4" for="pct4" onclick="dispImg('pct4','cart4','img4','image4','btn_img4')"></label>
-                    </div>
-                  </div>
-                  <input class="pct" type="file" id="pct4">
-
-                  <div style="display: none;" id="btn_img5" class="btn_img">
-                    <label class="cart"  for="pct5"><img class="cart1_class" id="cart5" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-                  </div>
-
-                  <div class="image" id="image5">
-                    <div class="plus">
-                    <label class="img1" id="img5" for="pct5" onclick="dispImg('pct5','cart5','img5','image5','btn_img5')"></label>
-                    </div>
-                  </div>
-                  <input class="pct" type="file" id="pct5">
-
-                  <div style="display: none;" id="btn_img6" class="btn_img">
-                    <label class="cart"  for="pct6"><img class="cart1_class" id="cart6" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-                  </div>
-
-                  <div class="image" id="image6">
-                    <div class="plus">
-                      <label class="img1" id="img6" for="pct6" onclick="dispImg('pct6','cart6','img6','image6','btn_img6')"></label>
-                    </div>
-                  </div>
-                  <input class="pct" type="file" id="pct6">
-
-                  <div style="display: none;" id="btn_img7" class="btn_img">
-                    <label class="cart"  for="pct7"><img class="cart1_class" id="cart7" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-                  </div>
-
-                  <div class="image" id="image7">
-                      <div class="plus">
-                        <label class="img1" id="img7" for="pct7" onclick="dispImg('pct7','cart7','img7','image7','btn_img7')"></label>
-                      </div>
-                  </div>
-                  <input class="pct" type="file" id="pct7">
-
-                  <div style="display: none;" id="btn_img8" class="btn_img">
-                    <label class="cart"  for="pct8"><img class="cart1_class" id="cart8" src="" alt=""></label>
-                    <div class="btns_el">
-                      <button class="btnImg"><img class="trash" src="/src/assets/images/crest.png" alt=""></button>
-                      <button class="btnImg" id="refresh"><img class="trash" src="/src/assets/images/Group.png" alt=""></button>
-                    </div>
-                  </div>
-
-                  <div class="image" id="image8">
-                    <div class="plus">
-                      <label class="img1" id="img8" for="pct8" onclick="dispImg('pct8','cart8','img8','image8','btn_img8')"></label>
-                    </div>
-                  </div>
-                  <input class="pct" type="file" id="pct8">
-
-                </div>
-
-                <div class="colum_form" style="display: flex; flex-direction: row; width: 100%;" >
-                  <input class="btn btn-label-brand btn-bold" type="button" v-model="btn5p"  @click="changeContent44" style="font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; background-color: #ffffff !important; color: #3758FF !important; border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px;height: 50px; width: 164px; margin-top: 110px !important; margin-left: 36%; text-transform: uppercase;">
-                  <input class="btn btn-label-brand btn-bold" type="button" v-model="btn5c"  style="border: 2px solid #3758FF; box-sizing: border-box;border-radius: 4px; background-color: #3758FF !important; color: #ffffff!important; font-size: 16px; font-weight: 600; font-style: normal; font-family: Poppins; height: 50px; width: 164px; margin-top: 110px !important; margin-left: 2% !important; text-transform: uppercase;">
-
-                </div>
-              </form>
-            </div>
 
               <div id="attributes">
 
@@ -1415,11 +1235,11 @@ var count = 10, timer = setInterval(function() {
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-  <script src="n11productadd.js"></script>
+  <!-- <script src="n11productadd.js"></script> -->
+  <script src="hbproductadd.js"></script>
   <!-- <script src="trendyoladd.js"></script> -->
   <script src="/n11.js"></script>
-  <script src="imagePost.js"></script>
+
 </body>
 <!-- end::Body -->
 </html>
